@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+/*==============================================
+	INTERNAL DOCUMENTATION
+	-	File: general_style.css.
+	-	Author: Isaac Nelson Erb.
+	-	Date Created: 2024-Aug-16.
+
+	-	Description: Provides some general stylings
+		for my pages for this course; things like
+		color-palette, quote-characters, and list-
+		formatting.
+
+	-	Notes:
+		-	Nonrelative sizes are generally done in
+			millimetres (mm), because metricness and
+			precision are both important.
+		-	Colors are done by hex-codes, because it's
+			a surprisingly simple and intuitive
+			system.
+==============================================*/
+
+/*======================
+	PAGE-SECTIONS:
+======================*/
+html {
+	background-color: #202233;
+	color: #F0F0F0;
+
+	font-family: 'Verdana', 'Tahoma', 'Calibri';
+	font-size: 13pt;
+	line-height: 1.5rem;
+}
+
+body {
+	background-color: #303344;
+	margin-top: 0mm;
+	/* padding-top: 10mm; */
+	margin-bottom: 0mm;
+	/* padding-bottom: 10mm; */
+
+	max-width: 250mm; /*Approx. 10in, ideally.*/
+	margin-left: auto;
+	margin-right: auto;
+	/* padding-left: 10mm;
+	padding-right: 10mm; */
+	padding: 10mm;
+}
+
+footer {
+	position: relative;
+	bottom: 0mm;
+	font-size: 0.8rem;
+	line-height: 1.25rem;
+}
+
+/*======================
+	TEXT-BASED ELEMENTS:
+======================*/
+h1 {
+	font-size: 2rem;
+	font-family: 'Tahoma', 'Verdana', 'Calibri';	/*Tahoma is preferred for large-scale display.*/
+	line-height: 2.5rem;
+}
+
+header h1 {	/*For page-titles.*/
+	font-weight: bold;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+h4, h5, h6 {
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.list-header {
+	margin-top: 2mm;
+	margin-bottom: 0mm;
+	line-height: 1rem;
+}
+
+li h4, li h5, li h6 {
+	display: inline;
+}
+
+li {
+	padding-bottom: 4mm;
+}
+
+li li:last-child {
+	padding-bottom: 0mm;
+}
+
+a {
+	color: #FFBBDD;
+}
+
+a:visited {
+	color: #9988FF;
+}
+
+a:focus, a:hover {
+	color: #FF88EE;
+}
+
+q::before {content: "\2018";}	/*Single-quotes first, then double-quotes inside of single-quotes.*/
+q::after {content: "\2019";}
+
+q q::before {content: "\201c";}
+q q::after {content: "\201d";}
+
+span.image-caption {
+	display: block;
+	font-size: 0.9rem;
+	font-style: italic;
+	text-align: center;
+	padding-top: 5mm;
+	padding-bottom: 5mm;
+}

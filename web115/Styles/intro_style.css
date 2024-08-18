@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/*==============================================
+  INTERNAL DOCUMENTATION:
+  - File: intro_style.css
+  - Author: Isaac Nelson Erb.
+  - Date Created: 2023-Aug-13.
+
+  - Description: Styles the 'introductions' page
+		of the M1 assigments.
+==============================================*/
+
+img#self-photo {
+	display: block;
+	width: 75mm;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
