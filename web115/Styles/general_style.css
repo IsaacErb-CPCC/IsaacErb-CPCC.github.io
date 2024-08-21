@@ -68,14 +68,13 @@ footer {
 
 	font-size: 0.8rem;
 	line-height: 1.25rem;
+
+	text-align: center;
 }
 
 /*======================
 	TEXT-BASED ELEMENTS:
 ======================*/
-footer p:last-of-type {
-	font-style: italic;
-}
 
 h1 {
 	font-size: 2rem;
