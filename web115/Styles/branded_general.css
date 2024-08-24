@@ -105,15 +105,15 @@ header h1 {	/*For page-titles.*/
 	text-align: center;
 }
 
+h2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
 header h2 {
 	font-size: 1.75rem;
 	font-weight: normal;
 	text-align: center;
-}
-
-h2 {
-	font-size: 1.5rem;
-	line-height: 2rem;
 }
 
 h3 {
