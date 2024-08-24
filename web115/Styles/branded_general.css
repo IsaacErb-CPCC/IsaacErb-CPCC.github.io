@@ -95,14 +95,23 @@ footer {
 	TEXT-BASED ELEMENTS:
 ======================*/
 
-h1 {
-	font-size: 2rem;
+#page-title {	/*For page-titles.*/
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-align: center;
 	line-height: 2.5rem;
 }
 
-header h1 {	/*For page-titles.*/
-	font-size: 2.5rem;
+#page-subtitle {
+	font-size: 1.75rem;
+	font-weight: normal;
 	text-align: center;
+	line-height: 2rem;
+}
+
+h1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
 }
 
 h2 {
@@ -110,11 +119,6 @@ h2 {
 	line-height: 2rem;
 }
 
-header h2 {
-	font-size: 1.75rem;
-	font-weight: normal;
-	text-align: center;
-}
 
 h3 {
 	font-size: 1.25rem;
@@ -126,15 +130,21 @@ h4, h5, h6 {
 	font-weight: bold;
 }
 
-.list-header {
+.list-title {
 	margin-top: 2mm;
 	margin-bottom: 0mm;
 	line-height: 1rem;
 }
 
+.inlist-heading {
+	display: inline;
+	font-size: 1em;
+}
+
 nav ul {
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 }
 
 nav ul li {
@@ -143,10 +153,6 @@ nav ul li {
 	font-size: 1.25rem;
 	font-weight: bold;
 	list-style-type: none;
-}
-
-li h4, li h5, li h6 {
-	display: inline;
 }
 
 li {

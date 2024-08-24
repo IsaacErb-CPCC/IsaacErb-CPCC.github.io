@@ -32,20 +32,6 @@ html {
 	line-height: 1.5rem;
 }
 
-nav ul {
-	display: flex;
-	flex: 1, 1, 100%;
-	flex-direction: row;
-}
-
-nav ul li {
-	width: 33.3%;
-	text-align: center;
-	font-size: 1.25rem;
-	font-weight: bold;
-	list-style-type: none;
-}
-
 body {
 	background-color: #303344;
 	margin-top: 0mm;
@@ -75,26 +61,30 @@ footer {
 /*======================
 	TEXT-BASED ELEMENTS:
 ======================*/
-
-h1 {
-	font-size: 2rem;
-	font-family: 'Tahoma', 'Verdana', 'Calibri';	/*Tahoma is preferred for large-scale display.*/
+#page-title {	/*For page-titles.*/
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-align: center;
 	line-height: 2.5rem;
 }
 
-header h1 {	/*For page-titles.*/
-	text-align: center;
+#page-subtitle {
+	font-size: 1.75rem;
 	font-weight: normal;
+	text-align: center;
+	line-height: 2rem;
 }
 
-header h1 span:nth-of-type(3) {
-	font-weight: bold;
+h1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
 }
 
 h2 {
 	font-size: 1.5rem;
 	line-height: 2rem;
 }
+
 
 h3 {
 	font-size: 1.25rem;
@@ -106,14 +96,29 @@ h4, h5, h6 {
 	font-weight: bold;
 }
 
-.list-header {
+.list-title {
 	margin-top: 2mm;
 	margin-bottom: 0mm;
 	line-height: 1rem;
 }
 
-li h4, li h5, li h6 {
+.inlist-heading {
 	display: inline;
+	font-size: 1em;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+nav ul li {
+	width: 33.3%;
+	text-align: center;
+	font-size: 1.25rem;
+	font-weight: bold;
+	list-style-type: none;
 }
 
 li {
@@ -142,7 +147,7 @@ q::after {content: "\2019";}
 q q::before {content: "\201c";}
 q q::after {content: "\201d";}
 
-span.image-caption {
+.image-caption {
 	display: block;
 	font-size: 0.9rem;
 	font-style: italic;
