@@ -8,4 +8,5 @@ const EMAIL = 'ierb0000@email.cpcc.edu';
 FOOTER.innerHTML = `
 	<p>&copy;22087 by Lilith RoboticsCorp.</p>
 	<img src="${LOGO}" alt="Logo for Lilith RoboticsCorp">
-	<p>Web-Support: <a href="mailto:${EMAIL}">${EMAIL}</a></p>`;
+	<p>Web-Support: <a href="mailto:${EMAIL}">${EMAIL}</a></p>
+	<p>Fira Sans font used under SIL Open Font License v1.1.<p>`;

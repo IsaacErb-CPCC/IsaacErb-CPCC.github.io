@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: FiraSans;
+	src: url('../Fonts/FiraSans/FiraSans-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: FiraSans;
+	src: url('../Fonts/FiraSans/FiraSans-Italic.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: FiraSans;
+	src: url('../Fonts/FiraSans/FiraSans-Bold.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: FiraSans;
+	src: url('../Fonts/FiraSans/FiraSans-BoldItalic.woff2') format('woff2');
+	font-weight: bold;
+	font-style: italic;
+}
+
+/*==============================================
+	INTERNAL DOCUMENTATION
+	-	File: branded_general.css.
+	-	Author: Isaac Nelson Erb.
+	-	Date Created: 2024-Aug-22.
+
+	-	Description: @@
+
+	-	Notes:
+		-	Nonrelative sizes are generally done in
+			millimetres (mm), because metricness and
+			precision are both important.
+		-	Colors are done by hex-codes, because it's
+			a surprisingly simple and intuitive
+			system.
+
+	-	Licenses:
+		-	Fira Sans is used here within the
+			permissions of the SIL Open Font License
+			version 1.1.
+==============================================*/
+
+/*======================
+	PAGE-SECTIONS:
+======================*/
+html {
+	background-color: #000;
+	color: #9FD;
+
+	font-family: FiraSans;
+	font-size: 13pt;
+	line-height: 1.5rem;
+
+}
+
+body {
+	background-color: #112;
+	/* margin-top: 0mm; */
+	/* padding-top: 10mm; */
+	/* margin-bottom: 0mm; */
+	/* padding-bottom: 10mm; */
+
+	max-width: 250mm; /*Approx. 10in, ideally.*/
+	margin-left: auto;
+	margin-right: auto;
+	/* padding-left: 10mm;
+	padding-right: 10mm; */
+	padding: 10mm;
+
+	border: #FFF 12px ridge;
+}
+
+footer {
+	position: relative;
+	bottom: 0mm;
+	margin-top: 25mm;
+
+	font-size: 0.8rem;
+	line-height: 1.25rem;
+
+	text-align: center;
+}
+
+/*======================
+	TEXT-BASED ELEMENTS:
+======================*/
+
+h1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+
+header h1 {	/*For page-titles.*/
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+header h2 {
+	font-size: 1.75rem;
+	font-weight: normal;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+h4, h5, h6 {
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.list-header {
+	margin-top: 2mm;
+	margin-bottom: 0mm;
+	line-height: 1rem;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+}
+
+nav ul li {
+	width: 33.3%;
+	text-align: center;
+	font-size: 1.25rem;
+	font-weight: bold;
+	list-style-type: none;
+}
+
+li h4, li h5, li h6 {
+	display: inline;
+}
+
+li {
+	padding-bottom: 4mm;
+}
+
+li li:last-child {
+	padding-bottom: 0mm;
+}
+
+a {
+	color: #FD9; /*Base: #9FD*/
+}
+
+a:visited {
+	color: #FDB;
+}
+
+a:focus, a:hover {
+	color: #FFF;
+}
+
+q::before {content: "\2018";}	/*Single-quotes first, then double-quotes inside of single-quotes.*/
+q::after {content: "\2019";}
+
+q q::before {content: "\201c";}
+q q::after {content: "\201d";}
+
+q.speech::before {content: "\201c";}
+q.speech::after {content: "\201d";}
+
+q.speech q::before {content: "\2018";}
+q.speech q::after {content: "\2019";}
+
+span.image-caption {
+	display: block;
+	font-size: 0.9rem;
+	font-style: italic;
+	text-align: center;
+	padding-top: 5mm;
+	padding-bottom: 5mm;
+}
+
+blockquote p {
+	padding-top: 0mm;
+}
+
+blockquote.attributed p:first-of-type::before {
+	content: "\201c";
+}
+blockquote.attributed p:nth-last-of-type(2)::after {
+	content: "\201d";
+}
+blockquote.attributed p:last-of-type {
+	font-style: italic;
+}
+
+i em, i b, b i, b em {
+	font-weight: bold;
+	font-style: italic;
+}
