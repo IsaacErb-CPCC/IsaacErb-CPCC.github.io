@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
-const FOOTER = document.getElementsByTagName('footer')[0];
+const FOOTER = document.getElementsByTagName("footer")[0];
 
-const LOGO = 'Images/logo.png';
-const EMAIL = 'ierb0000@email.cpcc.edu';
+const LOGO = "Images/logo.png";
+const EMAIL = "ierb0000@email.cpcc.edu";
 
 FOOTER.innerHTML = `
 	<p>&copy;22087 by Lilith RoboticsCorp.</p>
