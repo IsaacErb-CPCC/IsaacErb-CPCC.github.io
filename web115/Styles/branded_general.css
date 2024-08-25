@@ -94,12 +94,15 @@ footer {
 /*======================
 	TEXT-BASED ELEMENTS:
 ======================*/
-
-#page-title {	/*For page-titles.*/
+.page-title {
 	font-size: 2.5rem;
-	font-weight: bold;
+	font-weight: normal;
 	text-align: center;
-	line-height: 2.5rem;
+	line-height: 2rem;
+}
+
+.page-title:last-of-type {
+	font-weight: bold;
 }
 
 #page-subtitle {
