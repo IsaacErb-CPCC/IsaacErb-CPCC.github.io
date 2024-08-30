@@ -12,7 +12,7 @@ function handle_anglemarks(codestring) {
 function handle_blanks(codestring) {
 	codestring = codestring.replaceAll("\t", "&nbsp;&nbsp;");
 	codestring = codestring.replaceAll("\n", "<br>");
-	codestring = codestring.replaceAll("<br><br>", "<br>&nbsp;<br>")
+	codestring = codestring.replaceAll("<br><br>", "<br>&nbsp;<br>");
 	return codestring;
 }
 function handle_all(codestring) {
@@ -29,7 +29,7 @@ function write_outcode(codestring) {
 	document.write(`${output_tag}${codestring}${end_tag}`);
 }
 
-document.write("<p>Defining constants which make the construction of HTML-elements modular. (These are only visible in the sourcecode, but took enough figuring out that I think it's fair to count them among the statements which fulfill my minimum for this assigment.)</p>")
+document.write("<p>Defining constants which make the construction of HTML-elements modular. (These are only visible in the sourcecode, but took enough figuring out that I think it's fair to count them among the statements which fulfill my minimum for this assigment.)</p>");
 write_incode(handle_anglemarks(`const input_tag = '<div class="code-bg"><code class="input">';`));
 write_outcode("undefined");
 write_incode(handle_anglemarks(`const output_tag = '<div class="code-bg"><code class="output">';`));
@@ -39,7 +39,7 @@ write_outcode("undefined");
 
 var material_list = [];
 
-document.write("<p>Defining class which holds some of the properties of a specified material.</p>")
+document.write("<p>Defining class which holds some of the properties of a specified material.</p>");
 write_incode(handle_blanks(`class Material {
 	constructor(name, density, melt_point) {
 		this.name = name;
@@ -58,9 +58,9 @@ class Material {
 document.write(`${output_tag}undefined${end_tag}`);
 
 document.write("<p>First failed attempt to instance Material.</p>");
-write_incode(`var Ca = Material("Calcium", 1.526, 1155);`);
+write_incode(`let Ca = Material("Calcium", 1.526, 1155);`);
 try {
-	var Ca = Material("Calcium", 1.526, 1155);
+	let Ca = Material("Calcium", 1.526, 1155);
 } catch (error) {
 	write_outcode(`${error}`);
 }
@@ -134,8 +134,7 @@ function mater_compare(elem1, elem2) {
 	if (elem1.density > elem2.density) {
 		dense = elem1;
 		sparse = elem2;
-	}
-	else {
+	} else {
 		dense = elem2;
 		sparse = elem1;
 	}
@@ -143,8 +142,7 @@ function mater_compare(elem1, elem2) {
 	if (elem1.melt_point > elem2.melt_point) {
 		heat_res = elem1;
 		melty = elem2;
-	}
-	else {
+	} else {
 		heat_res = elem2;
 		melty = elem1;
 	}
@@ -162,7 +160,7 @@ write_incode("mater_compare(Ca, Fe);");
 write_outcode(mater_compare(Ca, Fe));
 
 
-document.write("<p>Defining some more materials.</p>")
+document.write("<p>Defining some more materials.</p>");
 write_incode("var W = new Material('Wolfram', 19.254, 3695);");
 var W = new Material('Wolfram', 19.254, 3695);
 write_outcode("undefined");
@@ -196,7 +194,7 @@ function mater_extrema(mater_list) {
 	document.write("<p>(In <code>mater_extrema</code>) Showing before and after of a <q><code>.slice</code></q> operation on a part of the output.</p>");
 	write_incode("maters_string;");
 	write_outcode(maters_string);
-	write_incode("maters_string = maters_string.slice(0, -2);")
+	write_incode("maters_string = maters_string.slice(0, -2);");
 	maters_string = maters_string.slice(0, -2);
 	write_outcode(maters_string);
 
@@ -206,16 +204,14 @@ function mater_extrema(mater_list) {
 	let meltiest_val = Math.min(...melt_points);
 	let densest_mat, sparsest_mat, least_melty_mat, meltiest_mat;
 	for (let m = 0; m < mater_list.length; m++) {
-		if (material_list[m].density == densest_val) {
+		if (material_list[m].density === densest_val) {
 			densest_mat = material_list[m];
-		}
-		else if (material_list[m].density == sparsest_val) {
+		} else if (material_list[m].density === sparsest_val) {
 			sparsest_mat = material_list[m];
 		}
-		if (material_list[m].melt_point == least_melty_val) {
+		if (material_list[m].melt_point === least_melty_val) {
 			least_melty_mat = material_list[m];
-		}
-		else if (material_list[m].melt_point == meltiest_val) {
+		} else if (material_list[m].melt_point === meltiest_val) {
 			meltiest_mat = material_list[m];
 		}
 	}
@@ -230,7 +226,7 @@ function mater_extrema(mater_list) {
 	return out_string;
 }
 
-document.write("<p>Running <code>mater_extrema</code> on an array of all instances of Material.</p>")
+document.write("<p>Running <code>mater_extrema</code> on an array of all instances of Material.</p>");
 write_incode("<code>mater_extrema</code>(material_list);");
 write_outcode(handle_blanks(mater_extrema(material_list)));
 
