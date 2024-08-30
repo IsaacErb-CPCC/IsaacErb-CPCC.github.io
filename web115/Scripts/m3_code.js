@@ -217,7 +217,7 @@ write_incode(handle_blanks(`function mater_extrema(mater_list) {
 - \${densest_mat.name} is the densest of the materials, with a density of \${densest_mat.density}g/cm&#179;.
 - \${sparsest_mat.name} is the least dense of the materials, with a density of \${sparsest_mat.density}g/cm&#179;.
 - \${least_melty_mat.name} is the most heat-resistant of the materials, with a melting-point of \${least_melty_mat.melt_point}K.
-- \${meltiest_mat.name} is the least heat-resistant of the materials, with a melting-point of \${meltiest_mat.melt_point}K.\`
+- \${meltiest_mat.name} is the least heat-resistant of the materials, with a melting-point of \${meltiest_mat.melt_point}K.\`;
 
 	document.write("<p>Output from <code>mater_extrema</code>.</p>");
 	return out_string;
@@ -261,7 +261,7 @@ function mater_extrema(mater_list) {
 - ${densest_mat.name} is the densest of the materials, with a density of ${densest_mat.density}g/cm&#179;.
 - ${sparsest_mat.name} is the least dense of the materials, with a density of ${sparsest_mat.density}g/cm&#179;.
 - ${least_melty_mat.name} is the most heat-resistant of the materials, with a melting-point of ${least_melty_mat.melt_point}K.
-- ${meltiest_mat.name} is the least heat-resistant of the materials, with a melting-point of ${meltiest_mat.melt_point}K.`
+- ${meltiest_mat.name} is the least heat-resistant of the materials, with a melting-point of ${meltiest_mat.melt_point}K.`;
 
 	document.write("<p>Output from <code>mater_extrema</code>.</p>");
 	return out_string;
