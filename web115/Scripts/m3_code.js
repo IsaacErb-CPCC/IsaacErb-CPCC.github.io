@@ -1,7 +1,7 @@
 "use strict";
 
-const input_tag = '<div class="code-bg"><code class="input">';
-const output_tag = '<div class="code-bg"><code class="output">';
+const input_tag = "<div class=\"code-bg\"><code class=\"input\">";
+const output_tag = "<div class=\"code-bg\"><code class=\"output\">";
 const end_tag = "</code></div>";
 
 function handle_anglemarks(codestring) {
