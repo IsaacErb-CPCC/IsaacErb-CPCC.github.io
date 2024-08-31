@@ -30,11 +30,11 @@ function writeOutcode(codestring) {
 }
 
 document.write("<p>Defining constants which make the construction of HTML-elements modular. (These are only visible in the sourcecode, but took enough figuring out that I think it's fair to count them among the statements which fulfill my minimum for this assigment.)</p>");
-writeIncode(handleAnglemarks(`const inputTag = '<div class="code-bg"><code class="input">';`));
+writeIncode(handleAnglemarks("const inputTag = \"<div class=\\\"code-bg\\\"><code class=\\\"input\\\">\";"));
 writeOutcode("undefined");
-writeIncode(handleAnglemarks(`const outputTag = '<div class="code-bg"><code class="output">';`));
+writeIncode(handleAnglemarks("const outputTag = \"<div class=\\\"code-bg\\\"><code class=\\\"output\\\">\";"));
 writeOutcode("undefined");
-writeIncode(handleAnglemarks(`const endTag = "</code></div>";`));
+writeIncode(handleAnglemarks("const endTag = \"</code></div>\";"));
 writeOutcode("undefined");
 
 var materialList = [];
