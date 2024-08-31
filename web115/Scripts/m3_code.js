@@ -16,8 +16,8 @@ function handleBlanks(codestring) {
 	return codestring;
 }
 function handleAll(codestring) {
-	codestring = handleBlanks(codestring);
 	codestring = handleAnglemarks(codestring);
+	codestring = handleBlanks(codestring);
 	return codestring;
 }
 
@@ -178,7 +178,7 @@ writeOutcode("undefined");
 // var Cu22Sn3 = new Material('Bronze', 8.7, 1186);
 
 document.write("<p>Creating function for comparing an array of instances of Material.</p>");
-writeIncode(handleBlanks(`function materExtrema(materList) {
+writeIncode(handleAll(`function materExtrema(materList) {
 	let densities = [], meltPoints = [];
 	let matersString = "";
 
@@ -221,7 +221,7 @@ writeIncode(handleBlanks(`function materExtrema(materList) {
 
 	document.write("<p>Output from <code>materExtrema</code>.</p>");
 	return outString;
-}`));
+}`));	//${handleAnglemarks("<p>Output from <code>materExtrema</code>.</p>")}
 function materExtrema(materList) {
 	let densities = [], meltPoints = [];
 	let matersString = "";
