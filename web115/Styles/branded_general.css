@@ -60,6 +60,7 @@ html {
 	font-family: FiraSans;
 	font-size: 13pt;
 	line-height: 1.5rem;
+	font-variant-numeric: tabular-nums;
 
 }
 
@@ -190,7 +191,7 @@ q.speech::after {content: "\201d";}
 q.speech q::before {content: "\2018";}
 q.speech q::after {content: "\2019";}
 
-span.image-caption {
+figcaption {
 	display: block;
 	font-size: 0.9rem;
 	font-style: italic;
