@@ -30,8 +30,8 @@ function numberedText() {
 		const DIGITS = lineNum.toString().length;
 		let displayNum;
 
-		if (DIGITS != 3) {
-			if (DIGITS == 2) {
+		if (DIGITS !== 3) {
+			if (DIGITS === 2) {
 				displayNum = `0${lineNum}. `;
 			} else {
 				displayNum = `00${lineNum}. `;
@@ -40,7 +40,7 @@ function numberedText() {
 			displayNum = `${lineNum}. `;
 		}
 
-		let outLine = `${displayNum}${message}<br>`
+		let outLine = `${displayNum}${message}<br>`;
 
 		simpleOutDest.innerHTML += outLine;
 	}
@@ -54,8 +54,8 @@ function dynamicText() {
 		let displayNum;
 		let relMessage;
 
-		if (DIGITS != 3) {
-			if (DIGITS == 2) {
+		if (DIGITS !== 3) {
+			if (DIGITS === 2) {
 				displayNum = `0${lineNum}: `;
 			} else {
 				displayNum = `00${lineNum}: `;
@@ -64,7 +64,7 @@ function dynamicText() {
 			displayNum = `${lineNum}. `;
 		}
 
-		if (lineNum % 2 == 0) {
+		if (lineNum % 2 === 0) {
 			relMessage = evenMessage;
 		} else {
 			relMessage = oddMessage;
@@ -82,6 +82,6 @@ function writeOutputs() {
 	dynamicText();
 }
 
-submitButton.addEventListener(
-	"click", () => {writeOutputs()}
-);
+submitButton.addEventListener("click", () => {
+	writeOutputs();
+});
