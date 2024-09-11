@@ -9,5 +9,5 @@ const PAGES = [
 
 for (let index = 0; index < PAGES.length; index++) {
 	const pair = PAGES[index];
-	document.write(`<li><a href="${pair.filename}">${pair.title}</a></li>`);
+	console.log(`<li><a href="${pair.filename}">${pair.title}</a></li>`);
 }

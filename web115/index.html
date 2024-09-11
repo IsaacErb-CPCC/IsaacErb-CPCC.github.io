@@ -13,24 +13,12 @@
 
 	<link href="Styles/branded_general.css" rel="stylesheet">
 
-	<script defer="true" src="Scripts/insert-footer.js"></script>
-
 	<title>Home</title>
 
-	<script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
+	<!-- <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<script src="Scripts/insert-header.js"></script>
-			</ul>
-		</nav>
-
-		<h1 class="page-title">Isaac Erb's Indignant Emu</h1>
-		<h1 class="page-title">WEB115</h1>
-		<h1 class="page-title">Home</h1>
-	</header>
+	<div data-include="Components/header-gen.html" data-replace="@TITLE:Home"></div>
 
 	<main>
 		<h1>Welcome;</h1>
@@ -38,9 +26,9 @@
 		<p>The creator hopes you enjoy his sense of style, including the color-palette, fonts, and text-formatting. (<a href="brand.html">Some of those style-choices are explained here, after the preamble.</a>)</p>
 	</main>
 
-	<footer>	<!-- Contents are added by insert-footer.js. -->
-	</footer>
+	<div data-include="Components/footer-gen.html"></div>
 
+	<script src="Scripts/HTMLInclude/HTMLInclude.js"></script>
 </body>
 
 </html>
