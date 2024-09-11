@@ -1,21 +1,12 @@
 @charset "utf8";
 
-@font-face {
-	font-family: FiraMono;
-	src: url("../Fonts/fira-mono/FiraMono-Medium.woff2") format("woff2");
-	font-weight: normal;
-}
-
-@font-face {
-	font-family: FiraMono;
-	src: url("../Fonts/fira-mono/FiraMono-Bold.woff2") format("woff2");
-	font-weight: bold;
-}
+@import url("font-definitions.css");
+@import url("color-variables.css");
 
 .code-bg {
 	display: block;
-	background-color: #121;
-	color: #9DF;
+	background-color: var(--body-alt-bg);
+	color: var(--text-alt);
 }
 
 code {

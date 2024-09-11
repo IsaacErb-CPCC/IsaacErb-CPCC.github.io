@@ -1,32 +1,7 @@
 @charset "utf-8";
 
-@font-face {
-	font-family: FiraSans;
-	src: url('../Fonts/FiraSans/FiraSans-Regular.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: FiraSans;
-	src: url('../Fonts/FiraSans/FiraSans-Italic.woff2') format('woff2');
-	font-weight: normal;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: FiraSans;
-	src: url('../Fonts/FiraSans/FiraSans-Bold.woff2') format('woff2');
-	font-weight: bold;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: FiraSans;
-	src: url('../Fonts/FiraSans/FiraSans-BoldItalic.woff2') format('woff2');
-	font-weight: bold;
-	font-style: italic;
-}
+@import url("font-definitions.css");
+@import url("color-variables.css");
 
 /*==============================================
 	INTERNAL DOCUMENTATION
@@ -55,27 +30,20 @@
 ======================*/
 html {
 	background-color: #000;
-	color: #9FD;
+	color: var(--text-norm);
 
 	font-family: FiraSans;
-	font-size: 13pt;
+	font-size: 14pt;
 	line-height: 1.5rem;
 	font-variant-numeric: tabular-nums;
 
 }
 
 body {
-	background-color: #112;
-	/* margin-top: 0mm; */
-	/* padding-top: 10mm; */
-	/* margin-bottom: 0mm; */
-	/* padding-bottom: 10mm; */
+	background-color: var(--body-bg);
+	margin: 10mm auto;
 
 	max-width: 250mm; /*Approx. 10in, ideally.*/
-	margin-left: auto;
-	margin-right: auto;
-	/* padding-left: 10mm;
-	padding-right: 10mm; */
 	padding: 10mm;
 
 	border: #FFF 12px ridge;
@@ -102,7 +70,7 @@ footer {
 	line-height: 2rem;
 }
 
-.page-title:last-of-type {
+.page-title:nth-of-type(3) {
 	font-weight: bold;
 }
 
@@ -168,15 +136,15 @@ li li:last-child {
 }
 
 a {
-	color: #FD9; /*Base: #9FD*/
+	color: var(--text-highlight);
 }
 
 a:visited {
-	color: #FDB;
+	color: var(--text-less-highlight);
 }
 
-a:focus, a:hover {
-	color: #FFF;
+a:focus, a:hover, a:active {
+	color: var(--text-more-highlight);
 }
 
 q::before {content: "\2018";}	/*Single-quotes first, then double-quotes inside of single-quotes.*/
