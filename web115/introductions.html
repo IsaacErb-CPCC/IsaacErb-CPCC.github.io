@@ -13,30 +13,18 @@
 	<link href="Styles/branded_general.css" rel="stylesheet">
 	<link href="Styles/intro_style.css" rel="stylesheet">
 
-	<script defer="true" src="Scripts/insert-footer.js"></script>
-
 	<title>Introductions: Isaac N. Erb</title>
 
 	<script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-	<header>
-		<nav>
-			<ul>
-				<script src="Scripts/insert-header.js"></script>
-			</ul>
-		</nav>
+	<div data-include="Components/header-gen.html" data-replace="@TITLE:Introduction"></div>
 
-		<h1 class="page-title">Isaac Erb's Indignant Emu</h1>
-		<h1 class="page-title">WEB115</h1>
-		<h1 class="page-title">Introduction</h1>
-
-		<figure>
-			<img id="self-photo" src="Images/self-photo_scaled.jpg" alt="Photo of Isaac Erb">
-			<figcaption>Isaac Erb, having woken up an hour ago, and not having any pictures of himself (or much else, really) on his phone.</figcaption>
-		</figure>
-	</header>
+	<figure>
+		<img id="self-photo" src="Images/self-photo_scaled.jpg" alt="Photo of Isaac Erb">
+		<figcaption>Isaac Erb, having woken up an hour ago, and not having any pictures of himself (or much else, really) on his phone.</figcaption>
+	</figure>
 
 	<main>
 		<p>This is a page introducing me, Isaac Erb, as a participant in the 2024-Fall <q>WEB115-N801</q> course.</p>
@@ -80,9 +68,9 @@
 		</ul>
 	</main>
 
-	<footer>	<!-- Contents are added by insert-footer.js. -->
-	</footer>
+	<div data-include="Components/footer-gen.html"></div>
 
+	<script src="Scripts/HTMLInclude/HTMLInclude.js"></script>
 </body>
 
 </html>

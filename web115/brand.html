@@ -10,10 +10,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="match-device-width">
 
-	<!-- <link href="Styles/general_style.css" rel="stylesheet"> -->
 	<link href="Styles/branded_general.css" rel="stylesheet">
-
-	<script defer="true" src="Scripts/insert-footer.js"></script>
 
 	<title>Lil'RoboCo &ndash; Branding</title>
 
@@ -21,19 +18,7 @@
 </head>
 
 <body>
-	<header>
-		<nav>
-			<ul>
-				<script src="Scripts/insert-header.js"></script>
-			</ul>
-		</nav>
-
-		<h1 class="page-title">Isaac Erb's Indignant Emu</h1>
-		<h1 class="page-title">WEB115</h1>
-		<h1 class="page-title">Lilith RoboticsCorp</h1>
-		<h2 id="page-subtitle"><q>Lil'RoboCo</q></h2>
-
-	</header>
+	<div data-include="Components/header-gen.html" data-replace="@TITLE:Lil' RoboCo"></div>
 
 	<main>
 		<h1>About Us</h1>
@@ -57,8 +42,9 @@
 
 	</main>
 
-	<footer>	<!-- Contents are added by insert-footer.js. -->
-	</footer>
+	<div data-include="Components/footer-gen.html"></div>
+
+	<script src="Scripts/HTMLInclude/HTMLInclude.js"></script>
 </body>
 
 </html>

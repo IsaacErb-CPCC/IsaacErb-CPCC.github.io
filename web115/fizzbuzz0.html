@@ -15,7 +15,6 @@
 	<link href="Styles/form-styles.css" rel="stylesheet">
 	<link href="Styles/code-styles.css" rel="stylesheet">
 
-	<script defer="true" src="Scripts/insert-footer.js"></script>
 	<script defer="true" src="Scripts/fizz-buzz0.js"></script>
 
 	<title>FizzBuzz 0</title>
@@ -24,20 +23,10 @@
 </head>
 
 <body>
-	<header>
-		<nav>
-			<ul>
-				<script src="Scripts/insert-header.js"></script>
-			</ul>
-		</nav>
-
-		<h1 class="page-title">Isaac Erb's Indignant Emu</h1>
-		<h1 class="page-title">WEB115</h1>
-		<h1 class="page-title">Fizz Buzz 0</h1>
-		<h1 id="greeting">Welcome to Lil'RoboCo</h1>
-	</header>
+	<div data-include="Components/header-gen.html" data-replace="@TITLE:Fizz Buzz 0"></div>
 
 	<main>
+		<h1 id="greeting">Welcome to Lil'RoboCo</h1>
 		<form>
 			<fieldset>
 				<label for="first-name">First Name:</label>
@@ -55,6 +44,9 @@
 		<code id="output-1"></code>
 		<code id="output-2"></code>
 	</main>
-	<footer></footer>
+
+	<div data-include="Components/footer-gen.html"></div>
+
+	<script src="Scripts/HTMLInclude/HTMLInclude.js"></script>
 </body>
 </html>

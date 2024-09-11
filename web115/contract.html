@@ -12,25 +12,13 @@
 
 	<link href="Styles/branded_general.css" rel="stylesheet">
 
-	<script defer="true" src="Scripts/insert-footer.js"></script>
-
 	<title>Isaac Erb | WEB115-N801 | Course Contract</title>
 
 	<script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-	<header>
-		<nav>
-			<ul>
-				<script src="Scripts/insert-header.js"></script>
-			</ul>
-		</nav>
-
-		<h1 class="page-title">Isaac Erb's Indignant Emu</h1>
-		<h1 class="page-title">WEB115</h1>
-		<h1 class="page-title">Course-Contract</h1>
-	</header>
+	<div data-include="Components/header-gen.html" data-replace="@TITLE:Course-Contract"></div>
 
 	<main>
 		<h1>Course Contract</h1>
@@ -43,8 +31,9 @@
 		<p>Signed: <i>Isaac N. Erb, 13 August 2024</i>.</p>
 	</main>
 
-	<footer>	<!-- Contents are added by insert-footer.js. -->
-	</footer>
+	<div data-include="Components/footer-gen.html"></div>
+
+	<script src="Scripts/HTMLInclude/HTMLInclude.js"></script>
 </body>
 
 </html>

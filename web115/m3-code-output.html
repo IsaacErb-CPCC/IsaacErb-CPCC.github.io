@@ -21,17 +21,7 @@
 </head>
 
 <body>
-	<header>
-		<nav>
-			<ul>
-				<script src="Scripts/insert-header.js"></script>
-			</ul>
-		</nav>
-
-		<h1 class="page-title">Isaac Erb's Indignant Emu</h1>
-		<h1 class="page-title">WEB115</h1>
-		<h1 class="page-title">Codeplay-Output</h1>
-	</header>
+	<div data-include="Components/header-gen.html" data-replace="@TITLE:Code-Output"></div>
 
 	<main>
 		<h1>This Page</h1>
@@ -42,8 +32,9 @@
 		<script src="Scripts/m3_code.js"></script>
 	</main>
 
-	<footer>	<!-- Contents are added by insert-footer.js. -->
-	</footer>
+	<div data-include="Components/footer-gen.html"></div>
+
+	<script src="Scripts/HTMLInclude/HTMLInclude.js"></script>
 </body>
 
 </html>
