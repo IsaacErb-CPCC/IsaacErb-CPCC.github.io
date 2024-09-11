@@ -3,7 +3,7 @@
 @import url("font-definitions.css");
 @import url("color-variables.css");
 
-input {
+input, button {
 	display: block;
 	color: var(--text-highlight);
 	background-color: #000;
@@ -14,7 +14,7 @@ input {
 	font-size: 1rem;
 }
 
-[type="submit"], [type="button"] {
+ button, [type="submit"], [type="button"] {
 	color: var(--text-more-highlight);
 	margin: auto;
 	padding: 2mm 3mm;

@@ -11,12 +11,6 @@ function collectName() {
 	let mid = document.getElementById("middle-init").value;
 	let last = document.getElementById("last-name").value;
 
-	for (const part in [first, mid, last]) {
-		if (part === null) {
-			return;
-		}
-	}
-
 	if (mid.slice(-1) !== ".") {
 		mid += ".";
 	}
