@@ -119,7 +119,7 @@ nav ul {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin: auto none;
+	padding: auto 0mm;
 }
 
 nav ul li {
