@@ -50,6 +50,7 @@ body {
 }
 
 footer {
+	display: block;
 	position: relative;
 	bottom: 0mm;
 	margin-top: 25mm;
