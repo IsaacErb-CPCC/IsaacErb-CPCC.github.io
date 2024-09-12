@@ -127,6 +127,7 @@ nav ul li {
 	font-weight: bold;
 	list-style-type: none;
 	padding-left: 2mm; padding-right: 2mm;
+	margin: auto none;
 }
 
 #foot-links ul li {
