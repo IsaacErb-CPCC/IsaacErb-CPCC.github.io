@@ -119,6 +119,7 @@ nav ul {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
+	margin: auto none;
 }
 
 nav ul li {
@@ -127,7 +128,6 @@ nav ul li {
 	font-weight: bold;
 	list-style-type: none;
 	padding-left: 2mm; padding-right: 2mm;
-	margin: auto none;
 }
 
 #foot-links ul li {
