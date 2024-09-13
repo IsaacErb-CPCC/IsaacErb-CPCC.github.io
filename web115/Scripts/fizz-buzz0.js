@@ -71,7 +71,7 @@ function dynamicText() {
 }
 
 function writeOutputs() {
-	nameDest.innerHTML = `Welcome to Lil'RoboCo, ${collectName()}.`;
+	nameDest.innerHTML = `${exclamInv}Welcome to Lil'RoboCo, ${collectName()}!`;
 	numberedText();
 	dynamicText();
 }
