@@ -41,7 +41,7 @@ function modularFizzBuzz(smallFactor, largeFactor) {
 		let message;
 
 		if (isSmallMult && isLargeMult) {
-			message = `${THREE_TEXT}${FIVE_TEXT}!`;
+			message = `${SMALL_TEXT}${LARGE_TEXT}!`;
 		} else if (isSmallMult) {
 			message = SMALL_TEXT+"?";
 		} else if (isLargeMult) {
