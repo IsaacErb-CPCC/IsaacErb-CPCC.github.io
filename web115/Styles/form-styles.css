@@ -40,5 +40,5 @@ fieldset:first-of-type {
 .code-out-area code {
 	display: block;
 	box-sizing: border-box;
-	max-width: 50%;
+	width: 50%;
 }
