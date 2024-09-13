@@ -33,8 +33,12 @@ fieldset:first-of-type {
 }
 
 .code-out-area {
+	display: flex;
+	width: 100%;
+}
+
+.code-out-area code {
 	display: block;
-	width: 50%;
 	box-sizing: border-box;
-	float: left;
+	max-width: 50%;
 }
