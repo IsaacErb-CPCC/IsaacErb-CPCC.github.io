@@ -143,11 +143,10 @@ nav ul li {
 	font-family: LogoFont;
 	font-size: 50pt;
 	width: 225pt;
-	border: 3px solid #FFF;
 	margin-left: auto; margin-right: auto;
 
-	background-color: #000;
-	color: var(--text-norm);
+	background-color: #ECF;
+	color: #052;
 }
 
 #logo p {
