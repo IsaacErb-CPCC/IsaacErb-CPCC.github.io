@@ -139,8 +139,12 @@ nav ul li {
 #logo {
 	display: block;
 	text-align: center;
+
 	font-family: LogoFont;
-	font-size: 39pt;
+	font-size: 48pt;
+
+	background-color: #A9E;
+	color: #061;
 }
 
 li {
