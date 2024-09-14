@@ -144,10 +144,14 @@ nav ul li {
 	font-size: 50pt;
 	width: 225pt;
 	border: 3px solid #FFF;
-	padding: 4mm;
+	margin-left: auto; margin-right: auto;
 
 	background-color: #000;
 	color: var(--text-norm);
+}
+
+#logo p {
+	line-height: 0.5rem;
 }
 
 li {
