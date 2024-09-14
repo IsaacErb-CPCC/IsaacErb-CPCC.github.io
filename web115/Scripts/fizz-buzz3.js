@@ -57,7 +57,7 @@ function complexFizzBuzz(smallFactor, largeFactor, chaosFactor) {
 				message += LARGE_TEXT+" ";
 			}
 
-			message = message.slice(0, -2);
+			message = message.slice(0, -1);
 			message = `${EXCALM_INV}${message}!`;
 		}
 
