@@ -136,6 +136,13 @@ nav ul li {
 	font-weight: normal;
 }
 
+#logo {
+	display: block;
+	text-align: center;
+	font-family: LogoFont;
+	font-size: 39pt;
+}
+
 li {
 	padding-bottom: 4mm;
 }

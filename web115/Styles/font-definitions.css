@@ -37,3 +37,8 @@
 	src: url("../Fonts/fira-mono/FiraMono-Bold.woff2") format("woff2");
 	font-weight: bold;
 }
+
+@font-face {
+	font-family: LogoFont;
+	src: url("../Fonts/LRC-Logo.woff2") format("woff2");
+}
