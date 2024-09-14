@@ -4,7 +4,7 @@ var nameDest = document.getElementById("greeting");
 var simpleOutDest = document.getElementById("output-1");
 var complexOutDest = document.getElementById("output-2");
 var submitButton = document.getElementById("submission");
-var exclamInv = "&#161;";
+const EXCALM_INV = "&#161;";
 
 function collectName() {
 	let first = document.getElementById("first-name").value;
