@@ -142,6 +142,9 @@ nav ul li {
 
 	font-family: LogoFont;
 	font-size: 48pt;
+	line-height: auto;
+	width: auto;
+	border: 1px solid #FFF;
 
 	background-color: #A9E;
 	color: #061;
