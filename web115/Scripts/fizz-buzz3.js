@@ -44,7 +44,7 @@ function complexFizzBuzz(smallFactor, largeFactor, chaosFactor) {
 		let isChaosMult = isMultiple(lineNum, chaosFactor);
 		let message = "";
 
-		if (! isSmallMult && ! isChaosMult && !isLargeMult) {
+		if (!isSmallMult && !isChaosMult && !isLargeMult) {
 			message = NORM_TEXT+".";
 		} else {
 			if (isSmallMult) {
