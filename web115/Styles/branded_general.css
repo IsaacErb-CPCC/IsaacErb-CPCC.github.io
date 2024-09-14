@@ -141,12 +141,13 @@ nav ul li {
 	text-align: center;
 
 	font-family: LogoFont;
-	font-size: 48pt;
-	width: auto;
+	font-size: 50pt;
+	width: 225pt;
 	border: 3px solid #FFF;
+	padding: 4mm;
 
-	background-color: #98F;
-	color: #061;
+	background-color: #000;
+	color: var(--text-norm);
 }
 
 li {
