@@ -143,9 +143,9 @@ nav ul li {
 	font-family: LogoFont;
 	font-size: 50pt;
 	width: 250pt;
-	margin: -10mm auto;
+	margin: -5mm auto;
 
-	color: var(--text-highlight);
+	color: var(--logo-text);
 }
 
 li {

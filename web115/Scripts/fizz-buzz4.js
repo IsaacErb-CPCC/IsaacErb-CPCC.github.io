@@ -1,16 +1,27 @@
 "use strict";
 
+//> Defining global variables.
 var submitButton = document.getElementById("submission");
-// const SMALL_INPUT_LOC = document.getElementById("small-factor");
-// const LARGE_INPUT_LOC = document.getElementById("large-factor");
-const SMALL_FACTOR = 3;
-const LARGE_FACTOR = 5;
-const CHAOS_FACTOR = 7;
+
+const FACTOR_1_INPUT = document.getElementById("first-factor");
+const FACTOR_2_INPUT = document.getElementById("second-factor");
+const FACTOR_3_INPUT = document.getElementById("third-factor");
 const OUTPUT_1_LOC = document.getElementById("output-1");
+
+var first_factor = 6;
+var second_factor = 8;
+var third_factor = 9;
+var norm_word = ;
+var first_word = ;
+var second_word = ;
+var fourth_word = ;
+
 const EXCALM_INV = "&#161;";
 
+
+//> Defining functions.
 function isMultiple(numToCheck, factor) {
-	let answer = (numToCheck % factor === 0) ? true : false;
+	let answer = (numToCheck % factor === 0);
 	return answer;
 }
 
@@ -71,6 +82,8 @@ function writeOutputs() {
 	complexFizzBuzz(SMALL_FACTOR, LARGE_FACTOR, CHAOS_FACTOR);
 }
 
+
+//>	Setting up events.
 submitButton.addEventListener("click", () => {
 	writeOutputs();
 });
