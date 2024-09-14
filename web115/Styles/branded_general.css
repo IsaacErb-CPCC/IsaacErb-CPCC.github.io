@@ -145,12 +145,7 @@ nav ul li {
 	width: 250pt;
 	margin: -10mm auto;
 
-	background-color: #ECF;
-	color: #052;
-}
-
-#logo p {
-	line-height: 2.5rem;
+	color: var(--text-highlight);
 }
 
 li {
