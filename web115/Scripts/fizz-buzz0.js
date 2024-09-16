@@ -19,7 +19,7 @@ function collectName() {
 }
 
 function numberedText() {
-	let message = `${exclamInv}Robopets! ${exclamInv}Robospouses!`;
+	let message = `${EXCALM_INV}Robopets! ${EXCALM_INV}Robospouses!`;
 	for (let lineNum = 0; lineNum < 125; lineNum++) {
 		const DIGITS = lineNum.toString().length;
 		let displayNum;
@@ -71,7 +71,7 @@ function dynamicText() {
 }
 
 function writeOutputs() {
-	nameDest.innerHTML = `${exclamInv}Welcome to Lil'RoboCo, ${collectName()}!`;
+	nameDest.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${collectName()}!`;
 	numberedText();
 	dynamicText();
 }
