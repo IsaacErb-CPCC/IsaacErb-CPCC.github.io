@@ -15,7 +15,7 @@ const OUTPUT_1_LOC = document.getElementById("output-1");
 var firstFactor = 4;
 var secondFactor = 6;
 var thirdFactor = 9;
-var normWord = "Dutiful";
+var normWord = "Normal";
 var firstWord = "Caring";
 var secondWord = "Odd";
 var thirdWord = "Cute";
@@ -61,6 +61,7 @@ function setDefaults() {
 }
 
 function configuredFizzBuzz() {
+	OUTPUT_1_LOC.innerHTML = "";	//Clearing text of output-element, so repeated presses don't just keep appending.
 	for (let lineNum = 0; lineNum < 140; lineNum++) {
 		let isFirstMult = isMultiple(lineNum, firstFactor);
 		let isSecondMult = isMultiple(lineNum, secondFactor);
@@ -68,7 +69,7 @@ function configuredFizzBuzz() {
 		let message = "Robotstatus: ";
 
 		if (!isFirstMult && !isThirdMult && !isSecondMult) {
-			message = normWord+".";
+			message += normWord+".";
 		} else {
 			if (isFirstMult) {
 				message += firstWord+", ";
@@ -104,7 +105,7 @@ function getInputs() {
 		try {
 			numerics[ind] = parseInt(numerics[ind]);
 		}
-		catch {
+		catch (e) {
 			OUTPUT_1_LOC.innerHTML = "ERROR: You must fill the <q>First Word</q>, <q>Second Word</q>, <q>Third Word</q>, and <q>Line Count</q> fields with whole numbers.";
 			return;
 		}
