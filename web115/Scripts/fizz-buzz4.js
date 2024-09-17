@@ -58,30 +58,34 @@ function setDefaults() {
 	WORD_2_INPUT.value = secondWord;
 	WORD_3_INPUT.value = thirdWord;
 	LINELIMIT_INPUT.value = lineLimit;
+
+	return;
 }
 
 function configuredFizzBuzz() {
 	OUTPUT_1_LOC.innerHTML = "";	//Clearing text of output-element, so repeated presses don't just keep appending.
-	for (let lineNum = 0; lineNum < 140; lineNum++) {
+
+	//> FizzBuzz Loop:
+	for (let lineNum = 0; lineNum < lineLimit; lineNum++) {	//(lineLimit) here is a global variable.
 		let isFirstMult = isMultiple(lineNum, firstFactor);
 		let isSecondMult = isMultiple(lineNum, secondFactor);
 		let isThirdMult = isMultiple(lineNum, thirdFactor);
 		let message = "Robotstatus: ";
 
-		if (!isFirstMult && !isThirdMult && !isSecondMult) {
+		if (!isFirstMult && !isSecondMult && !isThirdMult) {
 			message += normWord+".";
 		} else {
 			if (isFirstMult) {
 				message += firstWord+", ";
 			}
-			if (isThirdMult) {
+			if (isSecondMult) {
 				message += secondWord+", ";
 			}
-			if (isSecondMult) {
+			if (isThirdMult) {
 				message += thirdWord+", ";
 			}
 
-			message = message.slice(0, -2);
+			message = message.slice(0, -2);	//Removing the ", " from the end.
 			message = `${message}.`;
 		}
 
@@ -89,6 +93,8 @@ function configuredFizzBuzz() {
 
 		OUTPUT_1_LOC.innerHTML += outLine;
 	}
+
+	return;
 }
 
 function getInputs() {
@@ -99,22 +105,15 @@ function getInputs() {
 	secondWord = WORD_2_INPUT.value;
 	thirdWord = WORD_3_INPUT.value;
 	lineLimit = LINELIMIT_INPUT.value;
-	let numerics = [firstWord, secondWord, thirdWord, lineLimit];
 
-	for (let ind = 0; ind < numerics.length; ind++) {
-		try {
-			numerics[ind] = parseInt(numerics[ind]);
-		}
-		catch (e) {
-			OUTPUT_1_LOC.innerHTML = "ERROR: You must fill the <q>First Word</q>, <q>Second Word</q>, <q>Third Word</q>, and <q>Line Count</q> fields with whole numbers.";
-			return;
-		}
-	}
+	return;
 }
 
 function doIO() {
 	getInputs();
 	configuredFizzBuzz();
+
+	return;
 }
 
 
