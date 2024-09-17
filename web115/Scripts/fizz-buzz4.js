@@ -3,18 +3,23 @@
 //> Defining global variables.
 var submitButton = document.getElementById("submission");
 
-const FACTOR_1_INPUT = document.getElementById("first-factor");
-const FACTOR_2_INPUT = document.getElementById("second-factor");
-const FACTOR_3_INPUT = document.getElementById("third-factor");
+const FACTOR_1_INPUT = document.getElementById("factor-1");
+const FACTOR_2_INPUT = document.getElementById("factor-2");
+const FACTOR_3_INPUT = document.getElementById("factor-3");
+const WORD_1_INPUT = document.getElementById("word-1");
+const WORD_2_INPUT = document.getElementById("word-2");
+const WORD_3_INPUT = document.getElementById("word-3");
+const LINELIMIT_INPUT = document.getElementById("line-limit");
 const OUTPUT_1_LOC = document.getElementById("output-1");
 
-var first_factor = 6;
-var second_factor = 8;
-var third_factor = 9;
-var norm_word = ;
-var first_word = ;
-var second_word = ;
-var fourth_word = ;
+var firstFactor = 4;
+var secondFactor = 6;
+var thirdFactor = 9;
+var normWord = "Dutiful";
+var firstWord = "Caring";
+var secondWord = "Odd";
+var thirdWord = "Cute";
+var lineLimit = 125;
 
 const EXCALM_INV = "&#161;";
 
@@ -44,32 +49,39 @@ function tabulateLinenum(lineNum) {
 	return displayNum;
 }
 
-function complexFizzBuzz(smallFactor, largeFactor, chaosFactor) {
-	const NORM_TEXT = "None for now";
-	const SMALL_TEXT = "Pet";
-	const LARGE_TEXT = "Robot";
-	const CHAOS_TEXT = "Cute";
+
+function setDefaults() {
+	FACTOR_1_INPUT.value = firstFactor;
+	FACTOR_2_INPUT.value = secondFactor;
+	FACTOR_3_INPUT.value = thirdFactor;
+	WORD_1_INPUT.value = firstWord;
+	WORD_2_INPUT.value = secondWord;
+	WORD_3_INPUT.value = thirdWord;
+	LINELIMIT_INPUT.value = lineLimit;
+}
+
+function configuredFizzBuzz() {
 	for (let lineNum = 0; lineNum < 140; lineNum++) {
-		let isSmallMult = isMultiple(lineNum, smallFactor);
-		let isLargeMult = isMultiple(lineNum, largeFactor);
-		let isChaosMult = isMultiple(lineNum, chaosFactor);
-		let message = "";
+		let isFirstMult = isMultiple(lineNum, firstFactor);
+		let isSecondMult = isMultiple(lineNum, secondFactor);
+		let isThirdMult = isMultiple(lineNum, thirdFactor);
+		let message = "Robotstatus: ";
 
-		if (!isSmallMult && !isChaosMult && !isLargeMult) {
-			message = NORM_TEXT+".";
+		if (!isFirstMult && !isThirdMult && !isSecondMult) {
+			message = normWord+".";
 		} else {
-			if (isSmallMult) {
-				message += SMALL_TEXT+" ";
+			if (isFirstMult) {
+				message += firstWord+", ";
 			}
-			if (isChaosMult) {
-				message += CHAOS_TEXT+" ";
+			if (isThirdMult) {
+				message += secondWord+", ";
 			}
-			if (isLargeMult) {
-				message += LARGE_TEXT+" ";
+			if (isSecondMult) {
+				message += thirdWord+", ";
 			}
 
-			message = message.slice(0, -1);
-			message = `${EXCALM_INV}${message}!`;
+			message = message.slice(0, -2);
+			message = `${message}.`;
 		}
 
 		let outLine = `${tabulateLinenum(lineNum)}${message}<br>`;
@@ -78,12 +90,37 @@ function complexFizzBuzz(smallFactor, largeFactor, chaosFactor) {
 	}
 }
 
-function writeOutputs() {
-	complexFizzBuzz(SMALL_FACTOR, LARGE_FACTOR, CHAOS_FACTOR);
+function getInputs() {
+	firstFactor = FACTOR_1_INPUT.value;
+	secondFactor = FACTOR_2_INPUT.value;
+	thirdFactor = FACTOR_3_INPUT.value;
+	firstWord = WORD_1_INPUT.value;
+	secondWord = WORD_2_INPUT.value;
+	thirdWord = WORD_3_INPUT.value;
+	lineLimit = LINELIMIT_INPUT.value;
+	let numerics = [firstWord, secondWord, thirdWord, lineLimit];
+
+	for (let ind = 0; ind < numerics.length; ind++) {
+		try {
+			numerics[ind] = parseInt(numerics[ind]);
+		}
+		catch {
+			OUTPUT_1_LOC.innerHTML = "ERROR: You must fill the <q>First Word</q>, <q>Second Word</q>, <q>Third Word</q>, and <q>Line Count</q> fields with whole numbers.";
+			return;
+		}
+	}
+}
+
+function doIO() {
+	getInputs();
+	configuredFizzBuzz();
 }
 
 
+//> Setting up default values.
+setDefaults();
+
 //>	Setting up events.
 submitButton.addEventListener("click", () => {
-	writeOutputs();
+	doIO();
 });
