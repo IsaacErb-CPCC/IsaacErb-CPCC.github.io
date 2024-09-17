@@ -3,6 +3,9 @@
 //> Defining global variables.
 var submitButton = document.getElementById("submission");
 
+const NAME_FIRST_INPUT = document.getElementById("first-name");
+const NAME_MIDDLE_INPUT = document.getElementById("middle-init");
+const NAME_LAST_INPUT = document.getElementById("last-name");
 const FACTOR_1_INPUT = document.getElementById("factor-1");
 const FACTOR_2_INPUT = document.getElementById("factor-2");
 const FACTOR_3_INPUT = document.getElementById("factor-3");
@@ -97,6 +100,10 @@ function configuredFizzBuzz() {
 	return;
 }
 
+//-	getInputs() sets most of the global variables to their
+//	current values from the webpage, and returns the
+//	concatenated pieces of the user's input name after a bit of
+//	processing.
 function getInputs() {
 	firstFactor = FACTOR_1_INPUT.value;
 	secondFactor = FACTOR_2_INPUT.value;
@@ -106,11 +113,20 @@ function getInputs() {
 	thirdWord = WORD_3_INPUT.value;
 	lineLimit = LINELIMIT_INPUT.value;
 
-	return;
+	let first = NAME_FIRST_INPUT.value;
+	let mid = NAME_MIDDLE_INPUT.value;
+	let last = NAME_LAST_INPUT.value;
+
+	if (mid.slice(-1) !== ".") {
+		mid += ".";
+	}
+	let full = `${first} ${mid} ${last}`;
+	return full;
 }
 
 function doIO() {
-	getInputs();
+	let name = getInputs();
+	nameDest.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${collectName()}!`;
 	configuredFizzBuzz();
 
 	return;
