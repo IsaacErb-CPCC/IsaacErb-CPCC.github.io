@@ -19,6 +19,9 @@ function collectName() {
 }
 
 function numberedText() {
+	OUTPUT_1_LOC.innerHTML = "";	//Clearing text of output-element, so repeated presses don't just keep appending.
+
+	//> FizzBuzz Loop:
 	let message = `${EXCALM_INV}Robopets! ${EXCALM_INV}Robospouses!`;
 	for (let lineNum = 0; lineNum < 125; lineNum++) {
 		const DIGITS = lineNum.toString().length;
@@ -71,11 +74,12 @@ function dynamicText() {
 }
 
 function writeOutputs() {
-	nameDest.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${collectName()}!`;
+	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${collectName()}!`;
 	numberedText();
 	dynamicText();
 }
 
+//> Setting up events.
 submitButton.addEventListener("click", () => {
 	writeOutputs();
 });

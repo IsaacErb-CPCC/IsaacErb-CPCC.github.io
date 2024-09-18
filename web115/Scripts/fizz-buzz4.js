@@ -13,6 +13,7 @@ const WORD_1_INPUT = document.getElementById("word-1");
 const WORD_2_INPUT = document.getElementById("word-2");
 const WORD_3_INPUT = document.getElementById("word-3");
 const LINELIMIT_INPUT = document.getElementById("line-limit");
+const NAME_LOC = document.getElementById("greeting");
 const OUTPUT_1_LOC = document.getElementById("output-1");
 
 var firstFactor = 4;
@@ -126,7 +127,7 @@ function getInputs() {
 
 function doIO() {
 	let name = getInputs();
-	nameDest.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${collectName()}!`;
+	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${collectName()}!`;
 	configuredFizzBuzz();
 
 	return;
