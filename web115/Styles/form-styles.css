@@ -26,10 +26,20 @@ input, button {
 fieldset {
   border: 1px solid #fff;
   border-bottom: none;
+
 }
 
 fieldset:last-of-type {
-  border-bottom: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+fieldset:not(:last-of-type) {
+	margin-bottom: -4mm;	/*- Making it so legends don't*/
+	padding-bottom: 3mm;	/*	interrupt the border-lines.*/
+}
+
+fieldset:not(:last-of-type) :last-child {
+	margin-bottom: 5mm;	/*Creating adeguate spacing between last element in a fieldset and the legend of the next.*/
 }
 
 .compact {
@@ -41,15 +51,32 @@ fieldset:last-of-type {
 .compact div {
 	box-sizing: border-box;
 	width: 50%;
+	padding: 1.5mm;
+	border: 1px dotted #FFF;
+	margin: -1px;
+}
+
+fieldset p {
+	margin-top: 0mm;
 }
 
 .code-out-area {
 	display: flex;
 	width: 100%;
+	padding-top: 4mm;
 }
 
 .code-out-area code {
 	display: block;
 	box-sizing: border-box;
 	width: 50%;
+}
+
+legend {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+label {
+	font-weight: bold;
 }

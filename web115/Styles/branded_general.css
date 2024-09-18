@@ -9,7 +9,9 @@
 	-	Author: Isaac Nelson Erb.
 	-	Date Created: 2024-Aug-22.
 
-	-	Description: @@
+	-	Description: This is the main file for
+		styling the pages of "isaacerb-cpcc.github
+		.io/web115".
 
 	-	Notes:
 		-	Nonrelative sizes are generally done in
@@ -20,16 +22,16 @@
 			system.
 
 	-	Licenses:
-		-	Fira Sans is used here within the
-			permissions of the SIL Open Font License
-			version 1.1.
+		-	Fira Sans and Fira Mono are used here
+			within the permissions of the SIL Open
+			Font License version 1.1.
 ==============================================*/
 
 /*======================
 	PAGE-SECTIONS:
 ======================*/
 html {
-	background-color: #000;
+	background-color: var(--html-bg);
 	color: var(--text-norm);
 
 	font-family: FiraSans;
