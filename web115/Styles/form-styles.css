@@ -32,6 +32,17 @@ fieldset:first-of-type {
   border-top: 1px solid #fff;
 }
 
+.compact {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.compact div {
+	box-sizing: border-box;
+	width: 50%;
+}
+
 .code-out-area {
 	display: flex;
 	width: 100%;
