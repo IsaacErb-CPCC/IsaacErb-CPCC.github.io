@@ -1,44 +1,44 @@
 @font-face {
 	font-family: FiraSans;
-	src: url('../Fonts/FiraSans/FiraSans-Regular.woff2') format('woff2');
+	src: url('../fonts/FiraSans/FiraSans-Regular.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: FiraSans;
-	src: url('../Fonts/FiraSans/FiraSans-Italic.woff2') format('woff2');
+	src: url('../fonts/FiraSans/FiraSans-Italic.woff2') format('woff2');
 	font-weight: normal;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: FiraSans;
-	src: url('../Fonts/FiraSans/FiraSans-Bold.woff2') format('woff2');
+	src: url('../fonts/FiraSans/FiraSans-Bold.woff2') format('woff2');
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: FiraSans;
-	src: url('../Fonts/FiraSans/FiraSans-BoldItalic.woff2') format('woff2');
+	src: url('../fonts/FiraSans/FiraSans-BoldItalic.woff2') format('woff2');
 	font-weight: bold;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: FiraMono;
-	src: url("../Fonts/fira-mono/FiraMono-Medium.woff2") format("woff2");
+	src: url("../fonts/fira-mono/FiraMono-Medium.woff2") format("woff2");
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: FiraMono;
-	src: url("../Fonts/fira-mono/FiraMono-Bold.woff2") format("woff2");
+	src: url("../fonts/fira-mono/FiraMono-Bold.woff2") format("woff2");
 	font-weight: bold;
 }
 
 @font-face {
 	font-family: LogoFont;
-	src: url("../Fonts/LRC-Logo.woff2") format("woff2");
+	src: url("../fonts/LRC-Logo.woff2") format("woff2");
 }
