@@ -1,16 +1,18 @@
 "use strict";
 
-var submitButton = document.getElementById("submission");
-// const SMALL_INPUT_LOC = document.getElementById("small-factor");
-// const LARGE_INPUT_LOC = document.getElementById("large-factor");
+//>	Defining global variables.
+const SUBMIT_BUTTON = document.getElementById("submission");
+const OUTPUT_1_LOC = document.getElementById("output-1");
+
+const EXCALM_INV = "&#161;";
 const SMALL_FACTOR = 3;
 const LARGE_FACTOR = 5;
-const CHAOS_FACTOR = 7;
-const OUTPUT_1_LOC = document.getElementById("output-1");
-const EXCALM_INV = "&#161;";
+const OTHER_FACTOR = 7;
 
+
+//>	Defining functions.
 function isMultiple(numToCheck, factor) {
-	let answer = (numToCheck % factor === 0) ? true : false;
+	let answer = (numToCheck % factor === 0);
 	return answer;
 }
 
@@ -33,31 +35,35 @@ function tabulateLinenum(lineNum) {
 	return displayNum;
 }
 
-function complexFizzBuzz(smallFactor, largeFactor, chaosFactor) {
+function complexFizzBuzz(smallFactor, largeFactor, otherFactor) {
+	OUTPUT_1_LOC.innerHTML = "";	//Clearing text of output-element, so repeated presses don't just keep appending.
+
 	const NORM_TEXT = "None for now";
 	const SMALL_TEXT = "Pet";
 	const LARGE_TEXT = "Robot";
-	const CHAOS_TEXT = "Cute";
+	const OTHER_TEXT = "Cute";
+
+	//>	FizzBuzz Loop:
 	for (let lineNum = 0; lineNum < 140; lineNum++) {
 		let isSmallMult = isMultiple(lineNum, smallFactor);
 		let isLargeMult = isMultiple(lineNum, largeFactor);
-		let isChaosMult = isMultiple(lineNum, chaosFactor);
+		let isOtherMult = isMultiple(lineNum, otherFactor);
 		let message = "";
 
-		if (!isSmallMult && !isChaosMult && !isLargeMult) {
+		if (!isSmallMult && !isOtherMult && !isLargeMult) {
 			message = NORM_TEXT+".";
 		} else {
 			if (isSmallMult) {
 				message += SMALL_TEXT+" ";
 			}
-			if (isChaosMult) {
-				message += CHAOS_TEXT+" ";
+			if (isOtherMult) {
+				message += OTHER_TEXT+" ";
 			}
 			if (isLargeMult) {
 				message += LARGE_TEXT+" ";
 			}
 
-			message = message.slice(0, -1);
+			message = message.slice(0, -1);	//Removing space at end.
 			message = `${EXCALM_INV}${message}!`;
 		}
 
@@ -68,9 +74,11 @@ function complexFizzBuzz(smallFactor, largeFactor, chaosFactor) {
 }
 
 function writeOutputs() {
-	complexFizzBuzz(SMALL_FACTOR, LARGE_FACTOR, CHAOS_FACTOR);
+	complexFizzBuzz(SMALL_FACTOR, LARGE_FACTOR, OTHER_FACTOR);
 }
 
-submitButton.addEventListener("click", () => {
+
+//>	Setting up events.
+SUBMIT_BUTTON.addEventListener("click", () => {
 	writeOutputs();
 });

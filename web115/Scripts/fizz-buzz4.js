@@ -1,7 +1,7 @@
 "use strict";
 
 //> Defining global variables.
-var submitButton = document.getElementById("submission");
+var SUBMIT_BUTTON = document.getElementById("submission");
 
 const NAME_FIRST_INPUT = document.getElementById("first-name");
 const NAME_MIDDLE_INPUT = document.getElementById("middle-init");
@@ -138,6 +138,6 @@ function doIO() {
 setDefaults();
 
 //>	Setting up events.
-submitButton.addEventListener("click", () => {
+SUBMIT_BUTTON.addEventListener("click", () => {
 	doIO();
 });

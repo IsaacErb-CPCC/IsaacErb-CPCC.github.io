@@ -1,11 +1,14 @@
 "use strict";
 
-var nameDest = document.getElementById("greeting");
-var simpleOutDest = document.getElementById("output-1");
-var complexOutDest = document.getElementById("output-2");
-var submitButton = document.getElementById("submission");
+//>	Defining global constants.
+const NAME_LOC = document.getElementById("greeting");
+const OUTPUT_1_LOC = document.getElementById("output-1");
+const OUTPUT_2_LOC = document.getElementById("output-2");
+const SUBMIT_BUTTON = document.getElementById("submission");
 const EXCALM_INV = "&#161;";
 
+
+//>	Defining functions.
 function collectName() {
 	let first = document.getElementById("first-name").value;
 	let mid = document.getElementById("middle-init").value;
@@ -18,48 +21,45 @@ function collectName() {
 	return full;
 }
 
+function tabulateLinenum(lineNum) {
+	const DIGITS = lineNum.toString().length;
+	let displayNum;
+
+	switch (DIGITS) {
+		case 3:
+			displayNum = `${lineNum}. `;
+			break;
+		case 2:
+			displayNum = `0${lineNum}. `;
+			break;
+		case 1:
+			displayNum = `00${lineNum}. `;
+			break;
+	}
+
+	return displayNum;
+}
+
 function numberedText() {
 	OUTPUT_1_LOC.innerHTML = "";	//Clearing text of output-element, so repeated presses don't just keep appending.
 
 	//> FizzBuzz Loop:
 	let message = `${EXCALM_INV}Robopets! ${EXCALM_INV}Robospouses!`;
 	for (let lineNum = 0; lineNum < 125; lineNum++) {
-		const DIGITS = lineNum.toString().length;
-		let displayNum;
+		let outLine = `${tabulateLinenum(lineNum)}${message}<br>`;
 
-		if (DIGITS !== 3) {
-			if (DIGITS === 2) {
-				displayNum = `0${lineNum}. `;
-			} else {
-				displayNum = `00${lineNum}. `;
-			}
-		} else {
-			displayNum = `${lineNum}. `;
-		}
-
-		let outLine = `${displayNum}${message}<br>`;
-
-		simpleOutDest.innerHTML += outLine;
+		OUTPUT_1_LOC.innerHTML += outLine;
 	}
 }
 
 function dynamicText() {
+	OUTPUT_2_LOC.innerHTML = "";	//Clearing text of output-element, so repeated presses don't just keep appending.
+
+	//> FizzBuzz Loop:
 	let oddMessage = "'Tis odd.";
 	let evenMessage = "'Tis even.";
 	for (let lineNum = 0; lineNum < 125; lineNum++) {
-		const DIGITS = lineNum.toString().length;
-		let displayNum;
 		let relMessage;
-
-		if (DIGITS !== 3) {
-			if (DIGITS === 2) {
-				displayNum = `0${lineNum}: `;
-			} else {
-				displayNum = `00${lineNum}: `;
-			}
-		} else {
-			displayNum = `${lineNum}. `;
-		}
 
 		if (lineNum % 2 === 0) {
 			relMessage = evenMessage;
@@ -67,9 +67,9 @@ function dynamicText() {
 			relMessage = oddMessage;
 		}
 
-		let outLine = `${displayNum}${relMessage}<br>`;
+		let outLine = `${tabulateLinenum(lineNum)}${relMessage}<br>`;
 
-		complexOutDest.innerHTML += outLine;
+		OUTPUT_2_LOC.innerHTML += outLine;
 	}
 }
 
@@ -80,6 +80,6 @@ function writeOutputs() {
 }
 
 //> Setting up events.
-submitButton.addEventListener("click", () => {
+SUBMIT_BUTTON.addEventListener("click", () => {
 	writeOutputs();
 });

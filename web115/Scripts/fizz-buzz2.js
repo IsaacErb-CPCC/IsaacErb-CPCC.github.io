@@ -1,12 +1,13 @@
 "use strict";
 
-var submitButton = document.getElementById("submission");
-// const SMALL_INPUT_LOC = document.getElementById("small-factor");
-// const LARGE_INPUT_LOC = document.getElementById("large-factor");
+//>	Defining global variables.
+const SUBMIT_BUTTON = document.getElementById("submission");
 const SMALL_FACTOR = 6;
 const LARGE_FACTOR = 8;
 const OUTPUT_1_LOC = document.getElementById("output-1");
 
+
+//> Defining functions.
 function isMultiple(numToCheck, factor) {
 	let answer = (numToCheck % factor === 0) ? true : false;
 	return answer;
@@ -31,13 +32,17 @@ function tabulateLinenum(lineNum) {
 	return displayNum;
 }
 
-function modularFizzBuzz(smallFactor, largeFactor) {
-	const NORM_TEXT = "Nonsapience";
+function modularFizzBuzz() {
+	OUTPUT_1_LOC.innerHTML = "";	//Clearing text of output-element, so repeated presses don't just keep appending.
+
+	const NORM_TEXT = "Work";
 	const SMALL_TEXT = "Robo";
 	const LARGE_TEXT = "Love";
+
+	//>	FizzBuzz Loop:
 	for (let lineNum = 0; lineNum < 140; lineNum++) {
-		let isSmallMult = isMultiple(lineNum, smallFactor);
-		let isLargeMult = isMultiple(lineNum, largeFactor);
+		let isSmallMult = isMultiple(lineNum, SMALL_FACTOR);
+		let isLargeMult = isMultiple(lineNum, LARGE_FACTOR);
 		let message;
 
 		if (isSmallMult && isLargeMult) {
@@ -57,9 +62,10 @@ function modularFizzBuzz(smallFactor, largeFactor) {
 }
 
 function writeOutputs() {
-	modularFizzBuzz(SMALL_FACTOR, LARGE_FACTOR);
+	modularFizzBuzz();
 }
 
-submitButton.addEventListener("click", () => {
+// > Setting up events.
+SUBMIT_BUTTON.addEventListener("click", () => {
 	writeOutputs();
 });
