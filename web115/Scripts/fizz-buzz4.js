@@ -74,7 +74,7 @@ function configuredFizzBuzz() {
 		let isFirstMult = isMultiple(lineNum, firstFactor);
 		let isSecondMult = isMultiple(lineNum, secondFactor);
 		let isThirdMult = isMultiple(lineNum, thirdFactor);
-		let message = "Robotstatus: ";
+		let message = "Robostatus: ";
 
 		if (!isFirstMult && !isSecondMult && !isThirdMult) {
 			message += normWord+".";
