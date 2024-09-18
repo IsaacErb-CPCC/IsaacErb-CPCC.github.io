@@ -31,7 +31,7 @@
 		<p></p>
 		<form>
 			<fieldset>
-				<h2>Your Name</h2>
+				<legend>Your Name</legend>
 				<label for="first-name">First Name:</label>
 				<input type="text" id="first-name">
 				<label for="middle-init">Middle Initial:</label>
@@ -40,15 +40,15 @@
 				<input type="text" id="last-name">
 			</fieldset>
 			<fieldset class="compact">
-				<h2>FizzBuzz Config</h2>
+				<legend>FizzBuzz Config</legend>
 				<div>
 					<p>Here, you enter the special numbers for the FizzBuzz-exercise; the correpsonding word (First, Second, or Third) will display at multiples of the appropriate number specified here.</p>
 					<label for="factor-1">First Special Number:</label>
-					<input type="number" id="factor-1">
+					<input type="number" id="factor-1" min="0" max="512">
 					<label for="factor-2">Second Special Number:</label>
-					<input type="number" id="factor-2">
+					<input type="number" id="factor-2" min="0" max="512">
 					<label for="factor-3">Third Special Number:</label>
-					<input type="number" id="factor-3">
+					<input type="number" id="factor-3" min="0" max="512">
 				</div>
 				<div>
 					<p>Here, you choose the words to be displayed at multiples of the special numbers.</p>

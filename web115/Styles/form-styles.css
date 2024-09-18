@@ -25,11 +25,11 @@ input, button {
 
 fieldset {
   border: 1px solid #fff;
-  border-top: none;
+  border-bottom: none;
 }
 
-fieldset:first-of-type {
-  border-top: 1px solid #fff;
+fieldset:last-of-type {
+  border-bottom: 1px solid #fff;
 }
 
 .compact {
