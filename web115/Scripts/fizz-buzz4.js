@@ -127,7 +127,7 @@ function getInputs() {
 
 function doIO() {
 	let name = getInputs();
-	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${collectName()}!`;
+	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${name}!`;
 	configuredFizzBuzz();
 
 	return;
