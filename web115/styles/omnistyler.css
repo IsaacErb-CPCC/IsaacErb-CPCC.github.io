@@ -80,7 +80,7 @@
 	--text-alt: #9CF;
 	--body-bg: #112;
 	--body-alt-bg: #121;
-	--logo-text: #E5F;
+	--logo-text: #C5F;
 	--html-bg: #100;
 }
 
@@ -108,11 +108,15 @@ body {
 	border: #FFF 12px ridge;
 }
 
+main {
+	margin-bottom: 15mm;
+}
+
 footer {
 	display: block;
 	position: relative;
 	bottom: 0mm;
-	margin-top: 25mm;
+	margin-top: 10mm;
 
 	font-size: 0.8rem;
 	line-height: 1.25rem;
