@@ -109,14 +109,14 @@ body {
 }
 
 main {
-	margin-bottom: 15mm;
+	margin-bottom: 12mm;
 }
 
 footer {
 	display: block;
 	position: relative;
 	bottom: 0mm;
-	margin-top: 10mm;
+	margin-top: 12mm;
 
 	font-size: 0.8rem;
 	line-height: 1.25rem;
@@ -135,24 +135,24 @@ footer {
 } */
 
 h1 {
-	font-size: 2.8rem;
+	font-size: 2.7rem;
 	text-align: center;
 	line-height: 2rem;
 }
 
 h2 {
-	font-size: 2.1rem;
+	font-size: 2.3rem;
 	text-align: center;
 	line-height: 2.5rem;
 }
 
 h3 {
-	font-size: 1.7rem;
+	font-size: 1.9rem;
 	line-height: 2rem;
 }
 
 h4 {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	font-weight: bold;
 }
 
