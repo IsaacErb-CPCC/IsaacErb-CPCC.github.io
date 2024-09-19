@@ -291,6 +291,9 @@ code {
 	margin-right: auto;
 }
 
+hr {
+	color: var(--text-alt);
+}
 
 /*======================
 	FORM-STUFF:
