@@ -184,14 +184,12 @@ nav ul {
 nav ul li {
 	text-align: center;
 	font-size: 1.25rem;
-	font-weight: bold;
 	list-style-type: none;
 	padding-left: 2mm; padding-right: 2mm;
 }
 
 #foot-links ul li {
 	font-size: 0.8rem;
-	font-weight: normal;
 }
 
 #logo {
