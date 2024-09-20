@@ -40,16 +40,21 @@
 	font-weight: bold;
 }
 
-@font-face {
+@font-face {	/*Used only for the Lil'RoboCo logo.*/
 	font-family: LogoFont;
 	src: url("../fonts/LRC-Logo.woff2") format("woff2");
 }
 
+@font-face {
+	font-family: UI;	/*Used for UI-symbols like dropdown arrowheads.*/
+	src: url("fonts/IronUI.woff2") format("woff2");
+}
+
 /*==============================================
 	INTERNAL DOCUMENTATION
-	-	File: branded_general.css.
+	-	File: omnistyler.css.
 	-	Author: Isaac Nelson Erb.
-	-	Date Created: 2024-Aug-22.
+	-	Date Created: 2024-Sep-20.
 
 	-	Description: This is the main file for
 		styling the pages of "isaacerb-cpcc.github
@@ -82,6 +87,8 @@
 	--body-alt-bg: #121;
 	--logo-text: #C5F;
 	--html-bg: #100;
+
+	--dropdown-icon: "images/dropdown.svg";
 }
 
 /*======================
@@ -190,6 +197,14 @@ nav ul li {
 
 #foot-links ul li {
 	font-size: 0.8rem;
+}
+
+#fizzbuzz-links {
+	display: none;
+	z-index: -1;
+	position: absolute;
+	top: inherit;
+	left: inherit;
 }
 
 #logo {
@@ -377,4 +392,9 @@ legend {
 
 label {
 	font-weight: bold;
+}
+
+.symbol {
+	font-family: UI;
+	color: var(--text-highlight);
 }
