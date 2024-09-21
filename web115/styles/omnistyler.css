@@ -405,12 +405,12 @@ label {
 	font-family: FiraSans;
 	font-weight: normal;
 	color: var(--text-alt);
-	text-align: right;
 }
 
 .drop-button-box {	/*Outer container; holds buttons. */
 	position: relative;
 	display: inline-block;
+	text-align: right;
 }
 
 .drop-content-box {	/*Menu (<div>) containing the <ul> of links.*/
