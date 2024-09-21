@@ -47,7 +47,7 @@
 
 @font-face {
 	font-family: UI;	/*Used for UI-symbols like dropdown arrowheads.*/
-	src: url("fonts/IronUI.woff2") format("woff2");
+	src: url("../fonts/IronUI.woff2") format("woff2");
 }
 
 /*==============================================

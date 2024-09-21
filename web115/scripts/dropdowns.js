@@ -5,9 +5,9 @@ const FIZZ_STATE = window.getComputedStyle(FIZZ_MENU);
 
 function toggleMenu(menuElem, menuState) {
 	if (menuState.getPropertyValue("display") === "none") {
-		menuElem.style("display: block");	//If menu is hidden, set it to be shown.
+		menuElem.setAttribute("style", "display: block");	//If menu is hidden, set it to be shown.
 	} else {
-		menuElem.style("display: none");		//Otherwise, hide it.
+		menuElem.setAttribute("style", "display: none");		//Otherwise, hide it.
 	}
 }
 
