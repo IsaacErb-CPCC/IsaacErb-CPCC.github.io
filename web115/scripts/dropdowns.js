@@ -14,5 +14,6 @@ function toggleMenu(menuElem, menuState) {
 }
 
 function toggleFizz() {
-	toggleMenu(FIZZ_MENU, FIZZ_STATE)
+	toggleMenu(FIZZ_MENU, FIZZ_STATE);
+	return;
 }
