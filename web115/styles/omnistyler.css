@@ -186,8 +186,9 @@ header nav {
 	columns: 2 minmax(fit-content, 82%) minmax(18%, fit-content);
 }
 
+
+
 nav ul {	/*Main header/footer-links.*/
-	grid-column: 0; grid-row: 0;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -203,27 +204,28 @@ nav ul li {
 	padding-left: 2mm; padding-right: 2mm;
 }
 
+#header-navlinks {
+	grid-column: 1; grid-row: 1;
+}
+
 #foot-links ul li {
 	font-size: 0.8rem;
 }
-
 
 .drop-button-box {	/*Outer container; holds buttons. */
 	position: relative;
 	display: inline-block;
 }
 
-
 .drop-content-box {	/*Menu (<div>) containing the <ul> of links.*/
 	display: none;
 	z-index: 2;
 	position: absolute;
-	top: inherit;
-	left: inherit;
+	border: 3px solid #FFF;
 }
 
 #header-drops {
-	grid-column: 1; grid-row: 0;
+	grid-column: 2; grid-row: 1;
 }
 
 #logo {
