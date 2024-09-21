@@ -46,7 +46,7 @@
 }
 
 @font-face {
-	font-family: UI;	/*Used for UI-symbols like dropdown arrowheads.*/
+	font-family: UI-Symbol;	/*Used for UI-symbols like dropdown arrowheads.*/
 	src: url("../fonts/IronUI.woff2") format("woff2");
 }
 
@@ -401,12 +401,6 @@ label {
 	font-weight: bold;
 }
 
-.symbol {
-	font-family: UI !important;
-	font-size: 1.3em;
-	color: var(--text-highlight);
-}
-
 .drop-button {
 	font-family: FiraSans;
 	font-weight: normal;
@@ -432,4 +426,9 @@ label {
 .drop-content-box ul {
 	list-style-type: disc;
 	display: inline-block;
+}
+
+.symbol {
+	font-family: UI-Symbol !important;;
+	color: var(--text-highlight);
 }
