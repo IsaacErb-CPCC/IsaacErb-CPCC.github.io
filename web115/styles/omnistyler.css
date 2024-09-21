@@ -408,15 +408,14 @@ label {
 }
 
 .drop-button-box {	/*Outer container; holds buttons. */
-	position: absolute;
+	position: relative;
 	display: inline-block;
-	right: 0mm;
 }
 
 .drop-content-box {	/*Menu (<div>) containing the <ul> of links.*/
 	display: none;
 	z-index: 2;
-	position: absolute;
+	position: relative;
 	right: 0mm;
 	border: 3px solid #FFF;
 
