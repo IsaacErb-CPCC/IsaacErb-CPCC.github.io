@@ -405,7 +405,7 @@ label {
 	font-family: FiraSans;
 	font-weight: normal;
 	color: var(--text-alt);
-	justify-self: right;
+	text-align: right;
 }
 
 .drop-button-box {	/*Outer container; holds buttons. */
@@ -424,11 +424,14 @@ label {
 }
 
 .drop-content-box ul {
-	list-style-type: disc;
 	display: inline-block;
 }
 
+.drop-content-box li {
+	list-style-type: disc;
+}
+
 .symbol {
-	font-family: UI-Symbol !important;;
+	font-family: UI-Symbol;
 	color: var(--text-highlight);
 }
