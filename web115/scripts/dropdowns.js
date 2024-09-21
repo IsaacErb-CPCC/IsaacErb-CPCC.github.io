@@ -1,6 +1,6 @@
 "use strict";
 
-const FIZZ_MENU = document.getElementById("fizzbuzz-dropdown");
+const FIZZ_MENU = document.getElementById("fizzbuzz-links");
 const FIZZ_STATE = window.getComputedStyle(FIZZ_MENU);
 
 function toggleMenu(menuElem, menuState) {
