@@ -404,7 +404,7 @@ label {
 .drop-button {
 	font-family: FiraSans;
 	font-weight: normal;
-	color: var(--text-alt);
+	color: var(--text-highlight);
 }
 
 .drop-button-box {	/*Outer container; holds buttons. */
@@ -425,10 +425,6 @@ label {
 
 .drop-content-box ul {
 	display: inline-block;
-}
-
-.drop-content-box li {
-	list-style-type: disc;
 }
 
 .symbol {
