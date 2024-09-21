@@ -408,9 +408,9 @@ label {
 }
 
 .drop-button-box {	/*Outer container; holds buttons. */
-	position: relative;
+	position: absolute;
 	display: inline-block;
-	text-align: right;
+	right: 0mm;
 }
 
 .drop-content-box {	/*Menu (<div>) containing the <ul> of links.*/
