@@ -10,8 +10,9 @@ function toggleMenu(menuElem, menuState) {
 	} else {
 		menuElem.setAttribute("style", "display: none");	//Otherwise, hide it.
 	}
+	return;
 }
 
-FIZZ_MENU.addEventListener("click", () => {
-	toggleMenu(FIZZ_MENU, FIZZ_STATE);
-});
+function toggleFizz() {
+	toggleMenu(FIZZ_MENU, FIZZ_STATE)
+}
