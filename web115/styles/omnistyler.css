@@ -183,10 +183,10 @@ h5, h6 {
 
 header nav {
 	display: grid;
-	columns: 2 minmax(auto, 82%) minmax(18%, auto);
+	columns: 2 minmax(fit-content, 82%) minmax(18%, fit-content);
 }
 
-nav ul {
+nav ul {	/*Main header/footer-links.*/
 	grid-column: 0; grid-row: 0;
 	display: flex;
 	flex-direction: row;
@@ -207,16 +207,23 @@ nav ul li {
 	font-size: 0.8rem;
 }
 
-#nav-dropdowns {
-	grid-column: 1; grid-row: 0;
+
+.drop-button-box {	/*Outer container; holds buttons. */
+	position: relative;
+	display: inline-block;
 }
 
-#fizzbuzz-links {
+
+.drop-content-box {	/*Menu (<div>) containing the <ul> of links.*/
 	display: none;
 	z-index: 2;
 	position: absolute;
 	top: inherit;
 	left: inherit;
+}
+
+#header-drops {
+	grid-column: 1; grid-row: 0;
 }
 
 #logo {
