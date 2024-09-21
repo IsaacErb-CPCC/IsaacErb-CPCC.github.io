@@ -186,8 +186,6 @@ header nav {
 	columns: 2 minmax(fit-content, 82%) minmax(18%, fit-content);
 }
 
-
-
 nav ul {	/*Main header/footer-links.*/
 	display: flex;
 	flex-direction: row;
@@ -212,6 +210,12 @@ nav ul li {
 	font-size: 0.8rem;
 }
 
+.drop-button {
+	font-family: FiraSans;
+	font-weight: normal;
+	color: var(--text-alt)
+}
+
 .drop-button-box {	/*Outer container; holds buttons. */
 	position: relative;
 	display: inline-block;
@@ -221,7 +225,11 @@ nav ul li {
 	display: none;
 	z-index: 2;
 	position: absolute;
+	right: 0;
 	border: 3px solid #FFF;
+
+	background-color: #000;
+	list-style-type: disc;
 }
 
 #header-drops {
@@ -416,6 +424,7 @@ label {
 }
 
 .symbol {
-	font-family: UI;
+	font-family: UI !important;
+	font-size: 1.3em;
 	color: var(--text-highlight);
 }
