@@ -445,6 +445,7 @@ label {
 .drop-opened {
 	border: 3px solid #FFF;
 	border-bottom: none;
+	width: var(--drop-button-x);
 }
 
 .symbol {

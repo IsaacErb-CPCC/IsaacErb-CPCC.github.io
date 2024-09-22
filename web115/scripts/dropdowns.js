@@ -8,7 +8,6 @@ class DropMenu {
 		this.BUTTON_STAT = window.getComputedStyle(this.BUTTON);
 		this.MENU = document.getElementById(menuID);
 		this.MENU_STAT = window.getComputedStyle(this.MENU);
-		//@ Make variable for location of arrowhead.
 		let buttonX = this.BUTTON_STAT.width;
 		let buttonY = this.BUTTON_STAT.height;
 		CSS_VARS.style.setProperty("--drop-button-x", buttonX);
@@ -31,6 +30,7 @@ class DropMenu {
 			this.MENU.setAttribute("style", "display: block");
 			this.restyleOpen();
 		} else {	//- Otherwise, hide it.
+			this.MENU.setAttribute("style", "display: none");
 			this.destyleClosed();
 		}
 	}
