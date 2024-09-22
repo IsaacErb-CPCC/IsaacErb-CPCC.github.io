@@ -17,12 +17,12 @@ class DropMenu {
 
 	restyleOpen() {
 		this.BUTTON.classList.add("drop-opened");
-		querySelector(`#${this.ID} span`).textContent = "^";
+		document.querySelector(`#${this.ID} span`).textContent = "^";
 	}
 
 	destyleClosed() {
 		this.BUTTON.classList.remove("drop-opened");
-		querySelector(`#${this.ID} span`).textContent = "_";
+		document.querySelector(`#${this.ID} span`).textContent = "_";
 	}
 
 	toggleMenu() {
