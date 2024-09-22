@@ -418,8 +418,10 @@ label {
 .drop-content-box {	/*Menu (<div>) containing the <ul> of links.*/
 	display: none;
 	z-index: 2;
-	position: relative;
+	position: absolute;
 	right: 0mm;
+
+	width: fit-content;
 	border: 3px solid #FFF;
 
 	background-color: #000;
