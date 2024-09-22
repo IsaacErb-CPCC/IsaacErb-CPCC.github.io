@@ -9,15 +9,20 @@ class DropMenu {
 	}
 
 	positionMenu() {
-		let buttonX = this.BUTTON_STAT.height;
-		this.MENU.setAttribute("style", `top: ${buttonX}`);
+		let buttonX = this.BUTTON_STAT.width;
+		let buttonY = this.BUTTON_STAT.height;
+		this.MENU.setAttribute("style", `width: ${buttonX}`);
+		this.MENU.setAttribute("style", "border-top: none");
+		this.BUTTON.setAttribute("style", "border: 3px solid #FFF")
+		this.BUTTON.setAttribute("style", "border-bottom: none")
+		this.MENU.setAttribute("style", `top: ${buttonY}`);
 	}
 
 	toggleMenu() {
 		//- If menu is hidden, set it to be shown.
 		if (this.MENU_STAT.getPropertyValue("display") === "none") {
 			this.MENU.setAttribute("style", "display: block");
-			// this.positionMenu();
+			this.positionMenu();
 		} else {	//- Otherwise, hide it.
 			this.MENU.setAttribute("style", "display: none");
 		}
