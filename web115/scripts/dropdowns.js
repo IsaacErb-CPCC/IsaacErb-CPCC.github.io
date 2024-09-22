@@ -1,22 +1,24 @@
 "use strict";
 
-function roundDistance(distString) {
-	let outString;
-	if (distString.includes(".")) {
-		let parts = distString.split(".");
-		let unitPart = parts[1];
-		let unit;
-		for (const char in unitPart) {
-			if (["0","1","2","3","4","5","6","7","8","9"].indexOf(char) === -1) {
-				unit += char;
-			}
-		}
-		outString = parts[0]+unit;
-	} else {
-		outString = distString;
-	}
-	return outString;
-}
+// function roundDistance(distString) {
+// 	let outString;
+// 	if (distString.includes(".")) {
+// 		let parts = distString.split(".");
+// 		let unitPart = parts[1];
+// 		let unit;
+// 		for (const char in unitPart) {
+// 			if (["0","1","2","3","4","5","6","7","8","9"].indexOf(char) === -1) {
+// 				unit += char;
+// 			}
+// 		}
+// 		outString = parts[0]+unit;
+// 	} else {
+// 		outString = distString;
+// 	}
+// 	return outString;
+// }
+
+const CSS_VARS = document.querySelector(":root");
 
 class DropMenu {
 	constructor(buttonID, menuID) {
@@ -28,16 +30,19 @@ class DropMenu {
 
 	positionMenu() {
 		let buttonX = this.BUTTON_STAT.width;
+		CSS_VARS.style.setProperty("--drop-button-x", buttonX);
 		let buttonY = this.BUTTON_STAT.height;
-		this.MENU.setAttribute("style", "width: "+roundDistance(buttonX));
-		this.MENU.setAttribute("style", "border-top: none");
-		this.BUTTON.setAttribute("style", "border: 3px solid #FFF");
-		this.BUTTON.setAttribute("style", "border-bottom: none");
-		this.MENU.setAttribute("style", "top: "+roundDistance(buttonY));
+		CSS_VARS.style.setProperty("--drop-button-y", buttonY);
+
+		// this.MENU.setAttribute("style", "width: "+roundDistance(buttonX));
+		// this.MENU.setAttribute("style", "border-top: none");
+		// this.BUTTON.setAttribute("style", "border: 3px solid #FFF");
+		// this.BUTTON.setAttribute("style", "border-bottom: none");
+		// this.MENU.setAttribute("style", "top: "+roundDistance(buttonY));
 	}
 
 	revertPosition() {
-		this.BUTTON.setAttribute("style", "border: 1px solid #FFF");
+		// this.BUTTON.setAttribute("style", "border: 1px solid #FFF");
 	}
 
 	toggleMenu() {
@@ -47,10 +52,11 @@ class DropMenu {
 			this.positionMenu();
 		} else {	//- Otherwise, hide it.
 			this.MENU.setAttribute("style", "display: none");
-			this.revertPosition();
+			// this.revertPosition();
 		}
 	}
 }
+
 
 const FIZZ_DROP = new DropMenu("fizz-drop", "fizzbuzz-links");
 

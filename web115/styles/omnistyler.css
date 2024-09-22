@@ -89,6 +89,8 @@
 	--html-bg: #100;
 
 	--dropdown-icon: "images/dropdown.svg";
+	--drop-button-x: 0px;
+	--drop-button-y: 0px;
 }
 
 /*======================
@@ -183,7 +185,7 @@ h5, h6 {
 
 header nav {
 	display: grid;
-	columns: 2 minmax(fit-content, 82%) minmax(18%, fit-content);
+	columns: 2 minmax(fit-content, 100%) minmax(fit-content, fit-content);
 }
 
 nav ul {	/*Main header/footer-links.*/
@@ -421,7 +423,9 @@ label {
 	display: none;
 	position: absolute;
 	right: 0mm;
+	top: var(--drop-button-y);
 
+	width: var(--drop-button-x);
 	box-sizing: border-box;
 	border: 3px solid #FFF;
 
