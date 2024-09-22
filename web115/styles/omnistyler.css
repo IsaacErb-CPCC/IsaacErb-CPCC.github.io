@@ -204,6 +204,8 @@ nav ul li {
 
 #header-navlinks {
 	grid-column: 1; grid-row: 1;
+	text-align: left;
+	justify-items: flex-start;
 }
 
 #foot-links ul li {
@@ -405,6 +407,7 @@ label {
 	font-family: FiraSans;
 	font-weight: normal;
 	color: var(--text-highlight);
+	justify-self: flex-end;
 }
 
 .drop-button-box {	/*Outer container; holds buttons. */
