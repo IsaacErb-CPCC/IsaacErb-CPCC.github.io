@@ -17,7 +17,7 @@ class DropMenu {
 		//- If menu is hidden, set it to be shown.
 		if (this.MENU_STAT.getPropertyValue("display") === "none") {
 			this.MENU.setAttribute("style", "display: block");
-			this.positionMenu();
+			// this.positionMenu();
 		} else {	//- Otherwise, hide it.
 			this.MENU.setAttribute("style", "display: none");
 		}
