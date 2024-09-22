@@ -11,12 +11,15 @@ class DropMenu {
 	positionMenu() {
 		let buttonX = this.BUTTON_STAT.width;
 		let buttonY = this.BUTTON_STAT.height;
-		try{this.MENU.setAttribute("style", `width: ${buttonX}`);}
-		catch (e) {console.log(e);}
+		this.MENU.setAttribute("style", "width: "+buttonX);
 		this.MENU.setAttribute("style", "border-top: none");
 		this.BUTTON.setAttribute("style", "border: 3px solid #FFF");
 		this.BUTTON.setAttribute("style", "border-bottom: none");
-		this.MENU.setAttribute("style", `top: ${buttonY}`);
+		this.MENU.setAttribute("style", "top: "+buttonY);
+	}
+
+	revertPosition() {
+		this.BUTTON.setAttribute("style", "border: 1px solid #FFF");
 	}
 
 	toggleMenu() {
