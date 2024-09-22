@@ -1,22 +1,30 @@
 "use strict";
 
-const FIZZ_BUTTON = document.getElementById("fizz-drop");
-const FIZZ_MENU = document.getElementById("fizzbuzz-links");
-const FIZZ_STATE = window.getComputedStyle(FIZZ_MENU);
-
-function toggleMenu(menuElem, menuState) {
-	if (menuState.getPropertyValue("display") === "none") {
-		menuElem.setAttribute("style", "display: block");	//If menu is hidden, set it to be shown.
-	} else {
-		menuElem.setAttribute("style", "display: none");	//Otherwise, hide it.
+class DropMenu {
+	constructor(buttonID, menuID) {
+		this.BUTTON = document.getElementById(buttonID);
+		this.BUTTON_STAT = window.getComputedStyle(this.BUTTON);
+		this.MENU = document.getElementById(menuID);
+		this.MENU_STAT = window.getComputedStyle(this.MENU);
 	}
-	return;
+
+	positionMenu() {
+		let buttonX = this.BUTTON_STAT.height;
+		this.MENU.setAttribute("style", `top: ${buttonX}`);
+	}
+
+	toggleMenu() {
+		//- If menu is hidden, set it to be shown.
+		if (this.MENU_STAT.getPropertyValue("display") === "none") {
+			this.MENU.setAttribute("style", "display: block");
+			this.positionMenu();
+		} else {	//- Otherwise, hide it.
+			this.MENU.setAttribute("style", "display: none");
+		}
+	}
 }
 
-function toggleFizz() {
-	toggleMenu(FIZZ_MENU, FIZZ_STATE);
-	return;
-}
+const FIZZ_DROP = new DropMenu("fizz-drop", "fizzbuzz-links");
 
 //@	THE BELOW IS FOR ADDING A FEATURE FOR CLOSING ON A CLICK
 //	OUTSIDE OF THE MENU.
