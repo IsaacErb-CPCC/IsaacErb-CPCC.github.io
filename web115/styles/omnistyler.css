@@ -413,6 +413,7 @@ label {
 	font-weight: normal;
 	color: var(--text-highlight);
 	position: absolute;
+	right: 0mm;
 
 	box-sizing: border-box;
 }

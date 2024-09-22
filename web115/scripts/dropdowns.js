@@ -9,38 +9,32 @@ class DropMenu {
 		this.MENU = document.getElementById(menuID);
 		this.MENU_STAT = window.getComputedStyle(this.MENU);
 		//@ Make variable for location of arrowhead.
-	}
-
-	positionMenu() {
 		let buttonX = this.BUTTON_STAT.width;
-		CSS_VARS.style.setProperty("--drop-button-x", buttonX);
 		let buttonY = this.BUTTON_STAT.height;
+		CSS_VARS.style.setProperty("--drop-button-x", buttonX);
 		CSS_VARS.style.setProperty("--drop-button-y", buttonY);
-		//@ Apply new border-style.
-
-		// this.MENU.setAttribute("style", "width: "+roundDistance(buttonX));
-		// this.MENU.setAttribute("style", "border-top: none");
-		// this.BUTTON.setAttribute("style", "border: 3px solid #FFF");
-		// this.BUTTON.setAttribute("style", "border-bottom: none");
-		// this.MENU.setAttribute("style", "top: "+roundDistance(buttonY));
 	}
 
-	revertPosition() {
-		// this.BUTTON.setAttribute("style", "border: 1px solid #FFF");
+	restyleOpen() {
+		this.BUTTON.classList.add("drop-opened");
+		this.BUTTON.textContent.replace("_","^");
+	}
+
+	destyleClosed() {
+		this.BUTTON.classList.remove("drop-opened");
+		this.BUTTON.textContent.replace("^","_");
 	}
 
 	toggleMenu() {
 		//- If menu is hidden, set it to be shown.
 		if (this.MENU_STAT.getPropertyValue("display") === "none") {
 			this.MENU.setAttribute("style", "display: block");
-			this.positionMenu();
+			this.restyleOpen();
 		} else {	//- Otherwise, hide it.
-			this.MENU.setAttribute("style", "display: none");
-			// this.revertPosition();
+			this.destyleClosed();
 		}
 	}
 }
-
 
 const FIZZ_DROP = new DropMenu("fizz-drop", "fizzbuzz-links");
 
