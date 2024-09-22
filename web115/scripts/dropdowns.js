@@ -1,5 +1,23 @@
 "use strict";
 
+function roundDistance(distString) {
+	let outString;
+	if (distString.includes(".")) {
+		let parts = distString.split(".");
+		let unitPart = parts[1];
+		let unit;
+		for (const char in unitPart) {
+			if (["0","1","2","3","4","5","6","7","8","9"].indexOf(char) === -1) {
+				unit += char;
+			}
+		}
+		outString = parts[0]+unit;
+	} else {
+		outString = distString;
+	}
+	return outString;
+}
+
 class DropMenu {
 	constructor(buttonID, menuID) {
 		this.BUTTON = document.getElementById(buttonID);
@@ -11,11 +29,11 @@ class DropMenu {
 	positionMenu() {
 		let buttonX = this.BUTTON_STAT.width;
 		let buttonY = this.BUTTON_STAT.height;
-		this.MENU.setAttribute("style", "width: "+buttonX);
+		this.MENU.setAttribute("style", "width: "+roundDistance(buttonX));
 		this.MENU.setAttribute("style", "border-top: none");
 		this.BUTTON.setAttribute("style", "border: 3px solid #FFF");
 		this.BUTTON.setAttribute("style", "border-bottom: none");
-		this.MENU.setAttribute("style", "top: "+buttonY);
+		this.MENU.setAttribute("style", "top: "+roundDistance(buttonY));
 	}
 
 	revertPosition() {
@@ -29,6 +47,7 @@ class DropMenu {
 			this.positionMenu();
 		} else {	//- Otherwise, hide it.
 			this.MENU.setAttribute("style", "display: none");
+			this.revertPosition();
 		}
 	}
 }
