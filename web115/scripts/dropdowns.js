@@ -4,6 +4,7 @@ const CSS_VARS = document.querySelector(":root");
 
 class DropMenu {
 	constructor(buttonID, menuID) {
+		this.ID = buttonID;
 		this.BUTTON = document.getElementById(buttonID);
 		this.BUTTON_STAT = window.getComputedStyle(this.BUTTON);
 		this.MENU = document.getElementById(menuID);
@@ -16,12 +17,12 @@ class DropMenu {
 
 	restyleOpen() {
 		this.BUTTON.classList.add("drop-opened");
-		this.BUTTON.textContent.replace("_","^");
+		querySelector(`#${this.ID} span`).textContent = "^";
 	}
 
 	destyleClosed() {
 		this.BUTTON.classList.remove("drop-opened");
-		this.BUTTON.textContent.replace("^","_");
+		querySelector(`#${this.ID} span`).textContent = "_";
 	}
 
 	toggleMenu() {

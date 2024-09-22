@@ -434,7 +434,7 @@ label {
 	border: 3px solid #FFF;
 	border-top: none;
 
-	background-color: #000;
+	background-color: var(--html-bg);
 	z-index: 2;
 }
 
@@ -443,8 +443,8 @@ label {
 }
 
 .drop-opened {
-	border: 3px solid #FFF;
-	border-bottom: none;
+	border: 3px solid var(--text-highlight);
+	border-bottom-color: var(--html-bg);
 	width: var(--drop-button-x);
 }
 
