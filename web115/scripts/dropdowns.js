@@ -1,23 +1,5 @@
 "use strict";
 
-// function roundDistance(distString) {
-// 	let outString;
-// 	if (distString.includes(".")) {
-// 		let parts = distString.split(".");
-// 		let unitPart = parts[1];
-// 		let unit;
-// 		for (const char in unitPart) {
-// 			if (["0","1","2","3","4","5","6","7","8","9"].indexOf(char) === -1) {
-// 				unit += char;
-// 			}
-// 		}
-// 		outString = parts[0]+unit;
-// 	} else {
-// 		outString = distString;
-// 	}
-// 	return outString;
-// }
-
 const CSS_VARS = document.querySelector(":root");
 
 class DropMenu {
@@ -26,6 +8,7 @@ class DropMenu {
 		this.BUTTON_STAT = window.getComputedStyle(this.BUTTON);
 		this.MENU = document.getElementById(menuID);
 		this.MENU_STAT = window.getComputedStyle(this.MENU);
+		//@ Make variable for location of arrowhead.
 	}
 
 	positionMenu() {
@@ -33,6 +16,7 @@ class DropMenu {
 		CSS_VARS.style.setProperty("--drop-button-x", buttonX);
 		let buttonY = this.BUTTON_STAT.height;
 		CSS_VARS.style.setProperty("--drop-button-y", buttonY);
+		//@ Apply new border-style.
 
 		// this.MENU.setAttribute("style", "width: "+roundDistance(buttonX));
 		// this.MENU.setAttribute("style", "border-top: none");

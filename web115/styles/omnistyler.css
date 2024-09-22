@@ -206,7 +206,9 @@ nav ul li {
 
 #header-navlinks {
 	grid-column: 1; grid-row: 1;
-	text-align: left;
+}
+
+#header-navlinks ul {
 	justify-items: flex-start;
 }
 
@@ -345,6 +347,7 @@ input, button {
 
 	font-size: 1.2rem;
 	font-weight: bold;
+	border-width: 2px;
 }
 
 fieldset {
@@ -363,7 +366,7 @@ fieldset:not(:last-of-type) {
 }
 
 fieldset:not(:last-of-type) :last-child {
-	margin-bottom: 5mm;	/*Creating adeguate spacing between last element in a fieldset and the legend of the next.*/
+	margin-bottom: 5mm;	/*Creating adequate spacing between last element in a fieldset and the legend of the next.*/
 }
 
 .compact {
@@ -428,6 +431,7 @@ label {
 	width: var(--drop-button-x);
 	box-sizing: border-box;
 	border: 3px solid #FFF;
+	border-top: none;
 
 	background-color: #000;
 	z-index: 2;
@@ -435,6 +439,11 @@ label {
 
 .drop-content-box ul {
 	display: inline-block;
+}
+
+.drop-opened {
+	border: 3px solid #FFF;
+	border-bottom: none;
 }
 
 .symbol {
