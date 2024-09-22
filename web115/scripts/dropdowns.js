@@ -11,7 +11,8 @@ class DropMenu {
 	positionMenu() {
 		let buttonX = this.BUTTON_STAT.width;
 		let buttonY = this.BUTTON_STAT.height;
-		this.MENU.setAttribute("style", `width: ${buttonX}`);
+		try{this.MENU.setAttribute("style", `width: ${buttonX}`);}
+		catch (e) {console.log(e);}
 		this.MENU.setAttribute("style", "border-top: none");
 		this.BUTTON.setAttribute("style", "border: 3px solid #FFF");
 		this.BUTTON.setAttribute("style", "border-bottom: none");
