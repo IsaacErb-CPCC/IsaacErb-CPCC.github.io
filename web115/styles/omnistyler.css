@@ -209,7 +209,7 @@ nav ul li {
 }
 
 #header-navlinks ul {
-	justify-items: flex-start;
+	justify-content: flex-start;
 }
 
 #foot-links ul li {
@@ -414,6 +414,7 @@ label {
 	color: var(--text-highlight);
 	position: absolute;
 	right: 0mm;
+	margin-top: 1.5mm; margin-bottom: 1.5mm;
 
 	box-sizing: border-box;
 }
