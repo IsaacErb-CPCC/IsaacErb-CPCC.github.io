@@ -413,10 +413,6 @@ label {
 	color: var(--text-highlight);
 }
 
-.symbol::after {
-	content: "_";
-}
-
 .drop-button {
 	font-family: FiraSans;
 	font-weight: normal;
@@ -460,8 +456,4 @@ label {
 
 .drop-opened + .drop-content-box {
 	border-color: var(--text-alt);
-}
-
-.drop-opened .symbol::after {
-	content: "^";
 }

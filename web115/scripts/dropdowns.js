@@ -17,12 +17,12 @@ class DropMenu {
 
 	restyleOpen() {
 		this.BUTTON.classList.add("drop-opened");
-		// document.querySelector(`#${this.ID} span`).innerHTML = "^";
+		document.querySelector(`#${this.ID} span`).innerHTML = "^";
 	}
 
 	destyleClosed() {
 		this.BUTTON.classList.remove("drop-opened");
-		// document.querySelector(`#${this.ID} span`).innerHTML = "_";
+		document.querySelector(`#${this.ID} span`).innerHTML = "_";
 	}
 
 	toggleMenu() {
