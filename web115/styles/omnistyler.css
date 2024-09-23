@@ -182,6 +182,19 @@ h5, h6 {
 	font-size: 1em;
 }
 
+#logo {
+	display: block;
+	text-align: center;
+	font-weight: normal;
+	padding-bottom: 12mm;
+
+	font-family: LogoFont;
+	font-size: 50pt;
+	margin: -5mm auto;
+
+	color: var(--logo-text);
+}
+
 header nav {
 	display: grid;
 	columns: 2 minmax(fit-content, 100%) minmax(fit-content, fit-content);
@@ -215,23 +228,6 @@ nav ul li {
 
 #foot-links ul li {
 	font-size: 1.1rem;
-}
-
-#header-drops {
-	grid-column: 2; grid-row: 1;
-}
-
-#logo {
-	display: block;
-	text-align: center;
-	font-weight: normal;
-	padding-bottom: 8mm;
-
-	font-family: LogoFont;
-	font-size: 50pt;
-	margin: -5mm auto;
-
-	color: var(--logo-text);
 }
 
 li {
@@ -422,6 +418,10 @@ label {
 /*======================
 	DROPDOWN-MENUS:
 ======================*/
+#header-drops {
+	grid-column: 2; grid-row: 1;
+}
+
 .drop-button {
 	font-family: FiraSans;
 	font-weight: normal;
