@@ -88,7 +88,6 @@
 	--logo-text: #C5F;
 	--html-bg: #100;
 
-	--dropdown-icon: "images/dropdown.svg";
 	--drop-button-x: 0px;
 	--drop-button-y: 0px;
 }
@@ -299,6 +298,11 @@ i em, i b, b i, b em {
 	font-style: italic;
 }
 
+.symbol {
+	font-family: UI-Symbol;
+	color: var(--text-highlight);
+}
+
 /*======================
 	CODE-STUFF:
 ======================*/
@@ -415,11 +419,9 @@ label {
 	font-weight: bold;
 }
 
-.symbol {
-	font-family: UI-Symbol;
-	color: var(--text-highlight);
-}
-
+/*======================
+	DROPDOWN-MENUS:
+======================*/
 .drop-button {
 	font-family: FiraSans;
 	font-weight: normal;
