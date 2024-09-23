@@ -225,10 +225,11 @@ nav ul li {
 #logo {
 	display: block;
 	text-align: center;
+	font-weight: normal;
+	padding-bottom: 8mm;
 
 	font-family: LogoFont;
 	font-size: 50pt;
-	width: 250pt;
 	margin: -5mm auto;
 
 	color: var(--logo-text);
@@ -252,6 +253,10 @@ a:not(.nav-link):visited {
 
 a:focus, a:hover, a:active {
 	color: var(--text-more-highlight);
+}
+
+.nav-link {
+	text-decoration: none;
 }
 
 q::before {content: "\2018";}	/*Single-quotes first, then double-quotes inside of single-quotes.*/
