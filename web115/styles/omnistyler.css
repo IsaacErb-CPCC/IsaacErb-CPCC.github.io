@@ -201,6 +201,8 @@ nav ul li {
 	text-align: center;
 	font-size: 1.25rem;
 	list-style-type: none;
+	text-decoration: none;
+
 	padding-left: 2mm; padding-right: 2mm;
 }
 
@@ -213,7 +215,7 @@ nav ul li {
 }
 
 #foot-links ul li {
-	font-size: 0.8rem;
+	font-size: 1.1rem;
 }
 
 #header-drops {
@@ -353,17 +355,17 @@ input, button {
 fieldset {
   border: 1px solid #fff;
   border-bottom: none;
+	margin-bottom: -4mm;	/*- Making it so legends don't*/
+	padding-bottom: 3mm;	/*	interrupt the border-lines.*/
 
 }
 
 fieldset:last-of-type {
 	border-bottom: 1px solid #fff;
+	margin-bottom: 2mm;
+	padding-bottom: 2mm;
 }
 
-fieldset:not(:last-of-type) {
-	margin-bottom: -4mm;	/*- Making it so legends don't*/
-	padding-bottom: 3mm;	/*	interrupt the border-lines.*/
-}
 
 fieldset:not(:last-of-type) :last-child {
 	margin-bottom: 5mm;	/*Creating adequate spacing between last element in a fieldset and the legend of the next.*/
