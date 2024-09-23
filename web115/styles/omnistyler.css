@@ -408,6 +408,15 @@ label {
 	font-weight: bold;
 }
 
+.symbol {
+	font-family: UI-Symbol;
+	color: var(--text-highlight);
+}
+
+.symbol::after {
+	content: "_";
+}
+
 .drop-button {
 	font-family: FiraSans;
 	font-weight: normal;
@@ -453,7 +462,6 @@ label {
 	border-color: var(--text-alt);
 }
 
-.symbol {
-	font-family: UI-Symbol;
-	color: var(--text-highlight);
+.drop-opened .symbol::after {
+	content: "^";
 }
