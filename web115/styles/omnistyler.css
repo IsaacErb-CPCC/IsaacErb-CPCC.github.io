@@ -76,10 +76,10 @@ main {
 
 footer {
 	display: grid;
-	columns: 2 fit-content auto;
+	columns: 2 unset unset;
 	position: relative;
 	bottom: 0mm;
-	margin-top: 12mm;
+	margin-top: 8mm;
 
 	font-size: 0.8rem;
 	line-height: 1.25rem;
@@ -168,31 +168,34 @@ nav ul li {
 
 #foot-links {
 	grid-row: 1;
-	grid-column: 1 2;
+	grid-column: span 2;
 }
 
 #foot-links ul li {
 	font-size: 1.1rem;
-	line-height: 1.5rem;
-	padding-top: inherit; padding-bottom: inherit;
+/* 	line-height: 1.5rem; */
+	padding-bottom: 0mm;
+	margin-bottom: -3mm;
 }
 
 #logo {
 	grid-row: 2; grid-column: 1;
 	display: block;
-	text-align: center;
-	font-weight: normal;
-	padding-bottom: 12mm;
-
+	position: absolute;
+	left: 0mm;
+	bottom: 4mm;
+	
 	font-family: LogoFont;
+	font-weight: normal;
 	font-size: 50pt;
-	margin: -5mm auto;
+	margin: auto;
 
 	color: var(--logo-text);
 }
 
 #footer-misc {
 	grid-row: 2; grid-column: 2;
+	text-align: left;
 }
 
 li {
