@@ -114,6 +114,11 @@ function getInputs() {
 	thirdWord = WORD_3_INPUT.value;
 	lineLimit = LINELIMIT_INPUT.value;
 
+	if (lineLimit > 999) {
+		window.alert("Number of lines cannot be greater than 999.");
+		return null;
+	}
+
 	let first = NAME_FIRST_INPUT.value;
 	let mid = NAME_MIDDLE_INPUT.value;
 	let last = NAME_LAST_INPUT.value;
@@ -122,11 +127,16 @@ function getInputs() {
 		mid += ".";
 	}
 	let full = `${first} ${mid} ${last}`;
+
 	return full;
 }
 
 function doIO() {
 	let name = getInputs();
+	if (name === null) {
+		return;
+	}
+
 	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${name}!`;
 	configuredFizzBuzz();
 
