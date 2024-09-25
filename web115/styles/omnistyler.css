@@ -173,9 +173,9 @@ nav ul li {
 
 #foot-links ul li {
 	font-size: 1.1rem;
-/* 	line-height: 1.5rem; */
-	padding-bottom: 0mm;
-	margin-bottom: -3mm;
+	line-height: 2rem;
+	padding-bottom: 5mm;
+  margin-bottom: -7mm;
 }
 
 #logo {
