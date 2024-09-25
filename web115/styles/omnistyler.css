@@ -1,54 +1,6 @@
 @charset "utf-8";
 
-@font-face {
-	font-family: FiraSans;
-	src: url('../fonts/FiraSans/FiraSans-Regular.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: FiraSans;
-	src: url('../fonts/FiraSans/FiraSans-Italic.woff2') format('woff2');
-	font-weight: normal;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: FiraSans;
-	src: url('../fonts/FiraSans/FiraSans-Bold.woff2') format('woff2');
-	font-weight: bold;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: FiraSans;
-	src: url('../fonts/FiraSans/FiraSans-BoldItalic.woff2') format('woff2');
-	font-weight: bold;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: FiraMono;
-	src: url("../fonts/fira-mono/FiraMono-Medium.woff2") format("woff2");
-	font-weight: normal;
-}
-
-@font-face {
-	font-family: FiraMono;
-	src: url("../fonts/fira-mono/FiraMono-Bold.woff2") format("woff2");
-	font-weight: bold;
-}
-
-@font-face {	/*Used only for the Lil'RoboCo logo.*/
-	font-family: LogoFont;
-	src: url("../fonts/LRC-Logo.woff2") format("woff2");
-}
-
-@font-face {
-	font-family: UI-Symbol;	/*Used for UI-symbols like dropdown arrowheads.*/
-	src: url("../fonts/IronUI.woff2") format("woff2");
-}
+@import url("font-defs.css");
 
 /*==============================================
 	INTERNAL DOCUMENTATION
@@ -80,7 +32,7 @@
 :root {
 	--text-norm: #9FC;
 	--text-highlight: #FD9;
-	--text-less-highlight: #BA7;
+	--text-less-highlight: #DB7;
 	--text-more-highlight: #FFF;
 	--text-alt: #9CF;
 	--body-bg: #112;
@@ -228,6 +180,7 @@ nav ul li {
 
 #foot-links ul li {
 	font-size: 1.1rem;
+	line-height: inherit;
 }
 
 li {
