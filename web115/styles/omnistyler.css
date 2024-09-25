@@ -75,7 +75,8 @@ main {
 }
 
 footer {
-	display: block;
+	display: grid;
+	columns: 2 fit-content auto;
 	position: relative;
 	bottom: 0mm;
 	margin-top: 12mm;
@@ -134,19 +135,6 @@ h5, h6 {
 	font-size: 1em;
 }
 
-#logo {
-	display: block;
-	text-align: center;
-	font-weight: normal;
-	padding-bottom: 12mm;
-
-	font-family: LogoFont;
-	font-size: 50pt;
-	margin: -5mm auto;
-
-	color: var(--logo-text);
-}
-
 header nav {
 	display: grid;
 	columns: 2 minmax(fit-content, 100%) minmax(fit-content, fit-content);
@@ -178,9 +166,33 @@ nav ul li {
 	justify-content: flex-start;
 }
 
+#foot-links {
+	grid-row: 1;
+	grid-column: 1 2;
+}
+
 #foot-links ul li {
 	font-size: 1.1rem;
-	line-height: inherit;
+	line-height: 1.5rem;
+	padding-top: inherit; padding-bottom: inherit;
+}
+
+#logo {
+	grid-row: 2; grid-column: 1;
+	display: block;
+	text-align: center;
+	font-weight: normal;
+	padding-bottom: 12mm;
+
+	font-family: LogoFont;
+	font-size: 50pt;
+	margin: -5mm auto;
+
+	color: var(--logo-text);
+}
+
+#footer-misc {
+	grid-row: 2; grid-column: 2;
 }
 
 li {
