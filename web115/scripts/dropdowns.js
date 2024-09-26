@@ -2,6 +2,20 @@
 
 const CSS_VARS = document.querySelector(":root");
 
+function readDistVal(distance) {
+	let numerics = ["0","1","2","3","4","5","6","7","8","9",".","-"];
+	let distString = distance.split("");
+	let distVal = "";
+
+	for (const char in distString) {
+		if (numerics.indexOf(char) !== -1) {
+			distVal += char;
+		}
+	}
+
+	return parseFloat(distVal);
+}
+
 class DropMenu {
 	constructor(buttonID, menuID) {
 		this.ID = buttonID;
@@ -10,10 +24,10 @@ class DropMenu {
 		this.MENU = document.getElementById(menuID);
 		this.MENU_STAT = window.getComputedStyle(this.MENU);
 
-		let buttonX = this.BUTTON_STAT.width * 1.05;
+		let buttonX = readDistVal(this.BUTTON_STAT.width) * 1.05;
 		let buttonY = this.BUTTON_STAT.height;
 
-		this.BUTTON.setAttribute("style", `width: ${buttonX}`);
+		this.BUTTON.setAttribute("style", `width: ${buttonX}px`);
 		CSS_VARS.style.setProperty("--drop-button-x", buttonX);
 		CSS_VARS.style.setProperty("--drop-button-y", buttonY);
 	}
