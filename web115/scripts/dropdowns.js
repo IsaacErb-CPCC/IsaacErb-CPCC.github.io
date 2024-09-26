@@ -25,11 +25,11 @@ class DropMenu {
 		this.MENU = document.getElementById(menuID);
 		this.MENU_STAT = window.getComputedStyle(this.MENU);
 
-		let buttonX = readDistVal(this.BUTTON_STAT.width) * 1.05;
+		// let buttonX = readDistVal(this.BUTTON_STAT.width) * 1.05;
 		let buttonY = this.BUTTON_STAT.height;
 
-		this.BUTTON.setAttribute("style", `width: ${buttonX}px`);
-		CSS_VARS.style.setProperty("--drop-button-x", buttonX);
+		// this.BUTTON.setAttribute("style", `width: ${buttonX}px`);
+		// CSS_VARS.style.setProperty("--drop-button-x", buttonX);
 		CSS_VARS.style.setProperty("--drop-button-y", buttonY);
 	}
 

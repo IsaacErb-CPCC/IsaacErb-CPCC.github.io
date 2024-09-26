@@ -40,7 +40,7 @@
 	--logo-text: #C5F;
 	--html-bg: #100;
 
-	--drop-button-x: 0px;
+	--drop-button-x: 50mm;
 	--drop-button-y: 0px;
 }
 
@@ -399,6 +399,7 @@ label {
 	right: 0mm;
 	margin-top: 1.5mm; margin-bottom: 1.5mm;
 
+	width: var(--drop-button-x);
 	box-sizing: border-box;
 }
 
@@ -429,10 +430,10 @@ label {
 .drop-opened {
 	border: 3px solid var(--text-alt);
 	border-bottom-color: var(--html-bg);
-	width: var(--drop-button-x);
+	/* width: var(--drop-button-x); */
 }
 
 .drop-opened + .drop-content-box {
 	border-color: var(--text-alt);
-	width: var(--drop-button-x);
+	/* width: var(--drop-button-x); */
 }
