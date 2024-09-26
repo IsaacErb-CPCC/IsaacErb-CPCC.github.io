@@ -434,4 +434,5 @@ label {
 
 .drop-opened + .drop-content-box {
 	border-color: var(--text-alt);
+	width: var(--drop-button-x);
 }

@@ -13,7 +13,7 @@ class DropMenu {
 		let buttonX = this.BUTTON_STAT.width * 1.05;
 		let buttonY = this.BUTTON_STAT.height;
 
-		this.BUTTON.setAttribute("style", `width: ${buttonX}px`)
+		this.BUTTON.setAttribute("style", `width: ${buttonX}`);
 		CSS_VARS.style.setProperty("--drop-button-x", buttonX);
 		CSS_VARS.style.setProperty("--drop-button-y", buttonY);
 	}
