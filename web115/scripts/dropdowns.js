@@ -7,9 +7,10 @@ function readDistVal(distance) {
 	let distString = distance.split("");
 	let distVal = "";
 
-	for (const char in distString) {
-		if (numerics.indexOf(char) !== -1) {
-			distVal += char;
+	for (const charPos in distString) {
+		const character = distString[charPos];
+		if (numerics.indexOf(character) !== -1) {
+			distVal += character;
 		}
 	}
 
