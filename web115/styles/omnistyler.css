@@ -46,6 +46,10 @@
 /*======================
 	PAGE-SECTIONS:
 ======================*/
+* {
+	box-sizing: border-box;
+}
+
 html {
 	z-index: 1;
 
@@ -56,7 +60,6 @@ html {
 	font-size: 14pt;
 	line-height: 1.5rem;
 	font-variant-numeric: tabular-nums;
-
 }
 
 body {
@@ -351,11 +354,10 @@ fieldset:not(:last-of-type) :last-child {
 }
 
 .compact div {
-	box-sizing: border-box;
 	width: 50%;
 	padding: 1.5mm;
 	border: 1px dotted #FFF;
-	margin: -1px;
+	margin: -0.5px;
 }
 
 fieldset p {
@@ -370,7 +372,6 @@ fieldset p {
 
 .code-out-area code {
 	display: block;
-	box-sizing: border-box;
 	width: 50%;
 }
 
@@ -397,7 +398,6 @@ label {
 	margin-top: 1.5mm; margin-bottom: 1.5mm;
 
 	width: 100%;
-	box-sizing: border-box;
 }
 
 .drop-button-box {	/*Outer container; holds buttons. */
@@ -413,7 +413,6 @@ label {
 	top: var(--drop-button-y);
 
 	width:100%;
-	box-sizing: border-box;
 	border: 3px solid #FFF;
 	border-top: none;
 
