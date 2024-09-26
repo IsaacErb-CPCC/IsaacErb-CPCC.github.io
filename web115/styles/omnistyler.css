@@ -419,17 +419,18 @@ label {
 	border: 3px solid #FFF;
 	border-top: none;
 
-	background-color: var(--html-bg);
+	background-color: #000;
 	z-index: 2;
 }
 
 .drop-content-box ul {
 	display: inline-block;
+	max-width: var(--drop-button-x);
 }
 
 .drop-opened {
 	border: 3px solid var(--text-alt);
-	border-bottom-color: var(--html-bg);
+	border-bottom-color: #000;
 	/* width: var(--drop-button-x); */
 }
 
