@@ -46,7 +46,7 @@
 /*======================
 	PAGE-SECTIONS:
 ======================*/
-* {
+div, input, button, ul, ol, figure, img, body, main {
 	box-sizing: border-box;
 }
 
