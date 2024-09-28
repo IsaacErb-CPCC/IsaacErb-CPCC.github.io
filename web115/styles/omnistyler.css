@@ -46,7 +46,7 @@
 /*======================
 	PAGE-SECTIONS:
 ======================*/
-div, input, button, ul, ol, figure, img, body, main, fieldset {
+div, input, button, ul, ol, figure, img, fieldset {
 	box-sizing: border-box;
 }
 
@@ -185,7 +185,7 @@ nav ul li {
 	display: block;
 	position: absolute;
 	right: 0mm;
-	bottom: 4mm;
+	bottom: 2mm;
 
 	font-family: LogoFont;
 	font-weight: normal;
