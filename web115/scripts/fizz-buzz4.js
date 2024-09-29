@@ -81,7 +81,7 @@ function configuredFizzBuzz(factorTextPairs) {
 			}
 		}
 
-		if (message === "") {	//If no words were added:
+		if (message === "Robostatus: ") {	//If no words were added:
 			message += "Normal.";
 		} else {
 			message = message.slice(0,-2);	//Removing comma and space at end.
