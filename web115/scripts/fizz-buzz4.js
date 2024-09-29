@@ -25,7 +25,7 @@ var secondWord = "Odd";
 var thirdWord = "Cute";
 var lineLimit = 125;
 
-const EXCALM_INV = "&#161;";
+const LINE_MAX = 1000;
 
 
 //> Defining functions.
@@ -76,15 +76,15 @@ function configuredFizzBuzz(factorTextPairs) {
 		for (const IND in factorTextPairs) {
 			const PAIR = factorTextPairs[IND];
 			if (isMultiple(lineNum, PAIR.factor)) {
-				message += PAIR.text+" ";
+				message += PAIR.text+", ";
 			}
 		}
 
 		if (message === "") {	//If no words were added:
-			message = NORM_TEXT+".";
+			message += "Normal.";
 		} else {
-			message = message.slice(0,-1);	//Removing space at end.
-			message = `${EXCALM_INV}${message}!`;
+			message = message.slice(0,-2);	//Removing comma and space at end.
+			message = `${message}.`;
 		}
 
 		let outLine = `${tabulateLinenum(lineNum)}${message}<br>`;
@@ -108,8 +108,8 @@ function getInputs() {
 	thirdWord = WORD_3_INPUT.value;
 	lineLimit = LINELIMIT_INPUT.value;
 
-	if (lineLimit > 999) {
-		window.alert("Number of lines cannot be greater than 999.");
+	if (lineLimit > LINE_MAX) {
+		window.alert(`Number of lines cannot be greater than ${LINE_MAX}.`);
 		return null;
 	}
 
