@@ -25,6 +25,7 @@ var secondWord = "Odd";
 var thirdWord = "Cute";
 var lineLimit = 125;
 
+const EXCALM_INV = "&#161;";
 const LINE_MAX = 1000;
 
 
