@@ -66,31 +66,25 @@ function setDefaults() {
 	return;
 }
 
-function configuredFizzBuzz() {
+function configuredFizzBuzz(factorTextPairs) {
 	OUTPUT_1_LOC.innerHTML = "";	//Clearing text of output-element, so repeated presses don't just keep appending.
 
 	//> FizzBuzz Loop:
 	for (let lineNum = 0; lineNum < lineLimit; lineNum++) {	//(lineLimit) here is a global variable.
-		let isFirstMult = isMultiple(lineNum, firstFactor);
-		let isSecondMult = isMultiple(lineNum, secondFactor);
-		let isThirdMult = isMultiple(lineNum, thirdFactor);
 		let message = "Robostatus: ";
 
-		if (!isFirstMult && !isSecondMult && !isThirdMult) {
-			message += normWord+".";
-		} else {
-			if (isFirstMult) {
-				message += firstWord+", ";
+		for (const IND in factorTextPairs) {
+			const PAIR = factorTextPairs[IND];
+			if (isMultiple(lineNum, PAIR.factor)) {
+				message += PAIR.text+" ";
 			}
-			if (isSecondMult) {
-				message += secondWord+", ";
-			}
-			if (isThirdMult) {
-				message += thirdWord+", ";
-			}
+		}
 
-			message = message.slice(0, -2);	//Removing the ", " from the end.
-			message = `${message}.`;
+		if (message === "") {	//If no words were added:
+			message = NORM_TEXT+".";
+		} else {
+			message = message.slice(0,-1);	//Removing space at end.
+			message = `${EXCALM_INV}${message}!`;
 		}
 
 		let outLine = `${tabulateLinenum(lineNum)}${message}<br>`;
@@ -136,9 +130,14 @@ function doIO() {
 	if (name === null) {
 		return;
 	}
-
 	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${name}!`;
-	configuredFizzBuzz();
+
+	let fizzbuzzInput = [
+		{factor: firstFactor, text: firstWord},
+		{factor: secondFactor, text: secondWord},
+		{factor: thirdFactor, text: thirdWord}
+	];
+	configuredFizzBuzz(fizzbuzzInput);
 
 	return;
 }

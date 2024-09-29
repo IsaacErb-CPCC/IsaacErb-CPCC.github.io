@@ -50,7 +50,8 @@ function complexFizzBuzz(factorTextPairs) {
 	for (let lineNum = 0; lineNum < 140; lineNum++) {
 		let message = "";
 
-		for (const PAIR in factorTextPairs) {
+		for (const IND in factorTextPairs) {
+			const PAIR = factorTextPairs[IND];
 			if (isMultiple(lineNum, PAIR.factor)) {
 				message += PAIR.text+" ";
 			}
