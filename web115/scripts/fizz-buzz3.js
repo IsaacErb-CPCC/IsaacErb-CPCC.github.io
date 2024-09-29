@@ -8,7 +8,15 @@ const EXCALM_INV = "&#161;";
 const SMALL_FACTOR = 3;
 const LARGE_FACTOR = 5;
 const OTHER_FACTOR = 7;
-
+const NORM_TEXT = "None for now";
+const SMALL_TEXT = "Pet";
+const LARGE_TEXT = "Robot";
+const OTHER_TEXT = "Cute";
+const FIZZBUZZ_INPUT = [
+	{factor: SMALL_FACTOR, text: SMALL_TEXT},
+	{factor: OTHER_FACTOR, text: OTHER_TEXT},
+	{factor: LARGE_FACTOR, text: LARGE_TEXT}
+];
 
 //>	Defining functions.
 function isMultiple(numToCheck, factor) {
@@ -35,35 +43,23 @@ function tabulateLinenum(lineNum) {
 	return displayNum;
 }
 
-function complexFizzBuzz(smallFactor, largeFactor, otherFactor) {
+function complexFizzBuzz(factorTextPairs) {
 	OUTPUT_1_LOC.innerHTML = "";	//Clearing text of output-element, so repeated presses don't just keep appending.
-
-	const NORM_TEXT = "None for now";
-	const SMALL_TEXT = "Pet";
-	const LARGE_TEXT = "Robot";
-	const OTHER_TEXT = "Cute";
 
 	//>	FizzBuzz Loop:
 	for (let lineNum = 0; lineNum < 140; lineNum++) {
-		let isSmallMult = isMultiple(lineNum, smallFactor);
-		let isLargeMult = isMultiple(lineNum, largeFactor);
-		let isOtherMult = isMultiple(lineNum, otherFactor);
 		let message = "";
 
-		if (!isSmallMult && !isOtherMult && !isLargeMult) {
+		for (const PAIR in factorTextPairs) {
+			if (isMultiple(lineNum, PAIR.factor)) {
+				message += PAIR.text+" ";
+			}
+		}
+
+		if (message === "") {	//If no words were added:
 			message = NORM_TEXT+".";
 		} else {
-			if (isSmallMult) {
-				message += SMALL_TEXT+" ";
-			}
-			if (isOtherMult) {
-				message += OTHER_TEXT+" ";
-			}
-			if (isLargeMult) {
-				message += LARGE_TEXT+" ";
-			}
-
-			message = message.slice(0, -1);	//Removing space at end.
+			message = message.slice(0,-1);	//Removing space at end.
 			message = `${EXCALM_INV}${message}!`;
 		}
 
@@ -74,7 +70,7 @@ function complexFizzBuzz(smallFactor, largeFactor, otherFactor) {
 }
 
 function writeOutputs() {
-	complexFizzBuzz(SMALL_FACTOR, LARGE_FACTOR, OTHER_FACTOR);
+	complexFizzBuzz(FIZZBUZZ_INPUT);
 }
 
 
