@@ -2,8 +2,8 @@
 
 class PageContents {
 	constructor(filename) {
-		let request = fetch(`https://IsaacErb-CPCC.github.io/web115/${filename}.html`);
-		this.contents = request.text();
+		// let request = fetch(`https://IsaacErb-CPCC.github.io/web115/${filename}.html`);
+		this.contents = fetch(`https://IsaacErb-CPCC.github.io/web115/${filename}.html`).then((response) => response.text());
 	}
 }
 
