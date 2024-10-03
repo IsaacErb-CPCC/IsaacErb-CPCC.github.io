@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<div data-include="components/head-gen.html" data-replace="@FILENAME:fizz-buzz0.html, @DATE:2024-Sep-09, @TABNAME:FizzBuzz 0, @SCRIPT:fizz-buzz0.js"></div>
+
+<body>
+	<div data-include="components/header-gen.html"></div>
+
+	<main>
+		<h2>FizzBuzz 0</h2>
+		<h3 id="greeting">&#161;Welcome to Lil'RoboCo!</h3>
+		<p>This interactive page shows a bit of form-functionality, as well as an example of the <q><a href="https://en.wikipedia.org/wiki/Fizz_buzz" target="_blank">FizzBuzz</a></q> exercise. (The theme for the outputs is <q>robots</q>.)</p>
+		<p>To start, please fill out the text-fields with the indicated parts of your name, then press the <q>Submit</q>-button.</p>
+		<form>
+			<fieldset>
+				<label for="first-name">First Name:</label>
+				<input type="text" id="first-name">
+				<label for="middle-init">Middle Initial:</label>
+				<input type="text" id="middle-init">
+				<label for="last-name">Last Name:</label>
+				<input type="text" id="last-name">
+			</fieldset>
+			<fieldset>
+				<button type="button" id="submission">Submit</button>
+			</fieldset>
+		</form>
+
+		<div class="code-out-area">
+			<code id="output-1"></code>
+			<code id="output-2"></code>
+		</div>
+	</main>
+
+	<div data-include="components/footer-gen.html"></div>
+
+	<script src="scripts/html-include/HTMLInclude.js"></script>
+</body>
+</html>
