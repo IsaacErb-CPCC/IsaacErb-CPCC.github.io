@@ -162,6 +162,19 @@ nav ul li {
 	padding-left: 2mm; padding-right: 2mm;
 }
 
+.content-button {
+	display: inline;
+	border: 2px solid #FFF;
+	border-radius: 20%;
+	background-color: #000;
+	color: var(--text-highlight);
+}
+
+.drop-content-box .content-button {
+	border: none;
+	width: 100%;
+}
+
 #header-navlinks {
 	grid-column: 1; grid-row: 1;
 }
@@ -214,7 +227,7 @@ a {
 	color: var(--text-highlight);
 }
 
-a:not(.nav-link):visited {
+a:not(.footer-link):visited {
 	color: var(--text-less-highlight);
 }
 
@@ -222,7 +235,7 @@ a:focus, a:hover, a:active {
 	color: var(--text-more-highlight);
 }
 
-.nav-link {
+.footer-link {
 	text-decoration: none;
 }
 
