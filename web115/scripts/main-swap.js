@@ -1,21 +1,13 @@
 "use strict";
 
 /*
-  ! NOTICE: This script copies the structure of the MDN
-    "fetch-text" example at https://github.com/mdn/dom-examples/blob/main/fetch/fetch-text/index.html.
+! NOTICE: This script copies the structure of the MDN
+"fetch-text" example at https://github.com/mdn/dom-examples/blob/main/fetch/fetch-text/index.html.
 */
 
 const MAIN = document.querySelector("main");
 const HOME_URL = "home.html";
-const CONTENT_LINKS = document.querySelectorAll("nav a");
-
-for (const link of CONTENT_LINKS) {
-	link.onclick = (contentRequest) => {
-		contentRequest.preventDefault();
-		const DATA_URL = contentRequest.target.getAttribute("data-page");
-		swapMainContents(DATA_URL);
-	};
-}
+// const CONTENT_LINKS = document.querySelectorAll("nav a");
 
 function swapMainContents(dataURL) {
 	console.log(dataURL);	//@DEBUG-FEATURE!
@@ -32,5 +24,14 @@ function swapMainContents(dataURL) {
 			MAIN.innerText = error.message;
 		});
 }
+
+// for (const link of CONTENT_LINKS) {
+// 	link.onclick = (contentRequest) => {
+// 		contentRequest.preventDefault();
+// 		const DATA_URL = contentRequest.target.getAttribute("data-page");
+// 		swapMainContents(DATA_URL);
+// 	};
+// }
+
 
 swapMainContents(HOME_URL);
