@@ -163,9 +163,10 @@ nav ul li {
 }
 
 .content-button {
+	font-family: FiraSans;
 	display: inline;
 	border: 2px solid #FFF;
-	border-radius: 20%;
+	border-radius: 6mm;
 	background-color: #000;
 	color: var(--text-highlight);
 }
@@ -321,7 +322,7 @@ hr {
 /*======================
 	FORM-STUFF:
 ======================*/
-input, button {
+input, button:not(.content-button) {
 	display: block;
 	color: var(--text-highlight);
 	background-color: #000;
