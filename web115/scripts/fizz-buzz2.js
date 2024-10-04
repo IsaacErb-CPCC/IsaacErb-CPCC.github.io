@@ -1,10 +1,10 @@
 "use strict";
 
 //>	Defining global variables.
-const SUBMIT_BUTTON = document.getElementById("submission");
-const SMALL_FACTOR = 6;
-const LARGE_FACTOR = 8;
-const OUTPUT_1_LOC = document.getElementById("output-1");
+var SUBMIT_BUTTON = document.getElementById("submission");
+var SMALL_FACTOR = 6;
+var LARGE_FACTOR = 8;
+var OUTPUT_1_LOC = document.getElementById("output-1");
 
 
 //> Defining functions.

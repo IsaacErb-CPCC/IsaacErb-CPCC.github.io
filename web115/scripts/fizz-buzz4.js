@@ -3,18 +3,18 @@
 //> Defining global variables.
 var SUBMIT_BUTTON = document.getElementById("submission");
 
-const NAME_FIRST_INPUT = document.getElementById("first-name");
-const NAME_MIDDLE_INPUT = document.getElementById("middle-init");
-const NAME_LAST_INPUT = document.getElementById("last-name");
-const FACTOR_1_INPUT = document.getElementById("factor-1");
-const FACTOR_2_INPUT = document.getElementById("factor-2");
-const FACTOR_3_INPUT = document.getElementById("factor-3");
-const WORD_1_INPUT = document.getElementById("word-1");
-const WORD_2_INPUT = document.getElementById("word-2");
-const WORD_3_INPUT = document.getElementById("word-3");
-const LINELIMIT_INPUT = document.getElementById("line-limit");
-const NAME_LOC = document.getElementById("greeting");
-const OUTPUT_1_LOC = document.getElementById("output-1");
+var NAME_FIRST_INPUT = document.getElementById("first-name");
+var NAME_MIDDLE_INPUT = document.getElementById("middle-init");
+var NAME_LAST_INPUT = document.getElementById("last-name");
+var FACTOR_1_INPUT = document.getElementById("factor-1");
+var FACTOR_2_INPUT = document.getElementById("factor-2");
+var FACTOR_3_INPUT = document.getElementById("factor-3");
+var WORD_1_INPUT = document.getElementById("word-1");
+var WORD_2_INPUT = document.getElementById("word-2");
+var WORD_3_INPUT = document.getElementById("word-3");
+var LINELIMIT_INPUT = document.getElementById("line-limit");
+var NAME_LOC = document.getElementById("greeting");
+var OUTPUT_1_LOC = document.getElementById("output-1");
 
 var firstFactor = 4;
 var secondFactor = 6;
@@ -25,8 +25,8 @@ var secondWord = "Odd";
 var thirdWord = "Cute";
 var lineLimit = 125;
 
-const EXCALM_INV = "&#161;";
-const LINE_MAX = 1000;
+var EXCALM_INV = "&#161;";
+var LINE_MAX = 1000;
 
 
 //> Defining functions.

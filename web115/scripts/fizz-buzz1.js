@@ -1,8 +1,8 @@
 "use strict";
 
 //> Defining global variables.
-const SUBMIT_BUTTON = document.getElementById("submission");
-const OUTPUT_1_LOC = document.getElementById("output-1");
+var SUBMIT_BUTTON = document.getElementById("submission");
+var OUTPUT_1_LOC = document.getElementById("output-1");
 
 //>	Defining functions.
 function tabulateLinenum(lineNum) {
