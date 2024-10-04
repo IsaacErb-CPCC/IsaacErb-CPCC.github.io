@@ -7,8 +7,28 @@
 
 const MAIN = document.querySelector("main");
 const HOME_URL = "home.html";
+// const CONTENT_SCRIPT = document.createElement('script');
+// CONTENT_SCRIPT.id = 'content-script';
 
-function swapMainContents(dataURL) {
+function swapContentScript(scriptName) {
+	const OLD_SCRIPT = document.querySelector('content-script');
+	if (OLD_SCRIPT !== null) {
+		document.head.removeChild(OLD_SCRIPT);
+	}
+
+	const NEW_SCRIPT = document.createElement('script');
+	NEW_SCRIPT.id = 'content-script';
+	// new Promise((resolve, reject) => {
+	document.head.prepend(NEW_SCRIPT);
+	// NEW_SCRIPT.onload = resolve;
+	// NEW_SCRIPT.onerror = reject;
+	NEW_SCRIPT.defer = true;
+	NEW_SCRIPT.src = `scripts/${scriptName}`;
+	// });
+	return;
+}
+
+function swapMainContents(dataURL, scriptName="none.js") {
 	// console.log(dataURL);	//@DEBUG-FEATURE!
 	const DATA_REQUEST = new Request(dataURL);
 
@@ -22,6 +42,9 @@ function swapMainContents(dataURL) {
 		.catch((error) => {	//@DEBUG-FEATURE!
 			MAIN.innerText = error.message;
 		});
+
+	swapContentScript(scriptName);
+	return;
 }
 
 swapMainContents(HOME_URL);
