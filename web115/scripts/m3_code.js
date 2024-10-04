@@ -1,8 +1,9 @@
 "use strict";
 
-const inputTag = "<div class=\"code-bg\"><code class=\"input\">";
-const outputTag = "<div class=\"code-bg\"><code class=\"output\">";
-const endTag = "</code></div>";
+var OUTPUT_ZONE = document.getElementById("output-zone");
+var inputTag = "<div class=\"code-bg\"><code class=\"input\">";
+var outputTag = "<div class=\"code-bg\"><code class=\"output\">";
+var endTag = "</code></div>";
 
 function handleAnglemarks(codestring) {
 	codestring = codestring.replaceAll("<", "&lt;");
@@ -22,14 +23,13 @@ function handleAll(codestring) {
 }
 
 function writeIncode(codestring) {
-	document.write(`${inputTag}${codestring}${endTag}`);
+	OUTPUT_ZONE.innerHTML += (`${inputTag}${codestring}${endTag}`);
 }
-
 function writeOutcode(codestring) {
-	document.write(`${outputTag}${codestring}${endTag}`);
+	OUTPUT_ZONE.innerHTML += (`${outputTag}${codestring}${endTag}`);
 }
 
-document.write("<p>Defining constants which make the construction of HTML-elements modular. (These are only visible in the sourcecode, but took enough figuring out that I think it's fair to count them among the statements which fulfill my minimum for this assigment.)</p>");
+OUTPUT_ZONE.innerHTML = ("<p>Defining constants which make the construction of HTML-elements modular. (These are only visible in the sourcecode, but took enough figuring out that I think it's fair to count them among the statements which fulfill my minimum for this assigment.)</p>");
 writeIncode(handleAnglemarks("const inputTag = \"<div class=\\\"code-bg\\\"><code class=\\\"input\\\">\";"));
 writeOutcode("undefined");
 writeIncode(handleAnglemarks("const outputTag = \"<div class=\\\"code-bg\\\"><code class=\\\"output\\\">\";"));
@@ -39,7 +39,7 @@ writeOutcode("undefined");
 
 var materialList = [];
 
-document.write("<p>Defining class which holds some of the properties of a specified material.</p>");
+OUTPUT_ZONE.innerHTML +=("<p>Defining class which holds some of the properties of a specified material.</p>");
 writeIncode(handleBlanks(`class Material {
 	constructor(name, density, meltPoint) {
 		this.name = name;
@@ -55,9 +55,9 @@ class Material {
 		materialList.push(this);
 	}
 }
-document.write(`${outputTag}undefined${endTag}`);
+OUTPUT_ZONE.innerHTML +=(`${outputTag}undefined${endTag}`);
 
-document.write("<p>First failed attempt to instance Material.</p>");
+OUTPUT_ZONE.innerHTML +=("<p>First failed attempt to instance Material.</p>");
 writeIncode("let Ca = Material(\"Calcium\", 1.526, 1155);");
 try {
 	let Ca = Material("Calcium", 1.526, 1155);
@@ -65,19 +65,19 @@ try {
 	writeOutcode(`${error}`);
 }
 
-document.write("<p>Second failed attempt to instance Material.</p>");
+OUTPUT_ZONE.innerHTML +=("<p>Second failed attempt to instance Material.</p>");
 writeIncode("new var Ca = Material(\"Calcium\", 1.526, 1155);");
 writeOutcode(handleBlanks(`new var Ca = Material("Calcium", 1.526, 1155);
 			^^^
 
 Uncaught SyntaxError: Unexpected token 'var'`));
 
-document.write("<p>Successful creation of an instance of Material.</p>");
+OUTPUT_ZONE.innerHTML +=("<p>Successful creation of an instance of Material.</p>");
 writeIncode("var Ca = new Material(\"Calcium\", 1.526, 1115);");
 var Ca = new Material("Calcium", 1.526, 1115);
 writeOutcode("undefined");
 
-document.write("<p>Returning properties of calcium.</p>");
+OUTPUT_ZONE.innerHTML +=("<p>Returning properties of calcium.</p>");
 writeIncode("Ca.name;");
 writeOutcode(Ca.name);
 writeIncode("Ca.density;");
@@ -87,12 +87,12 @@ writeOutcode(`${Ca.meltPoint}`);
 writeIncode("typeof(Ca);");
 writeOutcode(`${typeof(Ca)}`);
 
-document.write("<p>Creating a second instance for iron.</p>");
+OUTPUT_ZONE.innerHTML +=("<p>Creating a second instance for iron.</p>");
 writeIncode("var Fe = new Material(\"Iron\", 7.874, 1811);");
 var Fe = new Material("Iron", 7.874, 1811);
 writeOutcode("undefined");
 
-document.write("<p>Returning properties of iron.</p>");
+OUTPUT_ZONE.innerHTML +=("<p>Returning properties of iron.</p>");
 writeIncode("Fe.name;");
 writeOutcode(Fe.name);
 writeIncode("Fe.density;");
@@ -102,7 +102,7 @@ writeOutcode(`${Fe.meltPoint}`);
 writeIncode("typeof(Fe);");
 writeOutcode(`${typeof(Fe)}`);
 
-document.write("<p>Creating a function to compare instances of Material.</p>");
+OUTPUT_ZONE.innerHTML +=("<p>Creating a function to compare instances of Material.</p>");
 writeIncode(handleBlanks(`function materCompare(elem1, elem2) {
 	let dense, sparse, heatRes, melty;
 	if (elem1.density > elem2.density) {
@@ -153,12 +153,12 @@ function materCompare(elem1, elem2) {
 }
 writeOutcode("undefined");
 
-document.write("<p>Comparing iron and calcium.</p>");
+OUTPUT_ZONE.innerHTML +=("<p>Comparing iron and calcium.</p>");
 writeIncode("materCompare(Ca, Fe);");
 writeOutcode(handleBlanks(materCompare(Ca, Fe)));
 
 
-document.write("<p>Defining some more materials.</p>");
+OUTPUT_ZONE.innerHTML +=("<p>Defining some more materials.</p>");
 writeIncode("var W = new Material(\"Wolfram\", 19.254, 3695);");
 var W = new Material("Wolfram", 19.254, 3695);
 writeOutcode("undefined");
@@ -177,7 +177,7 @@ writeOutcode("undefined");
 // var H2O = new Material('Water', 0.9982, 373);
 // var Cu22Sn3 = new Material('Bronze', 8.7, 1186);
 
-document.write("<p>Creating function for comparing an array of instances of Material.</p>");
+OUTPUT_ZONE.innerHTML +=("<p>Creating function for comparing an array of instances of Material.</p>");
 writeIncode(handleAll(`function materExtrema(materList) {
 	let densities = [], meltPoints = [];
 	let matersString = "";
@@ -188,7 +188,7 @@ writeIncode(handleAll(`function materExtrema(materList) {
 		meltPoints.push(material.meltPoint);
 		matersString += material.name + ", ";
 	}
-	document.write("<p>(In <code>materExtrema</code>) Showing before and after of a <q><code>.slice</code></q> operation on a part of the output.</p>");
+	OUTPUT_ZONE.innerHTML +=("<p>(In <code>materExtrema</code>) Showing before and after of a <q><code>.slice</code></q> operation on a part of the output.</p>");
 	writeIncode("matersString;");
 	writeOutcode(matersString);
 	writeIncode("matersString = matersString.slice(0, -2);");
@@ -219,7 +219,7 @@ writeIncode(handleAll(`function materExtrema(materList) {
 - \${leastMeltyMat.name} is the most heat-resistant of the materials, with a melting-point of \${leastMeltyMat.meltPoint}K.
 - \${meltiestMat.name} is the least heat-resistant of the materials, with a melting-point of \${meltiestMat.meltPoint}K.\`;
 
-	document.write("<p>Output from <code>materExtrema</code>.</p>");
+	OUTPUT_ZONE.innerHTML +=("<p>Output from <code>materExtrema</code>.</p>");
 	return outString;
 }`));	//${handleAnglemarks("<p>Output from <code>materExtrema</code>.</p>")}
 function materExtrema(materList) {
@@ -232,7 +232,7 @@ function materExtrema(materList) {
 		meltPoints.push(material.meltPoint);
 		matersString += material.name + ", ";
 	}
-	document.write("<p>(In <code>materExtrema</code>) Showing before and after of a <q><code>.slice</code></q> operation on a part of the output.</p>");
+	OUTPUT_ZONE.innerHTML +=("<p>(In <code>materExtrema</code>) Showing before and after of a <q><code>.slice</code></q> operation on a part of the output.</p>");
 	writeIncode("matersString;");
 	writeOutcode(matersString);
 	writeIncode("matersString = matersString.slice(0, -2);");
@@ -263,12 +263,12 @@ function materExtrema(materList) {
 - ${leastMeltyMat.name} is the most heat-resistant of the materials, with a melting-point of ${leastMeltyMat.meltPoint}K.
 - ${meltiestMat.name} is the least heat-resistant of the materials, with a melting-point of ${meltiestMat.meltPoint}K.`;
 
-	document.write("<p>Output from <code>materExtrema</code>.</p>");
+	OUTPUT_ZONE.innerHTML +=("<p>Output from <code>materExtrema</code>.</p>");
 	return outString;
 }
 writeOutcode("undefined");
 
-document.write("<p>Running <code>materExtrema</code> on an array of all instances of Material.</p>");
+OUTPUT_ZONE.innerHTML +=("<p>Running <code>materExtrema</code> on an array of all instances of Material.</p>");
 writeIncode("<code>materExtrema</code>(materialList);");
 writeOutcode(handleBlanks(materExtrema(materialList)));
 
