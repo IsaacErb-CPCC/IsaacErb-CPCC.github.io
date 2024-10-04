@@ -407,7 +407,7 @@ label {
 	grid-column: 2; grid-row: 1;
 }
 
-.drop-button {
+nav .drop-button {
 	font-family: FiraSans;
 	font-weight: normal;
 	color: var(--text-highlight);
@@ -436,16 +436,11 @@ label {
 	z-index: 2;
 }
 
-/* .drop-content-box ul {
-	display: block;
-	width: 100%;
-}*/
-
-.drop-opened {
+nav .drop-opened {
 	border: 3px solid var(--text-alt);
 	border-bottom-color: #000;
 }
 
-.drop-opened + .drop-content-box {
+nav .drop-opened + .drop-content-box {
 	border-color: var(--text-alt);
 }
