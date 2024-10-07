@@ -13,11 +13,11 @@ const SCRIPT_MAP = [
 	{url: "introductions.html", script: "none.js"},
 	{url: "brand.html", script: "none.js"},
 	{url: "m3-code-output.html", script: "m3_code.js"},
-	{url: "fizz-buzz0.html", script: "fizzbuzz0.js"},
-	{url: "fizz-buzz1.html", script: "fizzbuzz1.js"},
-	{url: "fizz-buzz2.html", script: "fizzbuzz2.js"},
-	{url: "fizz-buzz3.html", script: "fizzbuzz3.js"},
-	{url: "fizz-buzz4.html", script: "fizzbuzz4.js"}
+	{url: "fizzbuzz0.html", script: "fizz-buzz0.js"},
+	{url: "fizzbuzz1.html", script: "fizz-buzz1.js"},
+	{url: "fizzbuzz2.html", script: "fizz-buzz2.js"},
+	{url: "fizzbuzz3.html", script: "fizz-buzz3.js"},
+	{url: "fizzbuzz4.html", script: "fizz-buzz4.js"}
 ];
 // const CONTENT_SCRIPT = document.createElement('script');
 // CONTENT_SCRIPT.id = 'content-script';
