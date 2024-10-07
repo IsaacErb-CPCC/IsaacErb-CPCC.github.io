@@ -19,10 +19,6 @@ const SCRIPT_MAP = [
 	{url: "fizzbuzz3.html", script: "fizz-buzz3.js"},
 	{url: "fizzbuzz4.html", script: "fizz-buzz4.js"}
 ];
-// const CONTENT_SCRIPT = document.createElement('script');
-// CONTENT_SCRIPT.id = 'content-script';
-
-function getPageScript() {}
 
 function getLastVisited() {
 	let lastVisited = localStorage.getItem('last-visited');
