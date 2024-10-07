@@ -92,13 +92,6 @@ footer {
 /*======================
 	TEXT-BASED ELEMENTS:
 ======================*/
-/* #page-subtitle {
-	font-size: 1.75rem;
-	font-weight: normal;
-	text-align: center;
-	line-height: 2rem;
-} */
-
 h1 {
 	font-size: 2.7rem;
 	text-align: center;
@@ -164,6 +157,7 @@ nav ul li {
 
 .content-button {
 	font-family: FiraSans;
+	font-size: 1.2rem;
 	display: inline;
 	border: 2px solid #FFF;
 	border-radius: 6mm;
@@ -415,6 +409,7 @@ label {
 
 nav .drop-button {
 	font-family: FiraSans;
+	font-size: 1.2rem;
 	font-weight: normal;
 	color: var(--text-highlight);
 	margin-top: 1.5mm; margin-bottom: 1.5mm;
