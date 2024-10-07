@@ -75,7 +75,7 @@ function swapMainContents(dataURL) {
 		});
 
 	swapContentScript(dataURL);
-	localStorage.setItem('lastVisited', dataURL);
+	localStorage.setItem('last-visited', dataURL);
 	return;
 }
 
