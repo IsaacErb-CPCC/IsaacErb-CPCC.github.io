@@ -7,13 +7,44 @@
 
 const MAIN = document.querySelector("main");
 const HOME_URL = "home.html";
+const SCRIPT_MAP = [
+	{url: HOME_URL, script: "none.js"},
+	{url: "contract.html", script: "none.js"},
+	{url: "introductions.html", script: "none.js"},
+	{url: "brand.html", script: "none.js"},
+	{url: "m3-code-output.html", script: "m3_code.js"},
+	{url: "fizz-buzz0.html", script: "fizzbuzz0.js"},
+	{url: "fizz-buzz1.html", script: "fizzbuzz1.js"},
+	{url: "fizz-buzz2.html", script: "fizzbuzz2.js"},
+	{url: "fizz-buzz3.html", script: "fizzbuzz3.js"},
+	{url: "fizz-buzz4.html", script: "fizzbuzz4.js"}
+];
 // const CONTENT_SCRIPT = document.createElement('script');
 // CONTENT_SCRIPT.id = 'content-script';
 
-function swapContentScript(scriptName) {
+function getPageScript() {}
+
+function getLastVisited() {
+	let lastVisited = localStorage.getItem('last-visited');
+	if (lastVisited !== null) {
+		return lastVisited;
+	} else {
+		return HOME_URL;
+	}
+}
+
+function swapContentScript(dataURL) {
 	const OLD_SCRIPT = document.querySelector('content-script');
 	if (OLD_SCRIPT !== null) {
 		document.head.removeChild(OLD_SCRIPT);
+	}
+
+	let scriptURL;
+	for (const index in SCRIPT_MAP) {
+		const pair = SCRIPT_MAP[index];
+		if (pair.url === dataURL) {
+			scriptURL = pair.script;
+		}
 	}
 
 	const NEW_SCRIPT = document.createElement('script');
@@ -23,12 +54,12 @@ function swapContentScript(scriptName) {
 	// NEW_SCRIPT.onload = resolve;
 	// NEW_SCRIPT.onerror = reject;
 	NEW_SCRIPT.defer = true;
-	NEW_SCRIPT.src = `scripts/${scriptName}`;
+	NEW_SCRIPT.src = `scripts/${scriptURL}`;
 	// });
 	return;
 }
 
-function swapMainContents(dataURL, scriptName="none.js") {
+function swapMainContents(dataURL) {
 	// console.log(dataURL);	//@DEBUG-FEATURE!
 	const DATA_REQUEST = new Request(dataURL);
 
@@ -43,8 +74,9 @@ function swapMainContents(dataURL, scriptName="none.js") {
 			MAIN.innerText = error.message;
 		});
 
-	swapContentScript(scriptName);
+	swapContentScript(dataURL);
+	localStorage.setItem('lastVisited', dataURL);
 	return;
 }
 
-swapMainContents(HOME_URL);
+swapMainContents(getLastVisited());

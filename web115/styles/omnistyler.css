@@ -334,7 +334,11 @@ input, button:not(.content-button) {
 	font-size: 1rem;
 }
 
- button, [type="submit"], [type="button"] {
+@media (min-width: 960) {
+	input
+}
+
+ button:not(.content-button), [type="submit"], [type="button"] {
 	color: var(--text-more-highlight);
 	margin: auto;
 	padding: 2mm 3mm;
