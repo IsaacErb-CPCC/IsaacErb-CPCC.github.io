@@ -1,10 +1,6 @@
 const inputLoc = document.querySelector("#text-input");
 const outputLoc = document.querySelector("#result");
-const isAlpha = /^[a-z0-9]+$/;
-
-function palinFilter(character) {
-	return isAlpha.test(character);
-}
+const isAlphaNumeric = /^[a-z0-9]+$/;
 
 function palinCheck() {
 	let inText = inputLoc.value;
@@ -12,7 +8,7 @@ function palinCheck() {
 		window.alert("Please input a value");
 	} else {
 		let inCharUnfiltered = inText.toLowerCase().split("");
-		let inChar = inCharUnfiltered.filter(char => char.match(isAlpha));
+		let inChar = inCharUnfiltered.filter(char => char.match(isAlphaNumeric));
 		let isPalin = true;
 		for (
 			let bgn = 0, end = inChar.length-1;
