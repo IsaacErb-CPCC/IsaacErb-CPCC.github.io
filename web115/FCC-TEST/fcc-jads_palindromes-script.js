@@ -15,8 +15,8 @@ function palinCheck() {
 		let inChar = inCharUnfiltered.filter(char => char.match(isAlpha));
 		let isPalin = true;
 		for (
-			let bgn=0, end=inChar.length-1;
-			isPalin && bgn !== end;
+			let bgn = 0, end = inChar.length-1;
+			isPalin && bgn - end > 0;
 			bgn++, end--
 		) {
 			const bgnChar = inChar[bgn], endChar = inChar[end];
