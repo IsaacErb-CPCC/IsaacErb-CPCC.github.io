@@ -12,7 +12,7 @@ function palinCheck() {
 		let isPalin = true;
 		for (
 			let bgn = 0, end = inChar.length-1;
-			isPalin && bgn - end > 0;
+			isPalin && bgn - end >= -1;
 			bgn++, end--
 		) {
 			const bgnChar = inChar[bgn], endChar = inChar[end];
