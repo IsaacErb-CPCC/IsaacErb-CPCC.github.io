@@ -4,7 +4,7 @@ const isAlphaNumeric = /^[a-z0-9]+$/;
 
 function palinCheck() {
 	let inText = inputLoc.value;
-	if (inText === null) {
+	if (inText === "") {
 		window.alert("Please input a value");
 	} else {
 		let inCharUnfiltered = inText.toLowerCase().split("");
