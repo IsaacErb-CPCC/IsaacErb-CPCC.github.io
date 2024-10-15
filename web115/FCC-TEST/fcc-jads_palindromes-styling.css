@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+html {
+	background-color: #EEE;
+	font-family: Kanit;
+	font-size: 18px;
+}
+
+body {
+	width: fit-content;
+	margin: auto;
+	border-radius: 1mm;
+	border: 3px solid #222;
+	background-color: #AAF;
+	color: #200;
+}
+
+body * {
+	display: block;
+	margin-left: auto; margin-right: auto;
+}
