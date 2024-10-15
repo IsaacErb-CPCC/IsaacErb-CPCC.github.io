@@ -11,7 +11,7 @@ function palinCheck() {
 	if (inText === null) {
 		window.alert("Please input a value");
 	} else {
-		let inCharUnfiltered = inText.split("");
+		let inCharUnfiltered = inText.split("").toLowerCase();
 		let inChar = inCharUnfiltered.filter(char => char.match(isAlpha));
 		let isPalin = true;
 		for (
