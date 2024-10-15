@@ -12,7 +12,7 @@ function palinCheck() {
 		window.alert("Please input a value");
 	} else {
 		let inCharUnfiltered = inText.split("");
-		let inChar = inCharUnfiltered.filter(palinFilter);
+		let inChar = inCharUnfiltered.filter(char => char.match(isAlpha));
 		let isPalin = true;
 		for (
 			let bgn=0, end=inChar.length()-1;
