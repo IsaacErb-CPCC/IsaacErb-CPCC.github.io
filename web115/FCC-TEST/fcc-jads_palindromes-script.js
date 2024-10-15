@@ -9,14 +9,12 @@ function palinCheck() {
 	} else {
 		let inCharUnfiltered = inText.toLowerCase().split("");
 		let inChar = inCharUnfiltered.filter(char => char.match(isAlphaNumeric));
+		let inReverse = [] + inChar;
+		inReverse.reverse();
 		let isPalin = true;
-		for (
-			let bgn = 0, end = inChar.length-1;
-			isPalin && bgn - end >= -2;
-			bgn++, end--
-		) {
-			const bgnChar = inChar[bgn], endChar = inChar[end];
-			isPalin = (bgnChar === endChar);
+		for (let i = 0; i < inChar.length; i++) {
+			const normChar = inChar[i], revChar = inReverse[i];
+			isPalin = (normChar === revChar);
 		}
 
 		message = isPalin ? "is a palindrome":"is not a palindrome";
