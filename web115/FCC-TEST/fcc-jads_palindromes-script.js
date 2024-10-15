@@ -9,7 +9,7 @@ function palinCheck() {
 	} else {
 		let inCharUnfiltered = inText.toLowerCase().split("");
 		let inChar = inCharUnfiltered.filter(char => char.match(isAlphaNumeric));
-		let inReverse = inChar;
+		let inReverse = [...inChar];
 		inReverse.reverse();
 		let isPalin = true;
 		for (let i = 0; isPalin && i < inChar.length; i++) {
