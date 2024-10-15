@@ -1,6 +1,6 @@
 const inputLoc = document.querySelector("#text-input");
 const outputLoc = document.querySelector("#result");
-const isAlpha = /^[a-zA-Z]+$/;
+const isAlpha = /^[a-zA-Z0-9]+$/;
 
 function palinFilter(character) {
 	return isAlpha.test(character);
