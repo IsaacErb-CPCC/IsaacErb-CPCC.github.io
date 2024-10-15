@@ -12,7 +12,7 @@ function palinCheck() {
 		let inReverse = inChar;
 		inReverse.reverse();
 		let isPalin = true;
-		for (let i = 0; i < inChar.length; i++) {
+		for (let i = 0; isPalin && i < inChar.length; i++) {
 			const normChar = inChar[i], revChar = inReverse[i];
 			isPalin = (normChar === revChar);
 		}
