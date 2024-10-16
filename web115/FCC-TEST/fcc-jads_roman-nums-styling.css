@@ -8,11 +8,11 @@
 html {
 	background-color: #CCD;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 body {
-	justify-self: center;
-	align-self: center;
 	margin: auto;
 	border-radius: 1mm;
 	border: 3px solid #000;
