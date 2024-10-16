@@ -33,37 +33,86 @@ function romanizeComponent(indoArabic, preVal, halfVal, wholeVal) {
 	return romNum
 }
 
-function romanizeNumber(indoArabic) {
-	// if (indoArabic >= cutoff) {
-	// 	window.alert(`Please enter a number below ${cutoff}.`)
-	// }
+const powerSymbols = [
+	{power:5, one:"ↈ"},
+	{power:4, one:"ↂ", five:"ↇ", ten:"ↈ"},
+	{power:3, one:"M", five:"ↁ", ten:"ↂ"},
+	{power:2, one:"C", five:"D", ten:"M"},
+	{power:1, one:"X", five:"L", ten:"C"},
+	{power:0, one:"I", five:"V", ten:"X"}
+]
+
+function romanLoop (indoArabic) {
 	let romanNumber = "";
-	if (indoArabic >= 10e5) {
-		let hundredKs = Math.floor(indoArabic / 10e5);
+	if (isNaN(indoArabic) || indoArabic < 1) {
+		window.alert("Please enter an integer greater than zero.");
+	}
+	else if (indoArabic >= 1e6) {
+		window.alert("Please enter an integer lower than 1000000 (1e+6).");
+	}
+
+	for (let power = 5; power >= 0; power--) {
+		if (power === 5) {
+			let oneSymbol;
+			for (const i in powerSymbols) {
+				const group = powerSymbols[i];
+				if (group.power === 5) {
+					oneSymbol = group.one;
+				}
+			}
+			let hundredKs = Math.floor(indoArabic / Number(`1e${power}`));
+			let e5_component = fillRemainder(hundredKs, oneSymbol);
+			romanNumber += e5_component;
+			indoArabic = Number(indoArabic.toString().slice(-power));
+		}
+		else {
+			let oneSymbol, fiveSymbol, tenSymbol;
+			for (const i in powerSymbols) {
+				const group = powerSymbols[i];
+				if (group.power === power) {
+					oneSymbol = group.one;
+					fiveSymbol = group.five;
+					tenSymbol = group.ten;
+				}
+			}
+			let placeVal = Math.floor(indoArabic / Number(`1e${power}`));
+			let placeRoman = romanizeComponent(placeVal, oneSymbol, fiveSymbol, tenSymbol);
+			romanNumber += placeRoman;
+			indoArabic = Number(indoArabic.toString().slice(-power));
+		}
+	}
+
+	outputLoc.innerText = romanNumber;
+}
+
+function romanizeNumber(indoArabic) {
+	let romanNumber = "";
+	if (indoArabic >= 1e5) {
+		let hundredKs = Math.floor(indoArabic / 1e5);
 		let e5_component = fillRemainder(hundredKs, "ↈ");
 		romanNumber += e5_component;
 		indoArabic = Number(indoArabic.toString().slice(-5));
 	}
-	if (indoArabic >= 10e4) {
-		let tenKs = Math.floor(indoArabic / 10e4);
+	if (indoArabic >= 1e4) {
+		let tenKs = Math.floor(indoArabic / 1e4);
 		let e4_component = romanizeComponent(tenKs, "ↂ", "ↇ", "ↈ");
 		romanNumber += e4_component;
 		indoArabic = Number(indoArabic.toString().slice(-4));
 	}
-	if (indoArabic >= 10e3) {
-		let thousands = Math.floor(indoArabic / 10e3);
+	if (indoArabic >= 1e3) {
+		let thousands = Math.floor(indoArabic / 1e3);
 		let e3_component = romanizeComponent(thousands, "M", "ↁ", "ↂ");
 		romanNumber += e3_component;
 		indoArabic = Number(indoArabic.toString().slice(-3));
 	}
-	if (indoArabic >= 10e2) {
-		let hundreds = Math.floor(indoArabic / 10e2);
+	if (indoArabic >= 1e2) {
+		let hundreds = Math.floor(indoArabic / 1e2);
 		let e2_component = romanizeComponent(hundreds, "C", "D", "M");
 		romanNumber += e2_component;
 		indoArabic = Number(indoArabic.toString().slice(-2));
 	}
-	if (indoArabic >= 10e1) {
-		let tens = Math.floor(indoArabic / 10e1);
+	if (indoArabic >= 1e1) {
+		let tens = Math.floor(indoArabic / 1e1);
 		let e1_component = romanizeComponent(tens, "X", "L", "C");
 		romanNumber += e1_component;
 		indoArabic = Number(indoArabic.toString().slice(-1));
@@ -74,7 +123,7 @@ function romanizeNumber(indoArabic) {
 }
 
 function callRomans() {
-	romanizeNumber(inputLoc.value);
+	romanLoop(inputLoc.value);
 }
 /*
 100000: ↈ
