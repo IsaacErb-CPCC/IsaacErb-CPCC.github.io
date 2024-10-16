@@ -11,6 +11,7 @@ html {
 
 body {
 	width: fit-content;
+	height: fit-content;
 	margin: auto;
 	border-radius: 1mm;
 	border: 3px solid #222;
