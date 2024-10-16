@@ -18,6 +18,6 @@ function palinCheck() {
 		}
 
 		message = isPalin ? "is a palindrome":"is not a palindrome";
-		outputLoc.innerText = `${inText} ${message}`;
+		outputLoc.innerText = `"${inText}" ${message}.`;
 	}
 }
