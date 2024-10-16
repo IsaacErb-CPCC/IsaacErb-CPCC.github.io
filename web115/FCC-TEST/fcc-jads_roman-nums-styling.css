@@ -7,11 +7,12 @@
 
 html {
 	background-color: #EEE;
+	display: flex;
 }
 
 body {
-	width: fit-content;
-	height: fit-content;
+	justify-self: center;
+	align-self: center;
 	margin: auto;
 	border-radius: 1mm;
 	border: 3px solid #222;

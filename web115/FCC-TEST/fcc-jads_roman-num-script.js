@@ -1,6 +1,5 @@
 "use strict";
 
-const cutoff = 500000;
 const inputLoc = document.querySelector("#text-input");
 const outputLoc = document.querySelector("#result");
 
