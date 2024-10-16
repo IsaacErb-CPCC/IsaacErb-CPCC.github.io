@@ -6,7 +6,7 @@ const outputLoc = document.querySelector("#result");
 
 function fillRemainder(indoArabic, numChar) {
 	let romNum = "";
-	for (rem = 0; rem < indoArabic; rem++) {
+	for (let rem = 0; rem < indoArabic; rem++) {
 		romNum += numChar;
 	}
 
