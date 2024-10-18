@@ -1,7 +1,7 @@
 "use strict";
 
-const INPUT_LOC = document.querySelector("#user-input");
-const OUTPUT_LOC = document.querySelector("#results-div");
+const INPUT_LOC = document.getElementById("user-input");
+const OUTPUT_LOC = document.getElementById("results-div");
 const PHONE_REGEX = /^[1]?[ \-(]?[0-9]{3}[) \-?][0-9]{3}[ \-?][0-9]{3}$/;
 
 function sussNumber() {
