@@ -40,6 +40,7 @@ h2 {
 input {
 	min-width: fit-content;
 	max-width: 80%;
+	background-color: #222;
 }
 
 ::placeholder {
@@ -48,4 +49,5 @@ input {
 
 button {
 	font-weight: bold;
+	background-color: #222;
 }
