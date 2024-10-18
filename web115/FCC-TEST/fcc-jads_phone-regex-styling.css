@@ -3,11 +3,11 @@
 * {
 	font-family: "Ubuntu Mono";
 	font-size: 24px;
-	color: #07F;
+	color: #0AF;
 }
 
 html {
-	background-color: #100;
+	background-color: #000;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -16,8 +16,8 @@ html {
 body {
 	margin: auto;
 	border-radius: 1mm;
-	border: 3px solid #000;
-	background-color: #075;
+	border: 3px solid #FFF;
+	background-color: #042;
 	padding: 3mm;
 }
 
@@ -29,6 +29,10 @@ body * {
 
 input {
 	max-width: 80%;
+}
+
+::placeholder {
+	font-size: 18px;
 }
 
 button {
