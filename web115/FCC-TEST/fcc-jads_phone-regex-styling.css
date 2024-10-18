@@ -3,7 +3,7 @@
 * {
 	font-family: "Ubuntu Mono";
 	font-size: 24px;
-	color: #0AF;
+	color: #0DF;
 }
 
 html {
@@ -25,6 +25,15 @@ body * {
 	display: block;
 	margin-left: auto; margin-right: auto;
   text-align: center;
+}
+
+h1 {
+	font-size: 2rem;
+}
+h2 {
+	font-size: 1.5rem;
+	font-weight: normal;
+	font-style: italic;
 }
 
 input {
