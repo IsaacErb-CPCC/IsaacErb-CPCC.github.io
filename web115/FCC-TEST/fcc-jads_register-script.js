@@ -81,7 +81,7 @@ class Register {
 
 		for (const i in this.contents) {
 			const unit = this.contents[i];
-			contentDisplay += `${unit.namePlr}: $${unit.currentBalance.toFixed(2)}\n`;}
+			contentDisplay += `${unit.plural}: $${unit.currentBalance.toFixed(2)}\n`;}
 
 		contentDisplay = contentDisplay.trimEnd();
 
@@ -114,7 +114,7 @@ class Register {
 				for (const i in change) {
 					const group = change[i];
 					group.unit.currentBalance -= group.requested;
-					transactSummary += `${group.unit.nameSng.toUpperCase()}: $${group.requested.toFixed(2)}\n`;}
+					transactSummary += `${group.unit.singular.toUpperCase()}: $${group.requested.toFixed(2)}\n`;}
 
 				//- Checking whether there is no money left in the
 				//  register.
