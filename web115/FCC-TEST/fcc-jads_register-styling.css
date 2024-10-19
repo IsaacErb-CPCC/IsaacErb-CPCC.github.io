@@ -1,0 +1,28 @@
+body * {
+	font-family: Lekton;
+	font-size: 15pt;
+	font-weight: bold;
+	color: #EFE;
+}
+
+#interal {
+	display: flex;
+	flex-flow: row wrap;
+
+	background-color: #223;
+}
+
+#internal div {
+	box-sizing: border-box;
+	width: 50%;
+	padding: 10%;
+}
+
+button, input {
+	border: 1px solid #FFF;
+}
+
+label, button, input {
+	text-align: center;
+	background-color: #223;
+}
