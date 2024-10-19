@@ -51,7 +51,7 @@ class Register {
 
 	matchPayment(payment) {
 		let canMatch = true;
-		let remSum = payment;
+		let remSum = payment - this.cost;
 		let requestedCurrency = [];
 
 		//- Make key-value-pair-array to track what sum is needed
