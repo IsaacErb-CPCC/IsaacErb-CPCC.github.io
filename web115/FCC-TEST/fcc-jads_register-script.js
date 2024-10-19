@@ -158,6 +158,11 @@ class Register {
 			}
 		}
 		return;}
+
+	displayCost() {
+		COST_DISPLAY.innerText = this.cost;
+		return;}
 }
 
 const regi = new Register();
+regi.displayCost();
