@@ -61,7 +61,7 @@ class Register {
 			requestedCurrency.push({unit: currUnit, requested: 0});}
 
 		//- Find sums needed for each currency-unit.
-		for (const i in this.requestedCurrency) {
+		for (const i in requestedCurrency) {
 			const group = requestedCurrency[i];
 			if (remSum >= group.unit.value) {
 				group.requested = group.unit.value * (Math.floor(remSum/group.unit.value));
@@ -69,7 +69,7 @@ class Register {
 
 		//- Check whether any of the sums requested exceed the
 		//  amounts currently available.
-		for (const i in this.requestedCurrency) {
+		for (const i in requestedCurrency) {
 			const group = requestedCurrency[i];
 			if (group.requested > group.unit.currentBalance) {
 				canMatch = false;}}
