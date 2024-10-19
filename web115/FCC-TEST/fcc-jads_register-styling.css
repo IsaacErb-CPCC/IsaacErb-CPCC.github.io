@@ -5,9 +5,13 @@ body * {
 	color: #EFE;
 }
 
-#interal {
+#internal {
 	display: flex;
 	flex-flow: row wrap;
+	max-width: 22cm;
+	min-width: 12cm;
+	min-height: fit-content;
+	max-height: 60%;
 
 	background-color: #223;
 }
