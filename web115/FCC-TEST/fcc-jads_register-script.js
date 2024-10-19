@@ -46,7 +46,7 @@ class Register {
 		this.hundreds = new CurrencyUnit(100.00, 'hundred-dollar-bill');
 		this.importCID();
 
-		this.contents = [this.pennies, this.nickels, this.dimes, this.quarters, this.ones, this.fives, this.tens, this.twenties, this.hundreds];
+		this.contents = [this.hundreds, this.twenties, this.tens, this.fives, this.ones, this.quarters, this.dimes, this.nickels, this.pennies];
 		return;}
 
 	matchPayment(payment) {
