@@ -102,7 +102,7 @@ class Register {
 			let paymentStats = this.matchPayment(payment);
 			let canGiveChange	= paymentStats[0];
 			let change = paymentStats[1];
-			let transactSummary = "";
+			let transactSummary = "Transaction-Summary:\n";
 
 			if (!canGiveChange) {
 				this.status = "INSUFFICIENT_FUNDS";}
@@ -160,7 +160,7 @@ class Register {
 		return;}
 
 	displayCost() {
-		COST_DISPLAY.innerText = this.cost;
+		COST_DISPLAY.innerText = `Total Cost: $${this.cost}`;
 		return;}
 }
 
