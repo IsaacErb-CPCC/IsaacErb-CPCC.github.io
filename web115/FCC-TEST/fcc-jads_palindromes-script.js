@@ -1,8 +1,10 @@
-const inputLoc = document.querySelector("#text-input");
-const outputLoc = document.querySelector("#result");
-const isAlphaNumeric = /^[a-z0-9]+$/;
+"use strict";
 
 function palinCheck() {
+	let inputLoc = document.querySelector("#text-input");
+	let outputLoc = document.querySelector("#result");
+	let isAlphaNumeric = /^[a-z0-9]+$/;
+
 	let inText = inputLoc.value;
 	if (inText === "") {
 		window.alert("Please input a value");
@@ -17,7 +19,7 @@ function palinCheck() {
 			isPalin = (normChar === revChar);
 		}
 
-		message = isPalin ? "is a palindrome":"is not a palindrome";
-		outputLoc.innerText = `"${inText}" ${message}.`;
+		let message = isPalin ? "is a palindrome":"is not a palindrome";
+		outputLoc.innerText = `${inText} ${message}`;
 	}
 }

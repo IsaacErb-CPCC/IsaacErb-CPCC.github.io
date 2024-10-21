@@ -39,11 +39,11 @@ class Register {
 		this.nickels = new CurrencyUnit(0.05, 'nickel');
 		this.dimes = new CurrencyUnit(0.10, 'dime');
 		this.quarters = new CurrencyUnit(0.25, 'quarter');
-		this.ones = new CurrencyUnit(1.00, 'one-dollar-bill');
-		this.fives = new CurrencyUnit(5.00, 'five-dollar-bill');
-		this.tens = new CurrencyUnit(10.00, 'ten-dollar-bill');
-		this.twenties = new CurrencyUnit(20.00, 'twenty-dollar-bill');
-		this.hundreds = new CurrencyUnit(100.00, 'hundred-dollar-bill');
+		this.ones = new CurrencyUnit(1.00, 'one');
+		this.fives = new CurrencyUnit(5.00, 'five');
+		this.tens = new CurrencyUnit(10.00, 'ten');
+		this.twenties = new CurrencyUnit(20.00, 'twenty', 'twenties');
+		this.hundreds = new CurrencyUnit(100.00, 'one hundred', 'hundreds');
 		this.importCID();
 
 		this.contents = [this.hundreds, this.twenties, this.tens, this.fives, this.ones, this.quarters, this.dimes, this.nickels, this.pennies];
@@ -114,6 +114,12 @@ class Register {
 				for (const i in change) {
 					const group = change[i];
 					group.unit.currentBalance -= group.requested;
+					for (const i in cid) {
+						let record = cid[i]
+						if (record[0].toLowerCase() === group.unit.singular) {
+							record[1] -= group.requested;
+						}
+					}
 					transactSummary += `${group.unit.singular.toUpperCase()}: $${group.requested.toFixed(2)}\n`;}
 
 				//- Checking whether there is no money left in the
