@@ -1,12 +1,6 @@
 "use strict";
 
-const PAYMENT_INPUT = document.getElementById("cash");
-const SUBMIT_BUTTON = document.getElementById("purchase-btn");
-const COST_DISPLAY = document.getElementById("change-due");
-const SUMMARY_DISPLAY = document.getElementById("transaction");
-const CONTENTS_DISPLAY = document.getElementById("contents");
-
-let price = 1.87;
+let price = 11.95;
 let cid = [
   ['PENNY', 1.01],
   ['NICKEL', 2.05],
@@ -39,11 +33,11 @@ class Register {
 		this.nickels = new CurrencyUnit(0.05, 'nickel');
 		this.dimes = new CurrencyUnit(0.10, 'dime');
 		this.quarters = new CurrencyUnit(0.25, 'quarter');
-		this.ones = new CurrencyUnit(1.00, 'one');
-		this.fives = new CurrencyUnit(5.00, 'five');
-		this.tens = new CurrencyUnit(10.00, 'ten');
-		this.twenties = new CurrencyUnit(20.00, 'twenty', 'twenties');
-		this.hundreds = new CurrencyUnit(100.00, 'one hundred', 'hundreds');
+		this.ones = new CurrencyUnit(1.00, 'one-dollar-bill');
+		this.fives = new CurrencyUnit(5.00, 'five-dollar-bill');
+		this.tens = new CurrencyUnit(10.00, 'ten-dollar-bill');
+		this.twenties = new CurrencyUnit(20.00, 'twenty-dollar-bill');
+		this.hundreds = new CurrencyUnit(100.00, 'hundred-dollar-bill');
 		this.importCID();
 
 		this.contents = [this.hundreds, this.twenties, this.tens, this.fives, this.ones, this.quarters, this.dimes, this.nickels, this.pennies];
@@ -76,6 +70,7 @@ class Register {
 
 		return [canMatch, requestedCurrency];}
 
+
 	updateContents() {
 		let contentDisplay = "Register Contents:\n";
 
@@ -85,24 +80,23 @@ class Register {
 
 		contentDisplay = contentDisplay.trimEnd();
 
-		CONTENTS_DISPLAY.innerText = contentDisplay;
+		document.getElementById("contents").innerText = contentDisplay;
 		return;}
 
-	attemptChange() {
-		const payment = PAYMENT_INPUT.value;
-		if (payment < self.cost) {
-			window.alert("Customer does not have enough money to purchase the item.");
-			return;}
 
-		else if (payment === self.cost) {
-			window.alert("No change due - customer paid with exact cash.")
-			return;}
+	attemptChange() {
+		const payment = Number(document.getElementById("cash").value);
+		if (payment < this.cost) {
+			window.alert("Customer does not have enough money to purchase the item");}
+
+		else if (payment === this.cost) {
+			document.getElementById("change-due").innerText = "No change due - customer paid with exact cash";}
 
 		else {	//Customer has paid more than the amount due; is necessary to offer change.
 			let paymentStats = this.matchPayment(payment);
 			let canGiveChange	= paymentStats[0];
 			let change = paymentStats[1];
-			let transactSummary = "Transaction-Summary:\n";
+			let transactSummary = "";
 
 			if (!canGiveChange) {
 				this.status = "INSUFFICIENT_FUNDS";}
@@ -114,13 +108,8 @@ class Register {
 				for (const i in change) {
 					const group = change[i];
 					group.unit.currentBalance -= group.requested;
-					for (const i in cid) {
-						let record = cid[i]
-						if (record[0].toLowerCase() === group.unit.singular) {
-							record[1] -= group.requested;
-						}
-					}
-					transactSummary += `${group.unit.singular.toUpperCase()}: $${group.requested.toFixed(2)}\n`;}
+					if (group.requested !== 0) {
+						transactSummary += `${group.unit.singular.toUpperCase()}: $${group.requested.toFixed(2)}\n`;}}
 
 				//- Checking whether there is no money left in the
 				//  register.
@@ -132,11 +121,12 @@ class Register {
 
 			//- Finalizing and displaying transactSummary.
 			transactSummary = (this.status+"\n"+transactSummary).trimEnd();
-			SUMMARY_DISPLAY.innerText = transactSummary;
+			document.getElementById("transaction").innerText = transactSummary;
 
 			//- Updating display of register-contents.
 			this.updateContents();}
 		return;}
+
 
 	importCID() {
 		for (const i in cid) {
@@ -166,7 +156,7 @@ class Register {
 		return;}
 
 	displayCost() {
-		COST_DISPLAY.innerText = `Total Cost: $${this.cost}`;
+		document.getElementById("change-due").innerText = `Total Cost: $${this.cost}`;
 		return;}
 }
 
