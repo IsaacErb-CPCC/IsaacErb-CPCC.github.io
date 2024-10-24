@@ -56,6 +56,9 @@ class DropMenu {
 }
 
 const FIZZ_DROP = new DropMenu("fizz-drop", "fizzbuzz-links");
+document.getElementById("fizz-drop").addEventListener("click", () => {
+	FIZZ_DROP.toggleMenu();
+})
 
 //@	THE BELOW IS FOR ADDING A FEATURE FOR CLOSING ON A CLICK
 //	OUTSIDE OF THE MENU.

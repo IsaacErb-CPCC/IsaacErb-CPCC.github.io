@@ -382,6 +382,7 @@ fieldset:not(:last-of-type) :last-child {
 }
 
 .compact div {
+	box-sizing: border-box;
 	width: 50%;
 	padding: 1.5mm;
 	border: 1px dotted #FFF;
@@ -437,6 +438,7 @@ nav .drop-button {
 }
 
 .drop-content-box {	/*Menu (<div>) containing the <ul> of links.*/
+	box-sizing: border-box;
 	display: none;
 	position: absolute;
 	top: var(--drop-button-y);
