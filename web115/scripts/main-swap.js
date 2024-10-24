@@ -43,9 +43,9 @@ function swapContentScript(dataURL) {
 
 	const NEW_SCRIPT = document.createElement('script');
 	NEW_SCRIPT.id = 'content-script';
-	NEW_SCRIPT.defer = "true";
+	NEW_SCRIPT.defer = true;
 	NEW_SCRIPT.src = `scripts/${scriptURL}`;
-	document.head.prepend(NEW_SCRIPT);
+	document.body.appendChild(NEW_SCRIPT);
 	return;
 }
 
