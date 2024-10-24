@@ -28,14 +28,67 @@
 </head>
 
 <body>
-	<div data-include="components/header-gen.html"></div>
+	<!-- <div data-include="components/header-gen.html"></div> -->
+	<header>
+		<h1>Isaac Erb's Lil'RoboCo</h1>
+
+		<nav>
+			<div id="header-navlinks">
+				<button class="content-button" onclick="swapMainContents('home.html')">Home</button>
+				<button class="content-button" onclick="swapMainContents('contract.html')">Contract</button>
+				<button class="content-button" onclick="swapMainContents('introductions.html')">Introduction</button>
+				<button class="content-button" onclick="swapMainContents('brand.html')">Branding</button>
+				<button class="content-button" onclick="swapMainContents('m3-code-output.html')">M3 Codeplay</button>
+			</div>
+
+			<div class="drop-button-box" id="header-drops">
+				<button onclick="FIZZ_DROP.toggleMenu()" type="button" class="drop-button" id="fizz-drop">FizzBuzz <span  class="symbol">_</span></button>
+				<div class="drop-content-box" id="fizzbuzz-links">
+					<ul>
+						<li><button class="content-button" onclick="swapMainContents('fizzbuzz0.html')">FizzBuzz 0</button></li>
+						<li><button class="content-button" onclick="swapMainContents('fizzbuzz1.html')">FizzBuzz 1</button></li>
+						<li><button class="content-button" onclick="swapMainContents('fizzbuzz2.html')">FizzBuzz 2</button></li>
+						<li><button class="content-button" onclick="swapMainContents('fizzbuzz3.html')">FizzBuzz 3</button></li>
+						<li><button class="content-button" onclick="swapMainContents('fizzbuzz4.html')">FizzBuzz 4</button></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<hr>
 
 	<main>
 	</main>
 
-	<div data-include="components/footer-gen.html"></div>
+	<hr>
 
-	<script src="scripts/html-include/HTMLInclude.js"></script>
+	<footer>
+		<h2 id="logo">Lil'RoboCo</h2>
+
+		<nav id="foot-links">
+			<ul>
+				<li><a href="https://github.com/IsaacErb-CPCC" target="_blank" class="nav-link">GitHub</a></li>
+				<li><a href="https://isaacerb-cpcc.github.io" class="nav-link">GitHub.io</a></li>
+				<li><a href="https://isaacerb-cpcc.github.io/web115/index.html" class="nav-link">WEB115.io</a></li>
+				<li><a href="https://www.freecodecamp.org/IsaacErb-CPCC" target="_blank" class="nav-link">freeCodeCamp</a></li>
+				<li><a href="https://www.codecademy.com/profiles/IsaacErb-CPCC" target="_blank" class="nav-link">Codeacademy</a></li>
+				<li><a href="https://jsfiddle.net/u/IsaacErb_CPCC/fiddles/" target="_blank" class="nav-link">JSFiddle</a></li>
+				<li><a href="https://www.linkedin.com/in/isaac-erb-528630327/" target="_blank" class="nav-link">LinkedIn</a></li>
+			</ul>
+		</nav>
+
+		<div id="footer-misc">
+			<p>Fira Sans and Fira Mono fonts used under SIL Open Font License v1.1.<p>
+
+			<p>Web-Support: <a href="mailto:ierb0000@email.cpcc.edu">ierb0000@email.cpcc.edu</a></p>
+
+			<p>&copy;12052 by Lilith RoboticsCorp.</p>
+		</div>
+	</footer>
+	<!-- <div data-include="components/footer-gen.html"></div> -->
+
+	<!-- <script src="scripts/html-include/HTMLInclude.js"></script> -->
 </body>
 
 </html>
