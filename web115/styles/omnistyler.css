@@ -1,5 +1,15 @@
 @charset "utf-8";
 
+@font-face {	/*Used only for the Lil'RoboCo logo.*/
+	font-family: LogoFont;
+	src: url("../fonts/LRC-Logo.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: UI-Symbol;	/*Used for UI-symbols like dropdown arrowheads.*/
+	src: url("../fonts/IronUI.woff2") format("woff2");
+}
+
 /*==============================================
 	INTERNAL DOCUMENTATION
 	-	File: omnistyler.css.

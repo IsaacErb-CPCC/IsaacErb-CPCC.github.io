@@ -7,17 +7,17 @@
 
 const MAIN = document.querySelector("main");
 const HOME_URL = "home.html";
-const SCRIPT_MAP = [
-	{url: HOME_URL, script: "none.js"},
-	{url: "contract.html", script: "none.js"},
-	{url: "introductions.html", script: "none.js"},
-	{url: "brand.html", script: "none.js"},
-	{url: "m3-code-output.html", script: "m3_code.js"},
-	{url: "fizzbuzz0.html", script: "fizz-buzz0.js"},
-	{url: "fizzbuzz1.html", script: "fizz-buzz1.js"},
-	{url: "fizzbuzz2.html", script: "fizz-buzz2.js"},
-	{url: "fizzbuzz3.html", script: "fizz-buzz3.js"},
-	{url: "fizzbuzz4.html", script: "fizz-buzz4.js"}
+const FILE_INFO = [
+	{url: HOME_URL, script: "none.js", title: "Home"},
+	{url: "contract.html", script: "none.js", title: "Contract"},
+	{url: "introductions.html", script: "none.js", title: "Introduction"},
+	{url: "brand.html", script: "none.js", title: "Branding"},
+	{url: "m3-code-output.html", script: "m3_code.js", title: "M3 Codeplay"},
+	{url: "fizzbuzz0.html", script: "fizz-buzz0.js", title: "FizzBuzz 0"},
+	{url: "fizzbuzz1.html", script: "fizz-buzz1.js", title: "FizzBuzz 1"},
+	{url: "fizzbuzz2.html", script: "fizz-buzz2.js", title: "FizzBuzz 2"},
+	{url: "fizzbuzz3.html", script: "fizz-buzz3.js", title: "FizzBuzz 3"},
+	{url: "fizzbuzz4.html", script: "fizz-buzz4.js", title: "FizzBuzz 4"}
 ];
 
 function getLastVisited() {
@@ -36,8 +36,8 @@ function swapContentScript(dataURL) {
 	}
 
 	let scriptURL;
-	for (const index in SCRIPT_MAP) {
-		const pair = SCRIPT_MAP[index];
+	for (const index in FILE_INFO) {
+		const pair = FILE_INFO[index];
 		if (pair.url === dataURL) {
 			scriptURL = pair.script;
 		}
@@ -45,18 +45,32 @@ function swapContentScript(dataURL) {
 
 	const NEW_SCRIPT = document.createElement('script');
 	NEW_SCRIPT.id = 'content-script';
-	// new Promise((resolve, reject) => {
 	document.head.prepend(NEW_SCRIPT);
-	// NEW_SCRIPT.onload = resolve;
-	// NEW_SCRIPT.onerror = reject;
 	NEW_SCRIPT.defer = true;
 	NEW_SCRIPT.src = `scripts/${scriptURL}`;
-	// });
+	return;
+}
+
+function swapTitle(dataURL) {
+	const OLD_TITLE = document.querySelector("title");
+
+	document.head.removeChild(OLD_TITLE);
+
+	let title;
+	for (const index in FILE_INFO) {
+		const group = FILE_INFO[index];
+		if (group.url === dataURL) {
+			title = group.title;
+		}
+	}
+
+	const NEW_TITLE = document.createElement("title");
+	NEW_TITLE.innerHTML = `Isaac Erb's Lil'RoboCo: ${title}`;
+	document.head.prepend(NEW_TITLE);
 	return;
 }
 
 function swapMainContents(dataURL) {
-	// console.log(dataURL);	//@DEBUG-FEATURE!
 	const DATA_REQUEST = new Request(dataURL);
 
 	fetch(DATA_REQUEST)
@@ -72,6 +86,7 @@ function swapMainContents(dataURL) {
 
 	swapContentScript(dataURL);
 	localStorage.setItem('last-visited', dataURL);
+	swapTitle(dataURL);
 	return;
 }
 
