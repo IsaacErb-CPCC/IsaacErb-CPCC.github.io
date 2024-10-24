@@ -31,7 +31,7 @@ function getLastVisited() {
 
 function swapContentScript(dataURL) {
 	const OLD_SCRIPT = document.querySelector('#content-script');
-	document.head.removeChild(OLD_SCRIPT);
+	document.body.removeChild(OLD_SCRIPT);
 
 	let scriptURL;
 	for (const index in FILE_INFO) {
