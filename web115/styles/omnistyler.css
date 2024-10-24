@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-@import url("font-defs.css");
-
 /*==============================================
 	INTERNAL DOCUMENTATION
 	-	File: omnistyler.css.
@@ -56,7 +54,7 @@ html {
 	background-color: var(--html-bg);
 	color: var(--text-norm);
 
-	font-family: FiraSans;
+	font-family: "Fira Sans";
 	font-size: 14pt;
 	line-height: 1.5rem;
 	font-variant-numeric: tabular-nums;
@@ -81,7 +79,7 @@ footer {
 	columns: 2 unset unset;
 	position: relative;
 	bottom: 0mm;
-	margin-top: 8mm;
+	margin-top: 4mm;
 
 	font-size: 0.8rem;
 	line-height: 1.25rem;
@@ -155,12 +153,17 @@ nav ul li {
 	padding-left: 2mm; padding-right: 2mm;
 }
 
+.nav-link {
+	text-decoration: none;
+}
+
 .content-button {
-	font-family: FiraSans;
+	font-family: "Fira Sans";
 	font-size: 1.2rem;
 	display: inline;
 	border: 2px solid #FFF;
 	border-radius: 6mm;
+	padding: 1mm 3mm;
 	background-color: #000;
 	color: var(--text-highlight);
 }
@@ -172,6 +175,7 @@ nav ul li {
 
 #header-navlinks {
 	grid-column: 1; grid-row: 1;
+	align-content: center;
 }
 
 #header-navlinks ul {
@@ -230,9 +234,6 @@ a:focus, a:hover, a:active {
 	color: var(--text-more-highlight);
 }
 
-.footer-link {
-	text-decoration: none;
-}
 
 q::before {content: "\2018";}	/*Single-quotes first, then double-quotes inside of single-quotes.*/
 q::after {content: "\2019";}
@@ -289,7 +290,7 @@ i em, i b, b i, b em {
 }
 
 code {
-	font-family: FiraMono;
+	font-family: "Fira Mono";
 }
 
 .input {
@@ -324,7 +325,7 @@ input, button:not(.content-button) {
 	padding: 1mm 2mm;
 	max-width: 100%;
 
-	font-family: FiraMono;
+	font-family: "Fira Mono";
 	font-size: 1rem;
 }
 
@@ -408,7 +409,7 @@ label {
 }
 
 nav .drop-button {
-	font-family: FiraSans;
+	font-family: "Fira Sans";
 	font-size: 1.2rem;
 	font-weight: normal;
 	color: var(--text-highlight);
