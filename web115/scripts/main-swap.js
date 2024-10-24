@@ -6,18 +6,18 @@
 */
 
 const MAIN = document.querySelector("main");
-const HOME_URL = "home.html";
+const HOME_URL = "home";
 const FILE_INFO = [
 	{url: HOME_URL, script: "none.js", title: "Home"},
-	{url: "contract.html", script: "none.js", title: "Contract"},
-	{url: "introductions.html", script: "none.js", title: "Introduction"},
-	{url: "brand.html", script: "none.js", title: "Branding"},
-	{url: "m3-code-output.html", script: "m3_code.js", title: "M3 Codeplay"},
-	{url: "fizzbuzz0.html", script: "fizz-buzz0.js", title: "FizzBuzz 0"},
-	{url: "fizzbuzz1.html", script: "fizz-buzz1.js", title: "FizzBuzz 1"},
-	{url: "fizzbuzz2.html", script: "fizz-buzz2.js", title: "FizzBuzz 2"},
-	{url: "fizzbuzz3.html", script: "fizz-buzz3.js", title: "FizzBuzz 3"},
-	{url: "fizzbuzz4.html", script: "fizz-buzz4.js", title: "FizzBuzz 4"}
+	{url: "contract", script: "none.js", title: "Contract"},
+	{url: "introductions", script: "none.js", title: "Introduction"},
+	{url: "brand", script: "none.js", title: "Branding"},
+	{url: "m3-code-output", script: "m3_code.js", title: "M3 Codeplay"},
+	{url: "fizzbuzz0", script: "fizz-buzz0.js", title: "FizzBuzz 0"},
+	{url: "fizzbuzz1", script: "fizz-buzz1.js", title: "FizzBuzz 1"},
+	{url: "fizzbuzz2", script: "fizz-buzz2.js", title: "FizzBuzz 2"},
+	{url: "fizzbuzz3", script: "fizz-buzz3.js", title: "FizzBuzz 3"},
+	{url: "fizzbuzz4", script: "fizz-buzz4.js", title: "FizzBuzz 4"}
 ];
 
 function getLastVisited() {
@@ -45,6 +45,7 @@ function swapContentScript(dataURL) {
 	NEW_SCRIPT.setAttribute("id", "content-script");
 	NEW_SCRIPT.setAttribute("src", `scripts/${scriptURL}`);
 	NEW_SCRIPT.setAttribute("defer", "true");
+	NEW_SCRIPT.setAttribute("fetchpriority", "low");
 	document.body.appendChild(NEW_SCRIPT);
 	return;
 }
@@ -57,7 +58,7 @@ function swapTitle(dataURL) {
 	let title;
 	for (const index in FILE_INFO) {
 		const group = FILE_INFO[index];
-		if (group.url === dataURL) {
+		if (`${group.url}.html` === dataURL) {
 			title = group.title;
 		}
 	}
@@ -93,7 +94,7 @@ for (const index in FILE_INFO) {
 	const file = FILE_INFO[index].url;
 	let button = document.getElementById(`to-${file}`);
 	button.addEventListener("click", () => {
-		swapMainContents(file);
+		swapMainContents(`${file}.html`);
 	});
 }
 
