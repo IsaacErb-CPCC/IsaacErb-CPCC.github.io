@@ -36,7 +36,7 @@ function swapContentScript(dataURL) {
 	let scriptURL;
 	for (const index in FILE_INFO) {
 		const pair = FILE_INFO[index];
-		if (pair.url === dataURL) {
+		if (`${pair.url}.html` === dataURL) {
 			scriptURL = pair.script;
 		}
 	}
