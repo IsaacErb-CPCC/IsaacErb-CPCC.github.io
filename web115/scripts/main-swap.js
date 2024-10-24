@@ -91,7 +91,7 @@ function swapMainContents(dataURL) {
 //-	Setting event-listeners for swap-buttons.
 for (const index in FILE_INFO) {
 	const file = FILE_INFO[index].url;
-	let button = document.getElementById(`to_${file}`);
+	let button = document.getElementById(`to-${file}`);
 	button.addEventListener("click", () => {
 		swapMainContents(file);
 	});
