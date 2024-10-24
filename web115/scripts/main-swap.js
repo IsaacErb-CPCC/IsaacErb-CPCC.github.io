@@ -42,10 +42,10 @@ function swapContentScript(dataURL) {
 	}
 
 	const NEW_SCRIPT = document.createElement('script');
+	NEW_SCRIPT.setAttribute("id", "content-script");
+	NEW_SCRIPT.setAttribute("src", `scripts/${scriptURL}`);
+	NEW_SCRIPT.setAttribute("defer", "true");
 	document.body.appendChild(NEW_SCRIPT);
-	NEW_SCRIPT.id = 'content-script';
-	NEW_SCRIPT.defer = true;
-	NEW_SCRIPT.src = `scripts/${scriptURL}`;
 	return;
 }
 
