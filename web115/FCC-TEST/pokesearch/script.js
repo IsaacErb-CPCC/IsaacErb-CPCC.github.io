@@ -5,7 +5,8 @@ const ACTIVATOR = document.querySelector("#search-button");
 
 const PKMN_NAME = document.querySelector("#pokemon-name");
 const PKMN_NUM = document.querySelector("#pokemon-id");
-const PKMN_IMAGE = document.querySelector("#pokemon-image");
+const PKMN_IMAGE = document.querySelector("#sprite");
+const PKMN_TYPES = document.querySelector("#types");
 const PKMN_WEIGHT = document.querySelector("#weight");
 const PKMN_HEIGHT = document.querySelector("#height");
 
@@ -36,6 +37,14 @@ class PokeInfo {
 		return;
 	}
 
+	addTypeTag(typeObj) {
+		let typeTag = document.createElement("span");
+		typeTag.setAttribute("class", "type-tag");
+		typeTag.setAttribute.innerText = typeObj.type.name.toUpperCase();
+		PKMN_TYPES.appendChild(typeTag);
+		return;
+	}
+
 	displayInfo() {
 		PKMN_NAME.innerText = this.name.replace(/\b\w/g, (char) => char.toUpperCase());
 		PKMN_NUM.innerText = `#${this.number}`;
@@ -48,6 +57,8 @@ class PokeInfo {
 		PKMN_SPATK.innerText = this.spAtk;
 		PKMN_SPDEF.innerText = this.spDef;
 		PKMN_SPD.innerText = this.spd;
+
+		this.types.forEach(this.addTypeTag);
 	}
 }
 

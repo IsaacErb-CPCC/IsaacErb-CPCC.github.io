@@ -47,8 +47,18 @@ p, label, td, th, span, button {
 	font-size: 1rem;
 }
 
+img {
+	width: 80%;
+	display: block;
+}
+
 span {
 	display: inline;
+}
+
+#types {
+	display: block;
+	width: 80%;
 }
 
 h1 {
