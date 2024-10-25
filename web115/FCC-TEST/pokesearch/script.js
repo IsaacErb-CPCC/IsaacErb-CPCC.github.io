@@ -37,7 +37,7 @@ class PokeInfo {
 	}
 
 	displayInfo() {
-		PKMN_NAME.innerText = this.name.replace(/\b\w/g, (char) => char.toUppercase());
+		PKMN_NAME.innerText = this.name.replace(/\b\w/g, (char) => char.toUpperCase());
 		PKMN_NUM.innerText = `#${this.number}`;
 		PKMN_IMAGE.setAttribute("src", this.sprite);
 		PKMN_HEIGHT.innerText = `Height: ${this.height}`;
