@@ -177,15 +177,15 @@ let cid = [
 let cash = document.getElementById("cash");
 
 const currency = [
-  {single: 'PENNY',   plural: 'Pennies',  value:  0.01, requested: 0.00},
-  {single: 'NICKEL',  plural: 'Nickels',  value:  0.05, requested: 0.00},
-  {single: 'DIME',    plural: 'Dimes',    value:  0.10, requested: 0.00},
-  {single: 'QUARTER', plural: 'Quarters', value:  0.25, requested: 0.00},
-  {single: 'ONE',     plural: 'Ones',     value:  1.00, requested: 0.00},
-  {single: 'FIVE',    plural: 'Fives',    value:  5.00, requested: 0.00},
-  {single: 'TEN',     plural: 'Tens',     value: 10.00, requested: 0.00},
+  {single: 'ONE HUNDRED', plural: 'Hundreds', value: 100.00, requested: 0.00},
   {single: 'TWENTY',  plural: 'Twenties', value: 20.00, requested: 0.00},
-  {single: 'ONE HUNDRED', plural: 'Hundreds', value: 100.00, requested: 0.00}];
+  {single: 'TEN',     plural: 'Tens',     value: 10.00, requested: 0.00},
+  {single: 'FIVE',    plural: 'Fives',    value:  5.00, requested: 0.00},
+  {single: 'ONE',     plural: 'Ones',     value:  1.00, requested: 0.00},
+  {single: 'QUARTER', plural: 'Quarters', value:  0.25, requested: 0.00},
+  {single: 'DIME',    plural: 'Dimes',    value:  0.10, requested: 0.00},
+	{single: 'NICKEL',  plural: 'Nickels',  value:  0.05, requested: 0.00},
+  {single: 'PENNY',   plural: 'Pennies',  value:  0.01, requested: 0.00}];
 
 
 class Register {
