@@ -28,3 +28,7 @@ body * {
 input {
 	max-width: 80%;
 }
+
+script {
+	display: none;
+}
