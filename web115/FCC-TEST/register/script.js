@@ -201,7 +201,7 @@ class Register {
     for (const i in currency) {
       const group = currency[i];
       if (remSum >= group.value) {
-        group.requested = group.value * (Math.floor(remSum/group.value));
+        group.requested = Number((group.value * (Math.floor(remSum/group.value))).toFixed(2));
         remSum -= group.requested;
       }
     }
@@ -258,7 +258,7 @@ class Register {
             }
           }
           if (group.requested > 0) {
-            transactSummary += `${group.singular}: \$${group.requested}\n`;
+            transactSummary += `${group.single}: \$${group.requested}\n`;
           }
         }
 
@@ -274,7 +274,7 @@ class Register {
         this.status = timeForClose ? "CLOSED":"OPEN";
       }
 
-      transactSummary = (this.status+"\n"+transactSummary).trimEnd();
+      transactSummary = ("Status: "+this.status+"\n"+transactSummary).trimEnd();
       document.getElementById("transaction").innerText = transactSummary;
     }
   }
