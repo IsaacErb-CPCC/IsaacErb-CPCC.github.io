@@ -58,6 +58,8 @@ class PokeInfo {
 		PKMN_SPDEF.innerText = this.spDef;
 		PKMN_SPD.innerText = this.spd;
 
+		let extantTypes = document.querySelectorAll("#types *");
+		extantTypes.forEach((type) => PKMN_TYPES.removeChild(type));
 		this.types.forEach(this.addTypeTag);
 	}
 }

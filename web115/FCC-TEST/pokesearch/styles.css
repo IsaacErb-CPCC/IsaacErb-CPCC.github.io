@@ -6,13 +6,13 @@ html {
 
 	height: 100%; width: 100%;
 
-	background-color: #6D9;
+	background-color: #097;
 	color: #FFF;
 }
 
 body {
 	box-sizing: border-box;
-	width: 17cm;
+	width: 18cm;
 	height: 10cm;
 
 	border: 7px ridge #80A;
@@ -64,6 +64,14 @@ span {
 #types {
 	display: block;
 	width: 80%;
+}
+
+.type-tag {
+	background-color: #000;
+	border: 2px solid #FFF;
+	border-radius: 1mm;
+	margin-right: 2mm;
+	padding: 1mm 1.5mm;
 }
 
 h1 {
