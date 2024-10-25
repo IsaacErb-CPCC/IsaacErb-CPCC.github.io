@@ -23,6 +23,21 @@ body {
 	background-color: #124;
 }
 
+main {
+	display: grid;
+}
+
+#entry {
+	grid-area: 1/1/1/1;	/*row-start/col-start/row-end/col-end*/
+}
+
+#stats {
+	grid-area: 1/1/1/1;
+}
+
+#profile {
+	grid-area: 1/2/1/2;
+}
 p, label, td, th, span, button {
 	font-size: 1rem;
 }
