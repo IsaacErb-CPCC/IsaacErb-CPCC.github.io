@@ -44,8 +44,8 @@ function processSearchTerm(term) {
 	return final;
 }
 
-function pokeSearch() {
-	const searchTerm = TERM.value.toString();
+ACTIVATOR.addEventListener("clicked", () => {
+	const searchTerm = TERM.value;
 	const quest = new Request(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${processSearchTerm(searchTerm)}`);
 	fetch(quest)
 		.then((response) => {
@@ -56,7 +56,4 @@ function pokeSearch() {
 		})
 		.catch((errant) => {
 			console.log(errant);
-		});
-}
-
-ACTIVATOR.addEventListener("clicked", () => {pokeSearch();});
+		});});
