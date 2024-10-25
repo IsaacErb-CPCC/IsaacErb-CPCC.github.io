@@ -19,7 +19,7 @@ const PKMN_SPD = document.querySelector("#speed");
 const SEARCH_FILTER = /[a-z0-9\-]/;
 
 class PokeInfo {
-	constructor(name, number, weight, height, types, {hp, atk, def, spAtk, spDef, spd}, sprite) {
+	constructor(name, number, weight, height, types, [hp, atk, def, spAtk, spDef, spd], sprite) {
 		this.name = name;
 		this.number = number;
 		this.weight = weight;
