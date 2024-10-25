@@ -40,7 +40,7 @@ class PokeInfo {
 	addTypeTag(typeObj) {
 		let typeTag = document.createElement("span");
 		typeTag.setAttribute("class", "type-tag");
-		typeTag.setAttribute.innerText = typeObj.type.name.toUpperCase();
+		typeTag.innerText = typeObj.type.name.toUpperCase();
 		PKMN_TYPES.appendChild(typeTag);
 		return;
 	}
