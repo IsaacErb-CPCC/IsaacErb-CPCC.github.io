@@ -196,7 +196,7 @@ class Register {
 
   matchPayment(payment) {
     let canMatch = true;
-    let remSum = price - payment;
+    let remSum = payment - price;
 
     for (const i in currency) {
       const group = currency[i];
