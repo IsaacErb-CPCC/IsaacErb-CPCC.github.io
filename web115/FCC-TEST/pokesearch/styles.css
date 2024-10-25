@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+html {
+	font-family: Geo;
+	font-size: 18pt;
+
+	height: 100%; width: 100%;
+
+	background-color: #6D9;
+	color: #FFF;
+}
+
+body {
+	box-sizing: border-box;
+	width: 17cm;
+	height: 10cm;
+	overflow-y: scroll;
+
+	border: 7px ridge #80A;
+	border-radius: 2mm;
+	padding: 3mm;
+
+	background-color: #124;
+}
+
+p, label, td, th, span, button {
+	font-size: 1rem;
+}
+
+h1 {
+	font-size: 2rem;
+	text-align: center;
+}
+
+input {
+	display: inline;
+	font-family: inherit;
+	font-size: 1rem;
+
+	border: 2px solid #FFF;
+	border-radius: 1mm;
+
+	background-color: #000;
+	color: #FFF;
+}
+
+button {
+	display: inline;
+
+	font-family: inherit;
+	font-weight: bold;
+	border: 2px solid #FFF;
+	border-radius: 3mm;
+	background-color: #006;
+	color: #FFF;
+}
+
+label {
+	display: block;
+}
+
+/*TABLE-STUFF*/
+table {
+	height: fit-content;
+	min-width: fit-content;
+	max-width: 100%;
+}
+
+th {
+	font-weight: bold;
+}
