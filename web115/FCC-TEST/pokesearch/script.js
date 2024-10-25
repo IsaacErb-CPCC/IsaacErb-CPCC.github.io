@@ -5,7 +5,7 @@ const ACTIVATOR = document.querySelector("#search-button");
 
 const PKMN_NAME = document.querySelector("#pokemon-name");
 const PKMN_NUM = document.querySelector("#pokemon-id");
-const PKMN_IMAGE = document.querySelector("pokemon-image");
+const PKMN_IMAGE = document.querySelector("#pokemon-image");
 const PKMN_WEIGHT = document.querySelector("#weight");
 const PKMN_HEIGHT = document.querySelector("#height");
 
