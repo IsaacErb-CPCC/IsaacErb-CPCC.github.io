@@ -59,4 +59,4 @@ function pokeSearch() {
 		});
 }
 
-ACTIVATOR.addEventListener("clicked", pokeSearch());
+ACTIVATOR.addEventListener("clicked", () => {pokeSearch();});
