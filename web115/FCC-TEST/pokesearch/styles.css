@@ -29,7 +29,12 @@ main {
 }
 
 main div {
-	width: 50%;
+	width: 100%;
+}
+
+img {
+	width: 80%;
+	display: block;
 }
 
 #entry {
