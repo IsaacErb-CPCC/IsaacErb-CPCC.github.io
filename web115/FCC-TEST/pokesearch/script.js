@@ -37,7 +37,7 @@ class PokeInfo {
 	}
 
 	displayInfo() {
-		PKMN_NAME.innerText = this.name;
+		PKMN_NAME.innerText = this.name.replace(/\b\w/g, (char) => char.toUppercase());
 		PKMN_NUM.innerText = `#${this.number}`;
 		PKMN_IMAGE.setAttribute("src", this.sprite);
 		PKMN_HEIGHT.innerText = `Height: ${this.height}`;
@@ -54,7 +54,7 @@ class PokeInfo {
 function processSearchTerm(term) {
 	let unfiltered = term.toLowerCase().split("");
 	let filtered = unfiltered.filter(char => char.match(SEARCH_FILTER));
-	let final = [] + filtered;
+	let final = filtered.join("");
 	return final;
 }
 

@@ -9,18 +9,20 @@
 
 </head>
 <body>
-	<h1>PokeSearch</h1>
+	<header>
+		<h1>PokeSearch</h1>
+	</header>
 	<main>
 		<div id="entry">
 			<label for="termholder">Enter Name or Number of Pokemon:</label>
-			<input type="text" id="search-input" name="termholder">
+			<input type="text" id="search-input" name="termholder" required>
 
 			<button type="button" id="search-button">Search</button>
 		</div>
 
 		<div id="profile">
-			<p id="pokemon-name"></p>
-			<p id="pokemon-id"></p>
+			<span id="pokemon-name"></span>
+			<span id="pokemon-id"></span>
 			<img id="pokemon-image">
 		</div>
 		<div id="stats">

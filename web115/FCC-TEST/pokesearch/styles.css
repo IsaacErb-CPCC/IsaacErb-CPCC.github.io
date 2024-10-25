@@ -14,7 +14,6 @@ body {
 	box-sizing: border-box;
 	width: 17cm;
 	height: 10cm;
-	overflow-y: scroll;
 
 	border: 7px ridge #80A;
 	border-radius: 2mm;
@@ -25,6 +24,8 @@ body {
 
 main {
 	display: grid;
+	height: 80%;
+	overflow-y: scroll;
 }
 
 main div {
@@ -40,16 +41,25 @@ main div {
 }
 
 #profile {
-	grid-area: 1/2/2/2;
+	grid-area: 1/2/3/2;
 }
 p, label, td, th, span, button {
 	font-size: 1rem;
+}
+
+span {
+	display: inline;
 }
 
 h1 {
 	font-size: 2rem;
 	text-align: center;
 	margin: 2mm;
+}
+
+header {
+	box-sizing: border-box;
+	height: 20%;
 }
 
 input {
