@@ -14,7 +14,7 @@ function sussNumber() {
 	OUTPUT_LOC.innerText = `${judgement} US number: ${number}`;
 }
 
-function clearSus() {
+function clearSuss() {
   const OUTPUT_LOC = document.getElementById("results-div");
   OUTPUT_LOC.innerText = "";
 }
