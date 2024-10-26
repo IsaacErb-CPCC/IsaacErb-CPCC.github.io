@@ -38,8 +38,7 @@ h2 {
 }
 
 input {
-	min-width: fit-content;
-	max-width: 80%;
+	width: 100%;
 }
 
 ::placeholder {
@@ -48,6 +47,7 @@ input {
 
 button {
 	font-weight: bold;
+	display: inline;
 }
 
 input, button {
