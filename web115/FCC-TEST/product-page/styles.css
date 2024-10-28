@@ -1,0 +1,53 @@
+:root {
+	--text-norm: #9FC;
+	--text-highlight: #FD9;
+	--text-less-highlight: #DB7;
+	--text-more-highlight: #FFF;
+	--text-alt: #9CF;
+	--body-bg: #112;
+	--body-alt-bg: #121;
+	--logo-text: #C5F;
+	--html-bg: #100;
+
+	--drop-button-y: 0px;
+}
+
+html {
+	z-index: 1;
+
+	background-color: var(--html-bg);
+	color: var(--text-norm);
+
+	font-family: "Fira Sans";
+	font-size: 14pt;
+	line-height: 1.5rem;
+	font-variant-numeric: tabular-nums;
+}
+
+body {
+	background-color: var(--body-bg);
+	margin: 10mm auto;
+
+	max-width: 250mm; /*Approx. 10in, ideally.*/
+	padding: 10mm;
+
+	border: #FFF 12px ridge;
+}
+
+input, button {
+	display: block;
+	color: var(--text-highlight);
+	background-color: #000;
+	border: 1px solid #FFF;
+	padding: 1mm 2mm;
+	max-width: 100%;
+
+	font-family: "Fira Mono";
+	font-size: 1rem;
+}
+
+@media screen and (max-width: 960px) {
+	input {
+		border-width: 2px;
+	}
+}
