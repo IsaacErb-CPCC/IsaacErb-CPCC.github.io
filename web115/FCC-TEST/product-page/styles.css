@@ -9,7 +9,7 @@
 	--logo-text: #C5F;
 	--html-bg: #100;
 
-	--drop-button-y: 0px;
+	--image-x: 200px;
 }
 
 html {
@@ -24,14 +24,20 @@ html {
 	font-variant-numeric: tabular-nums;
 }
 
+html * {
+	box-sizing: border-box;
+}
+
 body {
 	background-color: var(--body-bg);
-	margin: 10mm auto;
+	margin-left: 0px;
+	margin-right: auto;
 
 	max-width: 250mm; /*Approx. 10in, ideally.*/
 	padding: 10mm;
 
 	border: #FFF 12px ridge;
+	border-top: none;
 }
 
 input, button {
@@ -46,8 +52,52 @@ input, button {
 	font-size: 1rem;
 }
 
-@media screen and (max-width: 960px) {
+a {
+	color: var(--text-highlight);
+}
+
+a:focus, a:hover, a:active {
+	color: var(--text-more-highlight);
+}
+
+
+img:not(#header-img) {
+  border: 2px dotted var(--text-alt);
+}
+
+@media screen and (max-width: 960) {
 	input {
 		border-width: 2px;
 	}
+}
+
+#display {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#display figure {
+  width: var(--image-x);
+}
+
+#header {
+	max-width: 250mm;
+	z-index: 0;
+	position: fixed;
+	top: 0mm;
+	left: 0mm;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	background-color: var(--html-bg);
+	border: 12px ridge #FFF;
+	border-bottom: 1px solid #fff;
+}
+
+nav li {
+	list-style-type: none;
+	display: inline;
+	padding: 3mm;
 }

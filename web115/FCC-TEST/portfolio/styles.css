@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+html {
+	font-family: Ubuntu;
+	font-size: 16pt;
+	color: #BDF;
+	background-color: #444;
+}
+
+body * {
+	box-sizing: border-box;
+}
+
+body {
+	max-width: 256mm;
+}
+
+#welcome-section {
+	height: 1vh;
+
+	display: flex;
+	flex-flow: columns nowrap;
+	justify-content: center;
+	align-items: center;
+
+	background-color: #012;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 1.8rem;
+}
+
+sub {
+	font-weight: normal;
+}
