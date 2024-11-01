@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<link href="styles.css" rel="stylesheet">
+
+	<script defer="true">
+		const falseLink = document.getElementById("false-link");
+		falseLink.addEventListener(onclick, () => {
+			window.alert("This link is only for flavor; no corresponding page exists.");
+		})
+	</script>
+
+	<title>Jartil: Stylers</title>
+</head>
+<body>
+	<nav id="navbar">
+		<header>NAVBAR</header>
+		<ul>
+			<li><a class="nav-link" href="#Basic_Explanation">Basic Explanation</a></li>
+			<li><a class="nav-link" href="#Definition">Definition</a></li>
+			<li><a class="nav-link" href="#Input">Input</a></li>
+			<li><a class="nav-link" href="#Output">Output</a></li>
+			<li><a class="nav-link" href="#Placeholder">Placeholder</a></li>
+		</ul>
+	</nav>
+
+	<main id="main-doc">
+		<section class="main-section" id="Basic_Explanation">
+			<header>Basic Explanation</header>
+			<p>The Styler objects of the Jartil module are probably the most useful part; they provide a way of converting normal plaintext into <i>styled</i> plaintext.</p>
+			<p><q>&#191;What does that mean?</q> Well, there is a range in Unicode called Mathematical Alphanumeric Symbols (starding at U+1D400) which is intended to allow plaintext files to represent styled variable-letters in algebraic equations.</p>
+			<p>However, as that range covers the entire english-roman alphabet, it can be used to make entire <i>words</i> in a plaintext file appear as if they were bold, italic, or bold-italic &ndash; and that's the purpose of the Styler objects.</p>
+		</section>
+
+		<section class="main-section" id="Definition">
+			<header>Definition</header>
+			<p>The <code>__init__()</code> function of the Styler class goes as such:</p>
+			<code class="segment">
+				def&nbsp;__init__(self,&nbsp;keys:str,&nbsp;values:str):<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;self.__cipher&nbsp;=&nbsp;dict_from_strings(keys,&nbsp;values)<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;self.__cipherable&nbsp;=&nbsp;self.__cipher.keys()<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;self.__decipher&nbsp;=&nbsp;{v:k&nbsp;for&nbsp;k,v&nbsp;in&nbsp;self.__cipher.items()}<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;self.__decipherable&nbsp;=&nbsp;self.__decipher.keys()
+			</code>
+			<p>And the <code>dict_from_strings()</code> function referenced is:</p>
+			<code class="segment">
+				def&nbsp;dict_from_strings(keystring:str,&nbsp;valstring:str):<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;len(keystring)&nbsp;!=&nbsp;len(valstring):<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;raise&nbsp;ValueError("The&nbsp;two&nbsp;strings&nbsp;passed&nbsp;into&nbsp;dict_from_strings()&nbsp;must&nbsp;be&nbsp;of&nbsp;equal&nbsp;length.")<br>
+
+				&nbsp;&nbsp;&nbsp;&nbsp;keys&nbsp;=&nbsp;tuple(keystring)<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;vals&nbsp;=&nbsp;tuple(valstring)<br>
+
+				&nbsp;&nbsp;&nbsp;&nbsp;kvpairs&nbsp;=&nbsp;[]<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pos&nbsp;=&nbsp;0<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;pos&nbsp;&lt;&nbsp;len(keys):<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kvpairs.append((keys[pos],&nbsp;vals[pos]))<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos&nbsp;+=&nbsp;1<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;kvpairs.sort()<br>
+
+				&nbsp;&nbsp;&nbsp;&nbsp;new_dict&nbsp;=&nbsp;dict(kvpairs)<br>
+
+				&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;new_dict
+			</code>
+
+			<p>What this means is that, to define a new Styler, you must pass in a sequence of two strings of equal length; the first item will become the keys, and the second will be the values.</p>
+			<p>As an example, here is the declaration of one of the predefined Styler-instances:</p>
+
+			<code class="segment">
+				ital&nbsp;=&nbsp;Styler(<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;"aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ`~1!2@3#4$5%6^7&amp;8*9(0)-_=+[{]}|\;:'\",&lt;.&gt;/?&nbsp;&#119834;&#119808;&#119835;&#119809;&#119836;&#119810;&#119837;&#119811;&#119838;&#119812;&#119839;&#119813;&#119840;&#119814;&#119841;&#119815;&#119842;&#119816;&#119843;&#119817;&#119844;&#119818;&#119845;&#119819;&#119846;&#119820;&#119847;&#119821;&#119848;&#119822;&#119849;&#119823;&#119850;&#119824;&#119851;&#119825;&#119852;&#119826;&#119853;&#119827;&#119854;&#119828;&#119855;&#119829;&#119856;&#119830;&#119857;&#119831;&#119858;&#119832;&#119859;&#119833;",<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;"&#119886;&#119860;&#119887;&#119861;&#119888;&#119862;&#119889;&#119863;&#119890;&#119864;&#119891;&#119865;&#119892;&#119866;&#8462;&#119867;&#119894;&#119868;&#119895;&#119869;&#119896;&#119870;&#119897;&#119871;&#119898;&#119872;&#119899;&#119873;&#119900;&#119874;&#119901;&#119875;&#119902;&#119876;&#119903;&#119877;&#119904;&#119878;&#119905;&#119879;&#119906;&#119880;&#119907;&#119881;&#119908;&#119882;&#119909;&#119883;&#119910;&#119884;&#119911;&#119885;`~1!2@3#4$5%6^7&amp;8*9(0)-_=+[{]}|\;:'\",&lt;.&gt;>/?&nbsp;&#119938;&#119912;&#119939;&#119913;&#119940;&#119914;&#119941;&#119915;&#119942;&#119916;&#119943;&#119917;&#119944;&#119918;&#119945;&#119919;&#119946;&#119920;&#119947;&#119921;&#119948;&#119922;&#119949;&#119923;&#119950;&#119924;&#119951;&#119925;&#119952;&#119926;&#119953;&#119927;&#119954;&#119928;&#119955;&#119929;&#119956;&#119930;&#119957;&#119931;&#119958;&#119932;&#119959;&#119933;&#119960;&#119934;&#119961;&#119935;&#119962;&#119936;&#119963;&#119937;")
+			</code>
+		</section>
+
+		<section class="main-section" id="Input">
+			<header>Input</header>
+			<p>As is common with functions of the Jartil module, there are two methods of input for the methods of Styler: A string can be input, or the methods may be called without arguments; in the latter case, the methods will look for suitable input from the OS clipboard, via <a id="false-link" href="#">Pyperclip</a>.</p>
+			<p>The two methods into which you may want to input are <code>Styler.style()</code> and <code>Styler.unstyle()</code>. As may be expected, <code>.style()</code> uses the <code>.__cipher</code> dictionary to replace the input string with the translated version, and <code>.unstyle()</code> does the opposite via <code>.decipher</code>.</p>
+		</section>
+
+		<section class="main-section" id="Output">
+			<header>Output</header>
+			<p>Again, as is common with Jartil, there are two methods of output from the <code>.style()</code> and <code>.unstyle()</code> functions; they send their transformed strings both to the OS-clipboard (via Pyperclip), and to whatever scope called the function, via the usual <code>return</code>.</p>
+		</section>
+		<section class="main-section" id="Placeholder">
+			<header>Placeholder</header>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+		</section>
+	</main>
+</body>
+</html>
