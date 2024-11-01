@@ -144,7 +144,6 @@ function getInputs() {
 }
 
 function doIO() {
-	loadPageElems();
 	let name = getInputs();
 	if (name === null) {
 		return;
@@ -163,6 +162,7 @@ function doIO() {
 
 
 //> Setting up default values.
+loadPageElems();
 setDefaults();
 
 //>	Setting up events.
