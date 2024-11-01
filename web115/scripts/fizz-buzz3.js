@@ -20,6 +20,24 @@ var FIZZBUZZ_INPUT = [
 ];
 
 //>	Defining functions.
+function collectName() {
+	let first = document.getElementById("first-name").value;
+	let mid = document.getElementById("middle-init").value;
+	let last = document.getElementById("last-name").value;
+	let full;
+
+	if (first === "" && mid === "" && last === "") {
+		full = "";
+	} else {
+		if (mid.slice(-1) !== ".") {
+			mid += ".";
+		}
+		full = `, ${first} ${mid} ${last}`;
+	}
+
+	return full;
+}
+
 function isMultiple(numToCheck, factor) {
 	let answer = (numToCheck % factor === 0);
 	return answer;
@@ -72,7 +90,7 @@ function complexFizzBuzz(factorTextPairs) {
 }
 
 function writeOutputs() {
-	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${collectName()}!`;
+	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${collectName()}!`;
 	complexFizzBuzz(FIZZBUZZ_INPUT);
 }
 
