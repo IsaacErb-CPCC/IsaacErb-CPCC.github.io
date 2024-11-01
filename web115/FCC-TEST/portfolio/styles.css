@@ -12,18 +12,88 @@ body * {
 }
 
 body {
-	max-width: 256mm;
+	max-width: 300mm;
+  margin: 5mm auto;
+}
+
+nav {
+	max-width: 300mm;
+	width: 100%;
+	background-color: #102;
+
+	margin-left: auto;
+	margin-right: auto;
+	position: fixed;
+	top: 0mm;
+
+	border-bottom: 1px solid #FFF;
+}
+
+nav a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+nav ul {
+	padding-left: 0mm;
+	list-style-type: none;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#bg-strip {
+	background-color: #444;
+	height: 5mm;
+}
+
+section {
+  padding: 0mm 5mm;
 }
 
 #welcome-section {
-	height: 1vh;
-
+	height: 100vh;
 	display: flex;
-	flex-flow: columns nowrap;
+	flex-flow: column nowrap;
 	justify-content: center;
 	align-items: center;
 
 	background-color: #012;
+}
+
+#projects {
+	background-color: #021;
+}
+
+#project-display {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	height: fit-content;
+	padding-top: 0mm;
+}
+
+.project-tile {
+	width: 48%;
+	border: 2px dotted #FFF;
+	margin-top: 5mm;
+}
+
+.project-tile img {
+	width: 100%;
+	padding: 2mm;
+}
+
+@media screen and (max-width: 200mm) {
+	.project-tile {
+		width: 90%;
+	}
+}
+
+h1, h2 {
+	display: block;
+  text-align: center;
 }
 
 h1 {
@@ -32,8 +102,20 @@ h1 {
 
 h2 {
 	font-size: 1.8rem;
+	margin: 0mm;
+	padding: 5mm;
+}
+
+h3 {
+	font-size: 1.5rem;
+	margin: 0mm;
+	padding: 2mm;
 }
 
 sub {
 	font-weight: normal;
+}
+
+a, a:visited {
+	color: #DBF;
 }

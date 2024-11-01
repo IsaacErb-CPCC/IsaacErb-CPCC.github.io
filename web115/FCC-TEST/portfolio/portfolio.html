@@ -3,36 +3,51 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="match-device-width">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	<link href="styles.css" rel="stylesheet">
 	<title>Portfolio</title>
 </head>
 
 <body>
 	<nav id="navbar">
-
+		<div id="bg-strip"></div>
+		<ul>
+			<li><a id="profile-link" href="https://github.com/IsaacErb-CPCC" target="_blank">My GitHub</a></li>
+			<li><a href="#font-start">My Fonts</a></li>
+			<li><a href="#write-start">My Writing</a></li>
+		</ul>
 	</nav>
 	<main>
 		<section id="welcome-section">
-			<h1>Hello; I am Isaac N. Erb <sub>(He/Him)</sub>,</h1>
+			<h1>Hello; I am Isaac N. Erb<br><sub>(He/Him)</sub>,</h1>
 			<h2>a studying programmer, hobbyist font-developer, and unpublished author.</h2>
 		</section>
+
 		<section id="projects">
-			<div class="project-tile">
-				<h3>Iron (Font)</h3>
-				<img src="https://isaacerb-cpcc.github.io/web115/FCC-TEST/iron-example.png">
-				<span>A bold, proportional sans-serif font I made because I wanted a good general-purpose font. It is stylistically based off of Bahnschrift, which is stylistically based off of <a href="https://en.wikipedia.org/wiki/DIN_1451" target="_blank">DIN 1451</a>.</span>
-			</div>
-			<div class="project-tile">
-				<h3>Carbon-13 (Font)</h3>
-				<img src="https://isaacerb-cpcc.github.io/web115/FCC-TEST/c13-example.png">
-				<span>My own take on how the classic &lsquo;dot-matrix&rsquo; style of font should look. This style of font is nothing new; if you've played Minecraft, you've seen it. But all-such fonts I've seen do things I don't like, so I decided to make my own.</span>
-			</div>
-			<div class="project-tile">
-				<h3>Riika & Chineu (Book)</h3>
-				<img src="https://isaacerb-cpcc.github.io/web115/FCC-TEST/chineu-example.png">
-				<span>This is the second book I've written, and is basically an immigration-story, with protagonist's character-arc focusing on a conflict between curiosity and fear of the unknown.</span>
+			<h2>My Projects:</h2>
+			<div id="project-display">
+				<div class="project-tile" id="font-start">
+					<h3>Iron Cast (Font)</h3>
+					<img src="https://isaacerb-cpcc.github.io/web115/FCC-TEST/iron-example.png">
+					<span>A semibold-weight, monospaced sans-serif font I made because I wanted a good general-purpose monospace. It is stylistically based off of Bahnschrift, which is stylistically based off of <a href="https://en.wikipedia.org/wiki/DIN_1451" target="_blank">DIN 1451</a>.</span>
+				</div>
+
+				<div class="project-tile">
+					<h3>Carbon-13 (Font)</h3>
+					<img src="https://isaacerb-cpcc.github.io/web115/FCC-TEST/c13-example.png">
+					<span>My own take on how the classic &lsquo;dot-matrix&rsquo; style of font should look. This style of font is nothing new; if you've played Minecraft, you've seen it. But all-such fonts I've seen do things I don't like, so I decided to make my own.</span>
+				</div>
+
+				<div class="project-tile" id="write-start">
+					<h3>Riika & Chineu (Book)</h3>
+					<img src="https://isaacerb-cpcc.github.io/web115/FCC-TEST/chineu-example.png">
+					<span>This is the second book I've written, and is basically an immigration-story, with protagonist's character-arc focusing on a conflict between curiosity and fear of the unknown.</span>
+				</div>
 			</div>
 		</section>
+
 	</main>
   </body>
 </html>
