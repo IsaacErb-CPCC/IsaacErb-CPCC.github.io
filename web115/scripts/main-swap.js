@@ -18,8 +18,8 @@ const FILE_INFO = [
 	{url: "fizzbuzz2", script: "fizz-buzz2.js", title: "FizzBuzz 2"},
 	{url: "fizzbuzz3", script: "fizz-buzz3.js", title: "FizzBuzz 3"},
 	{url: "fizzbuzz4", script: "fizz-buzz4.js", title: "FizzBuzz 4"},
-	{url: "FCC-TEST/rwd-hub", script: "none.js", title: "FCC RWD"},
-	{url: "FCC-TEST/jads-hub", script: "none.js", title: "FCC JADS"}
+	{url: "rwd-hub", script: "none.js", title: "FCC RWD"},
+	{url: "jads-hub", script: "none.js", title: "FCC JADS"}
 ];
 
 function getLastVisited() {
