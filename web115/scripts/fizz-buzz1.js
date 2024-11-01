@@ -1,10 +1,29 @@
 "use strict";
 
 //> Defining global variables.
+var NAME_LOC = document.getElementById("greeting");
 var SUBMIT_BUTTON = document.getElementById("submission");
 var OUTPUT_1_LOC = document.getElementById("output-1");
 
 //>	Defining functions.
+function collectName() {
+	let first = document.getElementById("first-name").value;
+	let mid = document.getElementById("middle-init").value;
+	let last = document.getElementById("last-name").value;
+	let full;
+
+	if (first === "" && mid === "" && last === "") {
+		full = "";
+	} else {
+		if (mid.slice(-1) !== ".") {
+			mid += ".";
+		}
+		full = `, ${first} ${mid} ${last}`;
+	}
+
+	return full;
+}
+
 function tabulateLinenum(lineNum) {
 	const DIGITS = lineNum.toString().length;
 	let displayNum;
@@ -54,6 +73,7 @@ function normalFizzBuzz() {
 }
 
 function writeOutputs() {
+	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${collectName()}!`;
 	normalFizzBuzz();
 }
 

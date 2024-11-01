@@ -1,6 +1,7 @@
 "use strict";
 
 //>	Defining global variables.
+var NAME_LOC = document.getElementById("greeting");
 var SUBMIT_BUTTON = document.getElementById("submission");
 var OUTPUT_1_LOC = document.getElementById("output-1");
 
@@ -71,6 +72,7 @@ function complexFizzBuzz(factorTextPairs) {
 }
 
 function writeOutputs() {
+	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${collectName()}!`;
 	complexFizzBuzz(FIZZBUZZ_INPUT);
 }
 

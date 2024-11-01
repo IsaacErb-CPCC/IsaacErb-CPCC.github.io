@@ -13,11 +13,17 @@ function collectName() {
 	let first = document.getElementById("first-name").value;
 	let mid = document.getElementById("middle-init").value;
 	let last = document.getElementById("last-name").value;
+	let full;
 
-	if (mid.slice(-1) !== ".") {
-		mid += ".";
+	if (first === "" && mid === "" && last === "") {
+		full = "";
+	} else {
+		if (mid.slice(-1) !== ".") {
+			mid += ".";
+		}
+		full = `, ${first} ${mid} ${last}`;
 	}
-	let full = `${first} ${mid} ${last}`;
+
 	return full;
 }
 
@@ -74,7 +80,7 @@ function dynamicText() {
 }
 
 function writeOutputs() {
-	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${collectName()}!`;
+	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${collectName()}!`;
 	numberedText();
 	dynamicText();
 }

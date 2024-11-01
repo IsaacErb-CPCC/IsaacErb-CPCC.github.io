@@ -1,6 +1,7 @@
 "use strict";
 
 //>	Defining global variables.
+var NAME_LOC = document.getElementById("greeting");
 var SUBMIT_BUTTON = document.getElementById("submission");
 var SMALL_FACTOR = 6;
 var LARGE_FACTOR = 8;
@@ -62,6 +63,7 @@ function modularFizzBuzz() {
 }
 
 function writeOutputs() {
+	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${collectName()}!`;
 	modularFizzBuzz();
 }
 
