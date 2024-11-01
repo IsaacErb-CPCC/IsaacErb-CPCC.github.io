@@ -10,13 +10,14 @@ html {
 }
 
 body {
-	width: fit-content;
+	min-width: fit-content;
+	width: 40%;
 	margin: auto;
 	border-radius: 1mm;
 	border: 3px solid #222;
 	background-color: #AAF;
 	color: #200;
-	padding: 3mm;
+	padding: 6mm;
 }
 
 body * {
@@ -26,7 +27,7 @@ body * {
 }
 
 input {
-	max-width: 80%;
+	width: 80%;
 }
 
 script {
