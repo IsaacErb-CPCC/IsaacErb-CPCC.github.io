@@ -64,7 +64,7 @@ html {
 	background-color: var(--html-bg);
 	color: var(--text-norm);
 
-	font-family: "Fira Sans";
+	font-family: "Fira Sans", "Noto Sans Symbols";
 	font-size: 14pt;
 	line-height: 1.5rem;
 	font-variant-numeric: tabular-nums;
@@ -340,11 +340,11 @@ input, button:not(.content-button) {
 	font-size: 1rem;
 }
 
-/* @media (min-width: 960) {
+@media screen and (max-width: 960px) {
 	input {
 		border-width: 2px;
 	}
-} */
+}
 
  button:not(.content-button), [type="submit"], [type="button"] {
 	color: var(--text-more-highlight);
