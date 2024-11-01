@@ -1,0 +1,81 @@
+html {
+  background-color: #203;
+  color: #DDD;
+}
+
+body {
+  font-family: "Verdana", sans-serif;
+  font-size: 14pt;
+
+  max-width: 200mm;
+  margin: 5mm auto;
+}
+
+#title {
+  text-align: center;
+  font-size: 28pt;
+}
+
+h2 {
+  font-size: 16pt;
+  margin-bottom: 0px;
+}
+
+label {
+  display: block;
+  padding-top: 3mm;
+}
+
+input, select, textarea {
+  display: block;
+  border: 1px solid #fff;
+
+  color: #fff;
+  background-color: #102;
+
+  font-family: "Consolas", "Verdana", sans-serif;
+  font-size: 14pt;
+}
+
+[type="text"], [type="email"] {
+  width: 99mm;
+}
+
+textarea{
+  max-width: 200mm;
+}
+
+input[type="radio"],
+input[type="radio"] + label,
+input[type="checkbox"],
+input[type="checkbox"] + label {
+  display: inline-block;
+}
+
+textarea {
+  width: 100%;
+}
+
+fieldset {
+  border: 1px solid #fff;
+  border-top: none;
+}
+
+fieldset:first-of-type {
+  border-top: 1px solid #fff;
+}
+
+ol {
+  margin-top: 0px;
+}
+
+.widgetlist {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+[type="submit"] {
+  margin: auto;
+  font-size: 18pt;
+  font-weight: bold;
+}

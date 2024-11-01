@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <link href="styles.css" rel="stylesheet">
+
+    <title>Literal Cats Only: Registration</title>
+  </head>
+
+  <body>
+    <section>
+      <h1 id="title">New Cat Registration</h1>
+    <p id="description">In order for you to begin using our services, we need some information about you and your preferences.</p>
+    </section>
+
+    <form id="survey-form">
+      <fieldset>
+        <label>First: Are you really a cat, and not a human furry?</label>
+        <input type="radio" name="cat-confirm" id="am-cat" value="am-cat">
+        <label for="am-cat">Yes.</label><br>
+        <input type="radio" name="cat-confirm" id="not-cat" value="not-cat" checked>
+        <label for="not-cat">No.</label>
+      </fieldset>
+
+      <fieldset>
+        <label for="name" id="name-label">What is your name?</label>
+        <input type="text", id="name" required
+          placeholder="Example: Skimbleshanks">
+
+        <label for="email" id="email-label">What is your email-address?</label>
+        <input type="email" id="email" required
+          placeholder="Example: lac2s.tolrnt@catmail.nya">
+
+        <label for="number" id="number-label">What is your age? (Optional.)</label>
+        <input type="number" id="number"
+          max="30" min="3"
+          placeholder="3">
+        <label for="dropdown">What is your breed?</label>
+        <select id="dropdown">
+          <option value="mix">Mixed</option>
+          <option value="maine">Maine Coon</option>
+          <option value="fold">Scottish Fold</option>
+          <option value="curl">American Curl</option>
+          <option value="munch">Munchkin</option>
+        </select>
+
+        <label for="self-desc">What would you like other cats to know about you?</label>
+        <textarea></textarea>
+      </fieldset>
+      <fieldset>
+        <p>Which of these are you looking for in a partner?</p>
+
+        <h2>Personality</h2>
+        <ol class="widgetlist">
+          <li>
+            <input type="checkbox" id="active" value="active">
+            <label for="active">Activeness.</label>
+          </li>
+          <li>
+            <input type="checkbox" id="affect" value="affect">
+            <label for="affect">Affection.</label>
+          </li>
+          <li>
+            <input type="checkbox" id="dom" value="dom">
+            <label for="dom">Domming.</label>
+          </li>
+          <li>
+            <input type="checkbox" id="sub" value="sub">
+            <label for="sub">Subbing.</label>
+          </li>
+        </ol>
+
+        <h2>Appearance</h2>
+        <ol class="widgetlist">
+          <li>
+            <input type="checkbox" id="small" value="small">
+            <label for="small">Smallness.</label>
+          </li>
+          <li>
+            <input type="checkbox" id="large" value="large">
+            <label for="large">Largeness.</label>
+          </li>
+          <li>
+            <input type="checkbox" id="stripe" value="stripe">
+            <label for="stripe">Stripes.</label>
+          </li>
+          <li>
+            <input type="checkbox" id="solid" value="solid">
+            <label for="solid">Solids.</label>
+          </li>
+          <li>
+            <input type="checkbox" id="fluff" value="fluff">
+            <label for="fluff">Long fur.</label>
+          </li>
+          <li>
+            <input type="checkbox" id="trim" value="trim">
+            <label for="trim">Short fur.</label>
+          </li>
+        </ol>
+      </fieldset>
+      <fieldset>
+        <input type="submit" id="submit" value="Submit Profile-Info">
+      </fieldset>
+
+    </form>
+  </body>
+</html>

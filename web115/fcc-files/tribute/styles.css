@@ -1,0 +1,49 @@
+html {
+  font-family: Univers, Oswald, Bahnschrift, Ubuntu, Verdana, Tahoma, sans-serif;
+  font-variant-numeric: tabular-nums;
+
+  font-size: 14pt;
+
+  color: #BDF;
+  background-color: #000;
+  line-height: 1.5em;
+}
+
+#title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+body {
+  background-color: #112;
+  max-width: 20cm;
+  margin: 5mm auto;
+  padding: 2mm;
+
+}
+
+#img-div {
+  width: 100%;
+}
+
+#image {
+  display: block;
+  max-width: 100%;
+  width: 80%;
+
+
+  margin: 0mm auto;
+}
+
+li:not(:last-of-type){
+  padding-bottom: 3mm;
+}
+
+a {
+  color: #BFD;
+}
+
+a:visited {
+  color: #DDF;
+}
