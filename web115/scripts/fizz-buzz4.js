@@ -3,18 +3,18 @@
 //> Defining global variables.
 var SUBMIT_BUTTON = document.getElementById("submission");
 
-var NAME_FIRST_INPUT;
-var NAME_MIDDLE_INPUT;
-var NAME_LAST_INPUT;
-var FACTOR_1_INPUT;
-var FACTOR_2_INPUT;
-var FACTOR_3_INPUT;
-var WORD_1_INPUT;
-var WORD_2_INPUT;
-var WORD_3_INPUT;
-var LINELIMIT_INPUT;
-var NAME_LOC;
-var OUTPUT_1_LOC;
+var NAME_FIRST_INPUT = await new Promise(document.getElementById("first-name"));
+var NAME_MIDDLE_INPUT = await new Promise(document.getElementById("middle-init"));
+var NAME_LAST_INPUT = await new Promise(document.getElementById("last-name"));
+var FACTOR_1_INPUT = await new Promise(document.getElementById("factor-1"));
+var FACTOR_2_INPUT = await new Promise(document.getElementById("factor-2"));
+var FACTOR_3_INPUT = await new Promise(document.getElementById("factor-3"));
+var WORD_1_INPUT = await new Promise(document.getElementById("word-1"));
+var WORD_2_INPUT = await new Promise(document.getElementById("word-2"));
+var WORD_3_INPUT = await new Promise(document.getElementById("word-3"));
+var LINELIMIT_INPUT = await new Promise(document.getElementById("line-limit"));
+var NAME_LOC = await new Promise(document.getElementById("greeting"));
+var OUTPUT_1_LOC = await new Promise(document.getElementById("output-1"));
 
 var firstFactor = 4;
 var secondFactor = 6;
@@ -30,23 +30,6 @@ var LINE_MAX = 1000;
 
 
 //> Defining functions.
-async function loadPageElems() {
-	let namefirstLoad = new Promise(document.getElementById("first-name"));
-	NAME_FIRST_INPUT = await namefirstLoad;
-	NAME_MIDDLE_INPUT = document.getElementById("middle-init");
-	NAME_LAST_INPUT = document.getElementById("last-name");
-	FACTOR_1_INPUT = document.getElementById("factor-1");
-	FACTOR_2_INPUT = document.getElementById("factor-2");
-	FACTOR_3_INPUT = document.getElementById("factor-3");
-	WORD_1_INPUT = document.getElementById("word-1");
-	WORD_2_INPUT = document.getElementById("word-2");
-	WORD_3_INPUT = document.getElementById("word-3");
-	LINELIMIT_INPUT = document.getElementById("line-limit");
-	NAME_LOC = document.getElementById("greeting");
-	OUTPUT_1_LOC = document.getElementById("output-1");
-
-}
-
 function isMultiple(numToCheck, factor) {
 	let answer = (numToCheck % factor === 0);
 	return answer;
@@ -162,7 +145,6 @@ function doIO() {
 
 
 //> Setting up default values.
-loadPageElems();
 setDefaults();
 
 //>	Setting up events.
