@@ -1,11 +1,11 @@
 "use strict";
 
-async function name(params) {
-
+async function loadSubmit() {
+	return await new Promise(document.getElementById("submission"));
 }
 
 //> Defining global variables.
-var SUBMIT_BUTTON = await document.getElementById("submission");
+var SUBMIT_BUTTON = loadSubmit();
 
 var NAME_FIRST_INPUT = document.getElementById("first-name");
 var NAME_MIDDLE_INPUT = document.getElementById("middle-init");
@@ -56,9 +56,6 @@ function tabulateLinenum(lineNum) {
 	}
 
 	return displayNum;
-}
-
-async function loadElems() {
 }
 
 function setDefaults() {
