@@ -1,6 +1,6 @@
 "use strict";
 
-function runScript() {
+window.addEventListener("DOMContentLoaded", () => {
 	//> Defining global variables.
 	var SUBMIT_BUTTON = document.getElementById("submission");
 
@@ -151,7 +151,5 @@ function runScript() {
 	SUBMIT_BUTTON.addEventListener("click", () => {
 		doIO();
 	});
-}
-
-window.addEventListener("DOMContentLoaded", runScript);
+});
 
