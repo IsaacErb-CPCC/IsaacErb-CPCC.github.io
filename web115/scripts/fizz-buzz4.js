@@ -1,7 +1,11 @@
 "use strict";
 
+async function name(params) {
+
+}
+
 //> Defining global variables.
-var SUBMIT_BUTTON = document.getElementById("submission");
+var SUBMIT_BUTTON = await document.getElementById("submission");
 
 var NAME_FIRST_INPUT = document.getElementById("first-name");
 var NAME_MIDDLE_INPUT = document.getElementById("middle-init");
