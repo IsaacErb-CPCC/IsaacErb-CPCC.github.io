@@ -1,7 +1,8 @@
 "use strict";
 
 async function loadSubmit() {
-	return await new Promise(document.getElementById("submission"));
+	let x = await new Promise(document.getElementById("submission"));
+	return x;
 }
 
 //> Defining global variables.
