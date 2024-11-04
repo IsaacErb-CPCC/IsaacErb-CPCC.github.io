@@ -47,7 +47,8 @@ function swapContentScript(dataURL) {
 	NEW_SCRIPT.setAttribute("id", "content-script");
 	NEW_SCRIPT.setAttribute("src", `scripts/${scriptURL}`);
 	NEW_SCRIPT.setAttribute("defer", "true");
-	NEW_SCRIPT.setAttribute("fetchpriority", "low");
+	NEW_SCRIPT.setAttribute("async", "true");
+	// NEW_SCRIPT.setAttribute("fetchpriority", "low");
 	document.body.appendChild(NEW_SCRIPT);
 	return;
 }
