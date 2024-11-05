@@ -459,3 +459,7 @@ nav .drop-opened {
 nav .drop-opened + .drop-content-box {
 	border-color: var(--text-alt);
 }
+
+#time-of-swap {
+	display: none;
+}

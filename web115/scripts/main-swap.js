@@ -97,6 +97,7 @@ function swapMainContents(dataURL) {
 		})
 		.then((text) => {
 			MAIN.innerHTML = text;
+			MAIN.innerHTML += `<span id="time-of-swap">${Date.now()}</span>`;
 		})
 		.catch((error) => {	//@DEBUG-FEATURE!
 			MAIN.innerText = error.message;
