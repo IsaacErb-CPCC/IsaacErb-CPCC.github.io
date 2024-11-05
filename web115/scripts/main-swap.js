@@ -89,7 +89,7 @@ function swapTitle(dataURL) {
 
 function swapMainContents(dataURL) {
 	const DATA_REQUEST = new Request(dataURL);
-	const oldTime = document.getElementById("time-of-swap").innerText;
+	const oldHTML = MAIN.innerHTML;
 
 	fetch(DATA_REQUEST)
 		.then((response) => {
@@ -116,8 +116,8 @@ function swapMainContents(dataURL) {
 
 	if (usesScriptOtherThanNoneJS) {
 		const resolutionCheck = setInterval(() => {
-			const newTime = Date.now().toString();
-			if (newTime !== null && newTime !== oldTime) {
+			const newHTML = MAIN.innerHTML;
+			if (newHTML !== null && newHTML !== oldHTML) {
 				console.log("InnerHTML-change complete.");
 				clearInterval(resolutionCheck);
 			}
