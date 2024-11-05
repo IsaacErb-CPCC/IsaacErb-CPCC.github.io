@@ -89,6 +89,7 @@ function swapTitle(dataURL) {
 
 function swapMainContents(dataURL) {
 	const DATA_REQUEST = new Request(dataURL);
+	const oldHTML = MAIN.innerHTML;
 
 	fetch(DATA_REQUEST)
 		.then((response) => {
@@ -113,11 +114,14 @@ function swapMainContents(dataURL) {
 	}
 
 	if (usesScriptOtherThanNoneJS) {
-		let outTest = document.getElementById("code-output-area");
-		while (outTest === null) {
-			stall(100);
-			outTest = document.getElementById("code-output-area");
-		}
+		const resolutionCheck = setInterval(() => {
+			const newHTML = MAIN.innerHTML;
+			if (newHTML !== oldHTML) {
+				console.log("InnerHTML-change complete.");
+				clearInterval(resolutionCheck);
+			}
+		}, 100);
+
 	}
 
 	swapContentScript(dataURL);
