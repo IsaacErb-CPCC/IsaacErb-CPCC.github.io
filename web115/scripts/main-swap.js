@@ -113,8 +113,10 @@ function swapMainContents(dataURL) {
 	}
 
 	if (usesScriptOtherThanNoneJS) {
-		while (document.getElementById("code-output-area") === null) {
+		let outTest = document.getElementById("code-output-area");
+		while (outTest === null) {
 			stall(100);
+			outTest = document.getElementById("code-output-area");
 		}
 	}
 
