@@ -19,8 +19,19 @@ const FILE_INFO = [
 	{url: "fizzbuzz3", script: "fizz-buzz3.js", title: "FizzBuzz 3"},
 	{url: "fizzbuzz4", script: "fizz-buzz4.js", title: "FizzBuzz 4"},
 	{url: "rwd-hub", script: "none.js", title: "FCC RWD"},
-	{url: "jads-hub", script: "none.js", title: "FCC JADS"}
-];
+	{url: "jads-hub", script: "none.js", title: "FCC JADS"}];
+
+const SCRIPT_PAGES = [
+	"m3-code-output.html",
+	"fizzbuzz0.html",
+	"fizzbuzz1.html",
+	"fizzbuzz2.html",
+	"fizzbuzz3.html",
+	"fizzbuzz4.html"];
+
+function stall() {
+	return
+}
 
 function getLastVisited() {
 	let lastVisited = localStorage.getItem('last-visited');
@@ -75,6 +86,8 @@ function swapTitle(dataURL) {
 function swapMainContents(dataURL) {
 	const DATA_REQUEST = new Request(dataURL);
 
+	const OLD_HTML = $("#main").html();
+
 	fetch(DATA_REQUEST)
 		.then((response) => {
 			return response.text();
@@ -85,6 +98,23 @@ function swapMainContents(dataURL) {
 		.catch((error) => {	//@DEBUG-FEATURE!
 			MAIN.innerText = error.message;
 		});
+
+	//- Beginning block which ensures the fetch()-block's changes
+	//  finish loading before the content-script is swapped.
+	let usesScriptOtherThanNoneJS = false;
+
+	for (const i in SCRIPT_PAGES) {
+		const scriptPage = SCRIPT_PAGES[i];
+		if (scriptPage === dataURL) {
+			usesScriptOtherThanNoneJS = true;
+		}
+	}
+
+	if (usesScriptOtherThanNoneJS) {
+		while (document.getElementById("code-output-area") === null) {
+			setTimeout(stall, 100);
+		}
+	}
 
 	swapContentScript(dataURL);
 	localStorage.setItem('last-visited', dataURL);
