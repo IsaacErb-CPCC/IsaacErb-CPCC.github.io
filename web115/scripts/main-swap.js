@@ -29,8 +29,12 @@ const SCRIPT_PAGES = [
 	"fizzbuzz3.html",
 	"fizzbuzz4.html"];
 
-function stall() {
-	return
+function wait(stallTime) {
+	return new Promise((resolve) => setTimeout(resolve, stallTime));
+}
+
+async function stall(stallTime) {
+	await wait(stallTime);
 }
 
 function getLastVisited() {
@@ -86,8 +90,6 @@ function swapTitle(dataURL) {
 function swapMainContents(dataURL) {
 	const DATA_REQUEST = new Request(dataURL);
 
-	const OLD_HTML = $("#main").html();
-
 	fetch(DATA_REQUEST)
 		.then((response) => {
 			return response.text();
@@ -112,7 +114,7 @@ function swapMainContents(dataURL) {
 
 	if (usesScriptOtherThanNoneJS) {
 		while (document.getElementById("code-output-area") === null) {
-			setTimeout(stall, 100);
+			stall(100);
 		}
 	}
 
