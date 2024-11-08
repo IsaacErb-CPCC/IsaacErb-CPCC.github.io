@@ -117,10 +117,16 @@ function getInputs() {
 	let mid = NAME_MIDDLE_INPUT.value;
 	let last = NAME_LAST_INPUT.value;
 
-	if (mid.slice(-1) !== ".") {
-		mid += ".";
+	let full;
+
+	if (first === "" && mid === "" && last === "") {
+		full = "";
+	} else {
+		if (mid.slice(-1) !== ".") {
+			mid += ".";
+		}
+		full = `, ${first} ${mid} ${last}`;
 	}
-	let full = `${first} ${mid} ${last}`;
 
 	return full;
 }
