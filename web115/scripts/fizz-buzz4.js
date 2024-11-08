@@ -136,7 +136,7 @@ function doIO() {
 	if (name === null) {
 		return;
 	}
-	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo, ${name}!`;
+	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${name}!`;
 
 	let fizzbuzzInput = [
 		{factor: firstFactor, text: firstWord},
