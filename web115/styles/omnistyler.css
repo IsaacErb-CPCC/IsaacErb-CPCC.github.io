@@ -173,8 +173,9 @@ nav ul li {
 	font-size: 1.2rem;
 	display: inline;
 	border: 2px solid #FFF;
-	border-radius: 6mm;
+	border-radius: 5mm;
 	padding: 1mm 3mm;
+	margin: 1mm;
 	background-color: #000;
 	color: var(--text-highlight);
 }
@@ -346,7 +347,11 @@ input, button:not(.content-button) {
 	}
 }
 
- button:not(.content-button), [type="submit"], [type="button"] {
+button:hover{
+	cursor: pointer;
+}
+
+button:not(.content-button), [type="submit"], [type="button"] {
 	color: var(--text-more-highlight);
 	margin: auto;
 	padding: 2mm 3mm;
@@ -433,7 +438,7 @@ nav .drop-button {
 	font-size: 1.2rem;
 	font-weight: normal;
 	color: var(--text-highlight);
-	margin-top: 1.5mm; margin-bottom: 1.5mm;
+	margin-top: 1mm; margin-bottom: 1mm;
 
 	width: 100%;
 }
