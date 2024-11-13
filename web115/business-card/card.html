@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="match-device-width" initial-scale="1.0">
+
+	<style>
+		@charset "utf-8";
+
+		@font-face {
+			font-family: Carbon-13;  src: url(fonts/Carbon-13/Carbon-13_Regular.woff2);
+			font-weight: normal;  font-style: normal;
+		}
+
+		@font-face {
+			font-family: Carbon-13;  src: url(fonts/Carbon-13/Carbon-13_Bold.woff2);
+			font-weight: bold;  font-style: normal;
+		}
+
+		@font-face {
+			font-family: Carbon-13;  src: url(fonts/Carbon-13/Carbon-13_Italic.woff2);
+			font-weight: normal;  font-style: italic;
+		}
+
+		@font-face {
+			font-family: Carbon-13;  src: url(fonts/Carbon-13/Carbon-13_Bold-Italic.woff2);
+			font-weight: bold;  font-style: italic;
+		}
+
+		@font-face {
+			font-family: Carbon-26;  src: url(fonts/Carbon-26/Carbon-26_Regular.woff2);
+			font-weight: normal; font-style: normal;
+		}
+
+		@font-face {
+			font-family: Carbon-26;  src: url(fonts/Carbon-26/Carbon-26_Bold.woff2);
+			font-weight: bold;  font-style: normal;
+		}
+
+		@font-face {
+			font-family: Carbon-26;  src: url(fonts/Carbon-26/Carbon-26_Italic.woff2);
+			font-weight: normal;  font-style: italic;
+		}
+
+		@font-face {
+			font-family: Carbon-26;  src: url(fonts/Carbon-26/Carbon-26_BoldItalic.woff2);
+			font-weight: bold;  font-style: italic;
+		}
+
+		:root {
+			--pixel-size: 1.364pt;	/* (Standard Font-Size) / 11 = 1font-pixel. */
+		}
+
+		html {
+			background-color: #000;
+
+			font-family: Carbon-13;
+			font-size: calc(var(--pixel-size) * 11);
+			color: #DEF;
+		}
+
+		body {
+			box-sizing: border-box;
+
+			width: 80vw;
+			height: 80vh;
+
+			margin: 10vh 10vw;
+			padding: calc(var(--pixel-size) * 3);
+		}
+
+		h1 {
+			font-family: Carbon-26;
+			font-size: 2rem;
+			font-weight: normal;
+
+			text-align: center;
+			margin: 0pt 0pt 0pt calc(var(--pixel-size) * 2);
+		}
+
+		h2, h3, h4, h5, h6 {
+			font-family: Carbon-13;
+			font-size: 1rem;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1><b>Isaac Erb</b><br>Font-Dev, Programmer, Writer</h1>
+	</header>
+	<main>
+		<img src="" id="profile">
+
+		<div id="info">
+			Isaac Erb: Creator of six fonts, developer of entry-level Python-programs, and writer of 1.8 books.
+		</div>
+	</main>
+	<footer>
+		Contact-Info: <a type="mailto">ierb0000@email.cpcc.edu</a>.
+	</footer>
+</body>
+</html>
