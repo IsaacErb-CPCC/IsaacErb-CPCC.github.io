@@ -48,7 +48,7 @@
 		}
 
 		:root {
-			--pixel-size: 1.364pt;	/* (Standard Font-Size) / 11 = 1font-pixel. */
+			--pixel-size: 1.7pt;
 		}
 
 		html {
@@ -56,10 +56,14 @@
 
 			font-family: Carbon-13;
 			font-size: calc(var(--pixel-size) * 11);
+			line-height: calc(var(--pixel-size) *15);
 			color: #DEF;
 		}
 
 		body {
+			background-color: #346;
+			border: calc(var(--pixel-size) * 6) ridge #DEF;
+
 			box-sizing: border-box;
 
 			width: 80vw;
@@ -72,6 +76,7 @@
 		h1 {
 			font-family: Carbon-26;
 			font-size: 2rem;
+			line-height: 2rem;
 			font-weight: normal;
 
 			text-align: center;
@@ -83,6 +88,18 @@
 			font-size: 1rem;
 			font-weight: bold;
 		}
+
+		header {
+			height: 20%;
+		}
+
+		main {
+			height: 70%;
+		}
+
+		footer {
+			height: 10%;
+		}
 	</style>
 </head>
 
@@ -91,7 +108,9 @@
 		<h1><b>Isaac Erb</b><br>Font-Dev, Programmer, Writer</h1>
 	</header>
 	<main>
-		<img src="" id="profile">
+		<figure>
+			<img src="" id="profile">
+		</figure>
 
 		<div id="info">
 			Isaac Erb: Creator of six fonts, developer of entry-level Python-programs, and writer of 1.8 books.
