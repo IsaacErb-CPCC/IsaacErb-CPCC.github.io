@@ -426,6 +426,10 @@ label {
 	font-weight: bold;
 }
 
+section {
+	display: none;
+}
+
 /*======================
 	DROPDOWN-MENUS:
 ======================*/

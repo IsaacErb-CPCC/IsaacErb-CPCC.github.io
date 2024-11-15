@@ -104,7 +104,7 @@ for (const i in BUTTONS) {
 	}
 }
 
-const TEXT_LINKS = document.querySelectorAll("a")
+const TEXT_LINKS = document.querySelectorAll("a");
 for (const i in TEXT_LINKS) {
 	const link = TEXT_LINKS[i];
 	if (link.href.slice(0,0) === "#") {
