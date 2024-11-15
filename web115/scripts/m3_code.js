@@ -3,6 +3,7 @@
 var inputTag = "<div class=\"code-bg\"><code class=\"input\">";
 var outputTag = "<div class=\"code-bg\"><code class=\"output\">";
 var endTag = "</code></div>";
+const OUTPUT_ZONE = document.getElementById("code-out-area");
 
 function handleAnglemarks(codestring) {
 	codestring = codestring.replaceAll("<", "&lt;");
@@ -29,7 +30,6 @@ function writeOutcode(codestring) {
 }
 
 function mainScript() {
-	const OUTPUT_ZONE = document.getElementById("code-out-area");
 	OUTPUT_ZONE.innerHTML = ("<p>Defining constants which make the construction of HTML-elements modular. (These are only visible in the sourcecode, but took enough figuring out that I think it's fair to count them among the statements which fulfill my minimum for this assigment.)</p>");
 	writeIncode(handleAnglemarks("const inputTag = \"<div class=\\\"code-bg\\\"><code class=\\\"input\\\">\";"));
 	writeOutcode("undefined");
