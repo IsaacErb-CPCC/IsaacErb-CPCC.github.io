@@ -95,23 +95,22 @@ function swapShownContent(displayID) {
 
 //-	Setting event-listeners for swap-buttons.
 const BUTTONS = document.querySelectorAll(".content-button");
-for (const i in BUTTONS) {
-	const button = BUTTONS[i];
-	if (button.id !== "to-namari-onepage") {
-		button.addEventListener("click", () => {
-			swapShownContent(button.id.replace("to-", ""));
-		});
-	}
-}
+BUTTONS.forEach((button) => {
+		if (button.id !== "to-namari-onepage") {
+			button.addEventListener("click", () => {
+				swapShownContent(button.id.replace("to-", ""));
+			});
+		}
+});
+
 
 const TEXT_LINKS = document.querySelectorAll("a");
-for (const i in TEXT_LINKS) {
-	const link = TEXT_LINKS[i];
+TEXT_LINKS.forEach((link) => {
 	if (link.href.slice(0,0) === "#") {
 		link.addEventListener("click", () => {
-			swapShownContent(link.href.replace("#", ""));
+			swapShownContent(link.href.replace("#",""));
 		});
 	}
-}
+});
 
 swapShownContent(getLastVisited());
