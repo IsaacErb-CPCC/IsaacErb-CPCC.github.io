@@ -77,7 +77,7 @@ function getLastVisited() {
 // }
 
 function swapShownContent(displayID) {
-	let priorContent = document.querySelector("section[display: block]");
+	let priorContent = document.querySelector("section[style='display: block']");
 	if (priorContent !== null) {
 		priorContent.setAttribute("style", "display: none");
 	}
