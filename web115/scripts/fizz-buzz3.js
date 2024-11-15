@@ -1,9 +1,9 @@
 "use strict";
 
 //>	Defining global variables.
-var NAME_LOC = document.getElementById("greeting");
-var SUBMIT_BUTTON = document.getElementById("submission");
-var OUTPUT_1_LOC = document.getElementById("output-1");
+var NAME_LOC = document.getElementById("fb3-greeting");
+var SUBMIT_BUTTON = document.getElementById("fb3-submission");
+var OUTPUT_1_LOC = document.getElementById("fb3-output-1");
 
 var EXCALM_INV = "&#161;";
 var SMALL_FACTOR = 3;
@@ -21,9 +21,9 @@ var FIZZBUZZ_INPUT = [
 
 //>	Defining functions.
 function collectName() {
-	let first = document.getElementById("first-name").value;
-	let mid = document.getElementById("middle-init").value;
-	let last = document.getElementById("last-name").value;
+	let first = document.getElementById("fb3-first-name").value;
+	let mid = document.getElementById("fb3-middle-init").value;
+	let last = document.getElementById("fb3-last-name").value;
 	let full;
 
 	if (first === "" && mid === "" && last === "") {

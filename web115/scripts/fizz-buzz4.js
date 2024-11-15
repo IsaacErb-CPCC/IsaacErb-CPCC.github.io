@@ -1,20 +1,20 @@
 "use strict";
 
 //> Defining global variables.
-var SUBMIT_BUTTON = document.getElementById("submission");
+var SUBMIT_BUTTON = document.getElementById("fb4-submission");
 
-var NAME_FIRST_INPUT = document.getElementById("first-name");
-var NAME_MIDDLE_INPUT = document.getElementById("middle-init");
-var NAME_LAST_INPUT = document.getElementById("last-name");
-var FACTOR_1_INPUT = document.getElementById("factor-1");
-var FACTOR_2_INPUT = document.getElementById("factor-2");
-var FACTOR_3_INPUT = document.getElementById("factor-3");
-var WORD_1_INPUT = document.getElementById("word-1");
-var WORD_2_INPUT = document.getElementById("word-2");
-var WORD_3_INPUT = document.getElementById("word-3");
-var LINELIMIT_INPUT = document.getElementById("line-limit");
-var NAME_LOC = document.getElementById("greeting");
-var OUTPUT_1_LOC = document.getElementById("output-1");
+var NAME_FIRST_INPUT = document.getElementById("fb4-first-name");
+var NAME_MIDDLE_INPUT = document.getElementById("fb4-middle-init");
+var NAME_LAST_INPUT = document.getElementById("fb4-last-name");
+var FACTOR_1_INPUT = document.getElementById("fb4-factor-1");
+var FACTOR_2_INPUT = document.getElementById("fb4-factor-2");
+var FACTOR_3_INPUT = document.getElementById("fb4-factor-3");
+var WORD_1_INPUT = document.getElementById("fb4-word-1");
+var WORD_2_INPUT = document.getElementById("fb4-word-2");
+var WORD_3_INPUT = document.getElementById("fb4-word-3");
+var LINELIMIT_INPUT = document.getElementById("fb4-line-limit");
+var NAME_LOC = document.getElementById("fb4-greeting");
+var OUTPUT_1_LOC = document.getElementById("fb4-output-1");
 
 var firstFactor = 4;
 var secondFactor = 6;

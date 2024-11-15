@@ -1,16 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<div data-include="components/head-gen.html" data-replace="@FILENAME:index.html, @DATE:2024-Aug-18, @SCRIPT:none.js"></div>
+<head>
+	<!--
+		INTERNAL DOCUMENTATION:
+		-	File: index.html
+		-	Author: Isaac N. Erb.
+		-	Date Created: 2024-Aug-18.
+	-->
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="match-device-width">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols&display=swap" rel="stylesheet">	<!-- Included for the unusual roman numerals in fcc-files/jads-hub.html. -->
+
+	<link href="styles/omnistyler.css" rel="stylesheet">
+	<link href="images/lrc-favicon.png?" type="x-icon" rel="shortcut icon">
+
+	<title>Isaac Erb's Lil'RoboCo: Home</title>
+
+	<!-- <script src="scripts/jquery-3.7.1.min.js"></script> -->
+	<script src="scripts/namari-link.js" defer="true"></script>
+	<script src="scripts/main-swap.js" defer="true"></script>
+	<script src="scripts/dropdowns.js" defer="true"></script>
+	<script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
+</head>
 
 <body>
-	<div data-include="components/header-gen.html"></div>
+	<!-- <div data-include="components/header-gen.html"></div> -->
+	<header>
+		<h1>Isaac Erb's Lil'RoboCo</h1>
+
+		<nav>
+			<div id="header-navlinks">
+				<button class="content-button" id="to-home">Home</button>
+				<button class="content-button" id="to-contract">Contract</button>
+				<button class="content-button" id="to-introductions">Introduction</button>
+				<button class="content-button" id="to-brand">Branding</button>
+				<button class="content-button" id="to-m3-code-output">M3 Codeplay</button>
+				<button class="content-button" id="to-rwd-hub">FCC RWD</button>
+				<button class="content-button" id="to-jads-hub">FCC JADS</button>
+				<button class="content-button" id="to-namari-onepage">One-Page</button>
+			</div>
+
+			<div class="drop-button-box" id="header-drops">
+				<button type="button" class="drop-button" id="fizz-drop">FizzBuzz <span  class="symbol">_</span></button>
+				<div class="drop-content-box" id="fizzbuzz-links">
+					<ul>
+						<li><button class="content-button" id="to-fizzbuzz0">FizzBuzz 0</button></li>
+						<li><button class="content-button" id="to-fizzbuzz1">FizzBuzz 1</button></li>
+						<li><button class="content-button" id="to-fizzbuzz2">FizzBuzz 2</button></li>
+						<li><button class="content-button" id="to-fizzbuzz3">FizzBuzz 3</button></li>
+						<li><button class="content-button" id="to-fizzbuzz4">FizzBuzz 4</button></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<hr>
 
 	<main>
 	</main>
 
-	<div data-include="components/footer-gen.html"></div>
+	<hr>
 
-	<script src="scripts/html-include/HTMLInclude.js"></script>
+	<footer>
+		<h2 id="logo">Lil'RoboCo</h2>
+
+		<nav id="foot-links">
+			<ul>
+				<li><a href="https://github.com/IsaacErb-CPCC" target="_blank" class="nav-link">GitHub</a></li>
+				<li><a href="https://isaacerb-cpcc.github.io" class="nav-link">GitHub.io</a></li>
+				<li><a href="https://isaacerb-cpcc.github.io/web115/index.html" class="nav-link">WEB115.io</a></li>
+				<li><a href="https://www.freecodecamp.org/IsaacErb-CPCC" target="_blank" class="nav-link">freeCodeCamp</a></li>
+				<li><a href="https://www.codecademy.com/profiles/IsaacErb-CPCC" target="_blank" class="nav-link">Codeacademy</a></li>
+				<li><a href="https://jsfiddle.net/u/IsaacErb_CPCC/fiddles/" target="_blank" class="nav-link">JSFiddle</a></li>
+				<li><a href="https://www.linkedin.com/in/isaac-erb-528630327/" target="_blank" class="nav-link">LinkedIn</a></li>
+			</ul>
+		</nav>
+
+		<div id="footer-misc">
+			<p>Fira Sans and Fira Mono fonts used under SIL Open Font License v1.1.</p>
+
+			<p>Web-Support: <a href="mailto:ierb0000@email.cpcc.edu">ierb0000@email.cpcc.edu</a></p>
+
+			<p>&copy;12052 by Lilith RoboticsCorp.</p>
+		</div>
+	</footer>
+	<!-- <div data-include="components/footer-gen.html"></div> -->
+
+	<!-- <script src="scripts/html-include/HTMLInclude.js"></script> -->
+	<script src="scripts/none.js" id="content-script" defer="true"></script>
 </body>
 
 </html>

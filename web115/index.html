@@ -24,6 +24,13 @@
 
 	<!-- <script src="scripts/jquery-3.7.1.min.js"></script> -->
 	<script src="scripts/namari-link.js" defer="true"></script>
+	<script src="scripts/fizz-buzz0.js" defer="true"></script>
+	<script src="scripts/fizz-buzz1.js" defer="true"></script>
+	<script src="scripts/fizz-buzz2.js" defer="true"></script>
+	<script src="scripts/fizz-buzz3.js" defer="true"></script>
+	<script src="scripts/fizz-buzz4.js" defer="true"></script>
+	<script src="scripts/m3_code.js" defer="true"></script>
+	<script src="scripts/" defer="true"></script>
 	<script src="scripts/main-swap.js" defer="true"></script>
 	<script src="scripts/dropdowns.js" defer="true"></script>
 	<script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
@@ -38,7 +45,7 @@
 			<div id="header-navlinks">
 				<button class="content-button" id="to-home">Home</button>
 				<button class="content-button" id="to-contract">Contract</button>
-				<button class="content-button" id="to-introductions">Introduction</button>
+				<button class="content-button" id="to-intro">Introduction</button>
 				<button class="content-button" id="to-brand">Branding</button>
 				<button class="content-button" id="to-m3-code-output">M3 Codeplay</button>
 				<button class="content-button" id="to-rwd-hub">FCC RWD</button>
@@ -64,6 +71,287 @@
 	<hr>
 
 	<main>
+		<section id="home">
+			<h2>Home</h2>
+			<p>This is the homepage for Isaac Erb's submissions for the WEB115-N801 course. <a href="#intro">His introduction-page is here.</a></p>
+			<p>The creator hopes you enjoy his sense of style, including the color-palette, fonts, and text-formatting. <a href="#brand">Some of those style-choices are explained here, after the preamble.</a></p>
+		</section>
+
+		<section id="contract">
+			<h2>Course Contract</h2>
+			<p>I, <a href="#intro">Isaac N. Erb</a>, agree to abide by the terms in my 2024-Fall <q>WEB115, Web Markup and Scripting</q> course with my instructor, D.I. von Briesen.</p>
+
+			<p>I understand that all work that I do on my school and personal websites will be publicly available to the world. I will not put information there that is inappropriate for schoolwork, or that I wish to keep private.</p>
+
+			<p>I also understand that it is my work that counts for attendance, not logins or showing up for class. As such, failure to turn in assignments may show as absences.</p>
+
+			<p>Signed: <i>Isaac N. Erb, 13 August 2024</i>.</p>
+		</section>
+
+		<section id="intro">
+			<h2>Self-Introduction</h2>
+
+			<figure>
+				<img id="self-photo" src="images/self-photo_scaled.jpg" alt="Photo of Isaac Erb">
+				<figcaption>Isaac Erb, having woken up an hour ago, and not having any pictures of himself (or much else, really) on his phone.</figcaption>
+			</figure>
+
+			<p>This is a page introducing me, Isaac Erb, as a participant in the 2024-Fall <q>WEB115-N801</q> course.</p>
+			<p>I'm a 21-year-old college student, working toward an Associate's Degree in Full Stack Programming. In addition to that, I'm also pursuing writing, font-design, and drawing when I have the time. (Though I'm still very bad at drawing.)</p>
+			<h4 class="list-title">Other Information about Me:</h4>
+			<ul>
+				<li id="additional-personal">
+					<h5>More about Me:</h5>
+					<ul>
+						<li>I will accept any pronouns you might use for me, but I default to <q>he/him</q>.</li>
+						<li>My native language is English. I can also speak (but not read) Japanese. I could probably communicate in other languages if necessary (via Google Translate), but those are the only two I actually know.</li>
+					</ul>
+				</li>
+				<li id="professional">
+					<h5 class="inlist-heading">Professional Background:</h5> None, in the sense of having gotten paid to do work. I've done several interviews, though.
+				</li>
+				<li id="academic">
+					<h5 class="inlist-heading">Academic Background:</h5> As mentioned earlier, I'm currently working toward an Associate's in programming. I also have my highschool diploma, and credits from a trade-school course on proper operation of an oxyfuel cutting-torch.
+				</li>
+				<li id="subject-specific">
+					<h5 class="inlist-heading">Background in this Subject:</h5> I have taken one course before this which had me work extensively with HTML and CSS. <br>I moderately enjoy web-design; though not my first choice, I would be fine with working primarily in that field.
+				</li>
+				<li id="platform">
+					<h5 class="inlist-heading">Primary Computer-Platform:</h5> I am on a 6-year-old laptop running <q>Pop! OS</q>, a distribution of Linux based on Ubuntu 22.04. <br>I <i>have</i> an installation of Windows, but it takes so long to start up that I really can't use it regularly. (Not that I would, anyway; it's the least-efficient, least-secure major operating-system.)
+				</li>
+				<li id="courses">
+					<h5 class="inlist-heading">My 2024-Fall Courses:</h5>
+					<ol>
+						<li><h5 class="inlist-heading">WEB115 &ndash; Web Markup and Scripting:</h5> This course. I'm taking it because learning to do web-dev is important to a programmer who doesn't know what field they'll end up working in. Also, it's in my major.</li>
+						<li><h5 class="inlist-heading">CTS130 &ndash; Spreadsheet:</h5> A course on how to properly use spreadsheet-applications like MS Excel. Software like that offers a faster and simpler (though far-less-upscaleable) version of what a database-centric application might, and is thus useful for working thru smaller problems based on datasets. That's probably why it's in my major.</li>
+					</ol>
+				</li>
+				<li id="trivia">
+					<h5 class="inlist-heading">Fun Facts about my Font-Design Hobby:</h5>
+					<ul>
+						<li>I am almost entirely self-taught; I downloaded FontForge, poked around in it for three years, and now I'm an amateur font-designer.</li>
+						<li>I have five fonts in active development. Only one of them is even close to being done.</li>
+						<li>The font that's closest to being done currently supports five dead languages (Ogham, Scandinavian Runes, Lycian, Carian, and Old Italic), and one dead numeric-system (Mayan). (This number will likely increase.)</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+		<section id="brand">
+			<h2>Branding</h2>
+			<h3>About Us</h3>
+			<blockquote class="attributed">
+			<p>Robots already have plenty of potential to be truly lovable &ndash; it's just that nobody else seems to have realized that.</p>
+			<p>&mdash; Skog Irons, Founder of Lilith RoboticsCorp.</p>
+			</blockquote>
+
+			<h4>Our Mission</h4>
+			<p>Our mission at Lil'RoboCo (Lilith RoboticsCorp) is to create lovable, intelligent lifestyle-assistance robots, and make them available to fit into the lives of common consumers. Unlike the cleaning-bots of yester-generation, or the converations-AIs and <i><q>companionship</q></i>-droids of more recent times, what we seek to provide are robotic companions who offer support in both an emotional <i>and</i> functional sense.</p>
+			<p>For example, take our first-ever product: The AmobeaPet (original name: <q>AmobeaDog/Cat/Hedgehog,Etc.</q>); it is a high-quality floor-crawling cleaner-robot, with functionality on-par with any of those you might find without an absurd price-tag attached to them. However, because it's made by us, it <i>also</i> greets you as you pass by, enjoys being pet, and will get lonely if haven't paid attention to it in a while. And these are not primative, poorly-implemented features; they are driven by sophisticated AI developed by our computer-scientists over in R&amp;D. And all of that, we offer to you at prices competitive with medium-high-end machines with the same cleaning-functionality.</p>
+			<p><q>&#191;How is that a sustainable business-model, especially if you're doing a bunch of R&amp;D?</q>, you might ask. Well, we're counting on <i>you</i> to give us enough business to let us keep making our dream a reality. <q class="speech">&#191;And don't you wanna?; C'mon: <i>Robopets. Robofriends. <em>Robospouses</em>.</i> &#161;We can actually make those happen!</q></p>
+			<p>(That last part curtesy of the founder, Skog Irons.)</p>
+
+			<h3>About Our Branding</h3>
+			<p>As with the default setting of the digital displays on our robot-models, the general idea for the aesthetic of our website is <q>futuristic sci-fi</q>; we want users to feel that they're reading a holographic-terminal-display from a sci-fi movie. (We experimented with actual holographic-display technology, but found it quite hard to actually read.)</p>
+			<h4>Colors</h4>
+			<p>For our text-colors, we go with a base of bright-green on midnight-blue, for that <i><q>digital</q></i> feel. For highlights, we use amber and white, for contrast.</p>
+			<h4>Text</h4>
+			<p>For our font, we use Fira Sans, for its modern, slightly-futuristic look.</p>
+		</section>
+
+		<section id="m3-code-output">
+			<h2>Code-Output</h2>
+			<h3>This Page</h3>
+			<p>This page shows Isaac Erb's efforts to fulfill the requirements of the M3 <q>Codeplay</q>-assignment.</p>
+			<p>The below text shows explanations with normal body-text-formatting, and highlights code-text with a green background. Within the highlighted text, inputs are shown in bold; outputs are at a normal weight, with a <q>&#187;</q> symbol in front of them.</p>
+			<p>When it says <q><code>undefined</code></q> in the output, that's because the statement has executed successfully, but there's no return value.</p>
+			<hr>
+			<div id="code-out-area"></div>
+		</section>
+
+		<section id="rwd-hub">
+			<dl>
+				<dt>Survey-Form: <a target="_blank" href="fcc-files/surveyform/catsonly.html">Cats Only Registration</a></dt>
+				<dd>Shows basic understanding of interactivity in forms.</dd>
+
+				<dt>Tribute-Page: <a target="_blank" href="fcc-files/tribute/faraday-tribute.html">Michael Faraday</a></dt>
+				<dd>Showing basic understanding of box-model and formatting of images and text.</dd>
+
+				<dt>Technical Documentation: <a target="_blank" href="fcc-files/techdocs/jartil-styler-docs.html">jartil.Styler</a></dt>
+				<dd>Showing understanding of page-navigation via links and use of <code>&lt;code&gt;</code>-elements.</dd>
+
+				<dt>Product-Landing-Page: <a target="_blank" href="fcc-files/product-page/product.html">Lil'RoboCo: Adopt a New Companion</a></dt>
+				<dd>Showing understanding of grid/flexbox-layout.</dd>
+
+				<dt>Personal Portfolio: <a target="_blank" href="fcc-files/portfolio/portfolio.html">Showing Off Stuff I've Actually Done</a></dt>
+				<dd>Showing understanding of advanced page-layout.</dd>
+			</dl>
+		</section>
+
+		<section id="jads-hub">
+			<dl>
+				<dt><a target="_blank" href="fcc-files/palindromes/palindromes.html">Palindrome-Checker</a></dt>
+				<dd>Shows basic understanding of looping, array-manipulation, and string-filtering.</dd>
+
+				<dt><a target="_blank" href="fcc-files/roman-nums/roman-nums.html">Roman-Numeral Converter</a></dt>
+				<dd>Shows understanding of looping and reusable, genericized code.<br>(Fun Fact: Because I'm a font-developer, I know about four more roman numerals than FCC does, and my program can actually properly convert numbers as large as 399'999; it just doesn't because they've specified a hard limit of 3999. The numerals are &#8577; [5000], &#8578; [10'000], &#8583; [50'000], and &#8584; [100'000].)</dd>
+
+				<dt><a target="_blank" href="fcc-files/phone-regex/phone-regex.html">Phone-Number Validator</a></dt>
+				<dd>Shows moderate understanding of regular expressions.</dd>
+
+				<dt><a target="_blank" href="fcc-files/register/register.html">Cash-Register</a> (NOT WORKING)</dt>
+				<dd>Shows understanding of classes.<br>I couldn't get this one to work, and I'm not sure why; I don't know what exactly FCC's tests are checking for, and this is, by far, the most complex assignment in JADS.<br>I had a previous build for this project that did all of the stuff they specified, but didn't satify the tests. The current build is a partial rewrite I did while keeping the code simpler and checking each step of the assignment as I added the corresponding pieces of functionality to the program. I gave up because I got to a check I couldn't figure out how to satisfy, so the program is incomplete.</dd>
+
+				<dt><a target="_blank" href="fcc-files/pokesearch/pokesearch.html">Pokemon-Database-Searcher</a></dt>
+				<dd>Shows understanding of <code>fetch()</code>-commands and working with JSON-formatted data.<br>(I spell it <q>Pokemon</q>, and not <q>Pok&eacute;mon</q>, because the accent-mark is not a correct inclusion under either of the major systems of transcription from japanese; they just put it in the english translation because they thought english-speakers would mispronounce the proper transcription. And they were right; even <i>with</i> the accent-mark, many english-speakers still mispronounce it.)</dd>
+			</dl>
+		</section>
+
+		<section id="fizzbuzz0">
+			<h2>FizzBuzz 0</h2>
+			<h3 id="fb0-greeting">&#161;Welcome to Lil'RoboCo!</h3>
+			<p>This interactive page shows a bit of form-functionality, as well as an example of the <q><a href="https://en.wikipedia.org/wiki/Fizz_buzz" target="_blank">FizzBuzz</a></q> exercise. (The theme for the outputs is <q>robots</q>.)</p>
+			<p>To start, please fill out the text-fields with the indicated parts of your name, then press the <q>Submit</q>-button.</p>
+			<form>
+				<fieldset>
+					<label for="first-name">First Name:</label>
+					<input type="text" id="fb0-first-name">
+					<label for="middle-init">Middle Initial:</label>
+					<input type="text" id="fb0-middle-init" maxlength="1">
+					<label for="last-name">Last Name:</label>
+					<input type="text" id="fb0-last-name">
+				</fieldset>
+				<fieldset>
+					<button type="button" id="fb0-submission">Submit</button>
+				</fieldset>
+			</form>
+
+			<div class="code-out-area">
+				<code id="fb0-output-1"></code>
+				<code id="fb0-output-2"></code>
+			</div>
+		</section>
+
+		<section id="fizzbuzz1">
+			<h2>FizzBuzz 1</h2>
+			<h3 id="fb1-greeting">&#161;Welcome to Lil'RoboCo!</h3>
+			<p>This is the second exercise in Fizz-Buzz. The theme is, as usual, robots. Press the button to display output.</p>
+			<form>
+				<fieldset>
+					<label for="first-name">First Name:</label>
+					<input type="text" id="fb1-first-name">
+					<label for="middle-init">Middle Initial:</label>
+					<input type="text" id="fb1-middle-init" maxlength="1">
+					<label for="last-name">Last Name:</label>
+					<input type="text" id="fb1-last-name">
+				</fieldset>
+				<fieldset>
+					<button type="button" id="fb1-submission">Display Code-Output</button>
+				</fieldset>
+			</form>
+
+			<div class="code-out-area">
+				<code id="fb1-output-1"></code>
+			</div>
+		</section>
+
+		<section id="fizzbuzz2">
+			<h2>FizzBuzz 2</h2>
+			<h3 id="fb2-greeting">&#161;Welcome to Lil'RoboCo!</h3>
+			<p>&#161;It's FizzBuzz time again! (&#161;The theme is <i>still</i> robots! &hellip; Mr. Irons is sort of a one-track dude.)</p>
+			<p>For this page, the special numbers will be a bit different.</p>
+			<form>
+				<fieldset>
+					<label for="first-name">First Name:</label>
+					<input type="text" id="fb2-first-name">
+					<label for="middle-init">Middle Initial:</label>
+					<input type="text" id="fb2-middle-init" maxlength="1">
+					<label for="last-name">Last Name:</label>
+					<input type="text" id="fb2-last-name">
+				</fieldset>
+				<fieldset>
+					<button type="button" id="fb2-submission">Submit</button>
+				</fieldset>
+			</form>
+
+			<div class="code-out-area">
+				<code id="fb2-output-1"></code>
+			</div>
+		</section>
+
+		<section id="fizzbuzz3">
+			<h2>FizzBuzz 3</h2>
+			<h3 id="fb3-greeting">&#161;Welcome to Lil'RoboCo!</h3>
+			<p>&#161;More FizzBuzz; this time with three special numbers! (&#161;More robots!; this time, specifically themed around the importance of show affection for your artificial companions.)</p>
+			<form>
+				<fieldset>
+					<label for="first-name">First Name:</label>
+					<input type="text" id="fb3-first-name">
+					<label for="middle-init">Middle Initial:</label>
+					<input type="text" id="fb3-middle-init" maxlength="1">
+					<label for="last-name">Last Name:</label>
+					<input type="text" id="fb3-last-name">
+				</fieldset>
+				<fieldset>
+					<button type="button" id="fb3-submission">Submit</button>
+				</fieldset>
+			</form>
+
+			<div class="code-out-area">
+				<code id="fb3-output-1"></code>
+			</div>
+		</section>
+
+		<section id="fizzbuzz4">
+			<h2>FizzBuzz 4</h2>
+			<h3 id="fb4-greeting">&#161;Welcome to Lil'RoboCo!</h3>
+			<p>This is the final FizzBuzz exercise. </p>
+			<p></p>
+			<form>
+				<fieldset>
+					<legend>Your Name</legend>
+					<label for="first-name">First Name:</label>
+					<input type="text" id="fb4-first-name">
+					<label for="middle-init">Middle Initial:</label>
+					<input type="text" id="fb4-middle-init" maxlength="1">
+					<label for="last-name">Last Name:</label>
+					<input type="text" id="fb4-last-name">
+				</fieldset>
+				<fieldset class="compact">
+					<legend>FizzBuzz Configuration</legend>
+					<div>
+						<p>Here, you enter the special numbers for the FizzBuzz-exercise; the correpsonding word (First, Second, or Third) will display at multiples of the appropriate number specified here.</p>
+						<label for="factor-1">First Special Number:</label>
+						<input type="number" id="fb4-factor-1" min="0" max="512">
+						<label for="factor-2">Second Special Number:</label>
+						<input type="number" id="fb4-factor-2" min="0" max="512">
+						<label for="factor-3">Third Special Number:</label>
+						<input type="number" id="fb4-factor-3" min="0" max="512">
+					</div>
+					<div>
+						<p>Here, you choose the words to be displayed at multiples of the special numbers.</p>
+						<label for="word-1">First Word:</label>
+						<input type="text" id="fb4-word-1">
+						<label for="word-2">Second Word:</label>
+						<input type="text" id="fb4-word-2">
+						<label for="word-3">Third Word:</label>
+						<input type="text" id="fb4-word-3">
+					</div>
+					<div>
+						<p>Here, you specify the number of lines to be output by the FizzBuzz loop.</p>
+						<label for="line-limit">Number of Lines:</label>
+						<input type="number" id="fb4-line-limit" min="0" max="999">
+					</div>
+				</fieldset>
+				<fieldset>
+					<button type="button" id="fb4-submission">Submit</button>
+				</fieldset>
+			</form>
+
+			<div class="code-out-area">
+				<code id="fb4-output-1"></code>
+			</div>
+		</section>
 	</main>
 
 	<hr>

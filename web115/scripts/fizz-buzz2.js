@@ -1,18 +1,18 @@
 "use strict";
 
 //>	Defining global variables.
-var NAME_LOC = document.getElementById("greeting");
-var SUBMIT_BUTTON = document.getElementById("submission");
+var NAME_LOC = document.getElementById("fb2-greeting");
+var SUBMIT_BUTTON = document.getElementById("fb2-submission");
 var SMALL_FACTOR = 6;
 var LARGE_FACTOR = 8;
-var OUTPUT_1_LOC = document.getElementById("output-1");
+var OUTPUT_1_LOC = document.getElementById("fb2-output-1");
 
 
 //> Defining functions.
 function collectName() {
-	let first = document.getElementById("first-name").value;
-	let mid = document.getElementById("middle-init").value;
-	let last = document.getElementById("last-name").value;
+	let first = document.getElementById("fb2-first-name").value;
+	let mid = document.getElementById("fb2-middle-init").value;
+	let last = document.getElementById("fb2-last-name").value;
 	let full;
 
 	if (first === "" && mid === "" && last === "") {
