@@ -5,7 +5,7 @@ var NAME_LOC = document.getElementById("fb2-greeting");
 var SUBMIT_BUTTON = document.getElementById("fb2-submission");
 var SMALL_FACTOR = 6;
 var LARGE_FACTOR = 8;
-var OUTPUT_1_LOC = document.getElementById("fb2-output-1");
+var OUTPUT_1_LOC = document.getElementById("fb2-output");
 
 
 //> Defining functions.

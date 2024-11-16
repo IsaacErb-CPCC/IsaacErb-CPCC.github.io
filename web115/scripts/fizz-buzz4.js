@@ -14,7 +14,7 @@ var WORD_2_INPUT = document.getElementById("fb4-word-2");
 var WORD_3_INPUT = document.getElementById("fb4-word-3");
 var LINELIMIT_INPUT = document.getElementById("fb4-line-limit");
 var NAME_LOC = document.getElementById("fb4-greeting");
-var OUTPUT_1_LOC = document.getElementById("fb4-output-1");
+var OUTPUT_1_LOC = document.getElementById("fb4-output");
 
 var firstFactor = 4;
 var secondFactor = 6;

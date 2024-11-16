@@ -3,7 +3,7 @@
 //> Defining global variables.
 var NAME_LOC = document.getElementById("fb1-greeting");
 var SUBMIT_BUTTON = document.getElementById("fb1-submission");
-var OUTPUT_1_LOC = document.getElementById("fb1-output-1");
+var OUTPUT_1_LOC = document.getElementById("fb1-outputs");
 
 //>	Defining functions.
 function collectName() {
