@@ -1,11 +1,13 @@
 "use strict";
 
 //> Defining global variables.
-var SUBMIT_BUTTON = document.getElementById("fb4-submission");
+import { OUTPUT_1_LOC } from "./common-assets";
 
-const NAME_FIRST_INPUT = document.getElementById("fb4-first-name");
-const NAME_MIDDLE_INPUT = document.getElementById("fb4-middle-init");
-const NAME_LAST_INPUT = document.getElementById("fb4-last-name");
+const FB4_SUBMIT_BUTTON = document.getElementById("fb4-submission");
+
+const FB4_NAME_FIRST_INPUT = document.getElementById("fb4-first-name");
+const FB4_NAME_MIDDLE_INPUT = document.getElementById("fb4-middle-init");
+const FB4_NAME_LAST_INPUT = document.getElementById("fb4-last-name");
 const FACTOR_1_INPUT = document.getElementById("fb4-factor-1");
 const FACTOR_2_INPUT = document.getElementById("fb4-factor-2");
 const FACTOR_3_INPUT = document.getElementById("fb4-factor-3");
@@ -13,13 +15,11 @@ const WORD_1_INPUT = document.getElementById("fb4-word-1");
 const WORD_2_INPUT = document.getElementById("fb4-word-2");
 const WORD_3_INPUT = document.getElementById("fb4-word-3");
 const LINELIMIT_INPUT = document.getElementById("fb4-line-limit");
-const NAME_LOC = document.getElementById("fb4-greeting");
-const OUTPUT_1_LOC = document.getElementById("code-output-1");
+const FB4_NAME_LOC = document.getElementById("fb4-greeting");
 
 var firstFactor = 4;
 var secondFactor = 6;
 var thirdFactor = 9;
-var normWord = "Normal";
 var firstWord = "Caring";
 var secondWord = "Odd";
 var thirdWord = "Cute";
@@ -113,9 +113,9 @@ function getInputs() {
 		return null;
 	}
 
-	let first = NAME_FIRST_INPUT.value;
-	let mid = NAME_MIDDLE_INPUT.value;
-	let last = NAME_LAST_INPUT.value;
+	let first = FB4_NAME_FIRST_INPUT.value;
+	let mid = FB4_NAME_MIDDLE_INPUT.value;
+	let last = FB4_NAME_LAST_INPUT.value;
 
 	let full;
 
@@ -136,7 +136,7 @@ function doIO() {
 	if (name === null) {
 		return;
 	}
-	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${name}!`;
+	FB4_NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${name}!`;
 
 	let fizzbuzzInput = [
 		{factor: firstFactor, text: firstWord},
@@ -153,6 +153,6 @@ function doIO() {
 setDefaults();
 
 //>	Setting up events.
-SUBMIT_BUTTON.addEventListener("click", () => {
+FB4_SUBMIT_BUTTON.addEventListener("click", () => {
 	doIO();
 });

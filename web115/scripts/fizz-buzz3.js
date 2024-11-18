@@ -1,9 +1,9 @@
 "use strict";
 
 //>	Defining global variables.
-const NAME_LOC = document.getElementById("fb3-greeting");
-const SUBMIT_BUTTON = document.getElementById("fb3-submission");
-const OUTPUT_1_LOC = document.getElementById("code-output-1");
+import { OUTPUT_1_LOC } from "./common-assets";
+const FB3_NAME_LOC = document.getElementById("fb3-greeting");
+const FB3_SUBMIT_BUTTON = document.getElementById("fb3-submission");
 
 const EXCALM_INV = "&#161;";
 const SMALL_FACTOR = 3;
@@ -90,12 +90,12 @@ function complexFizzBuzz(factorTextPairs) {
 }
 
 function writeOutputs() {
-	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${collectName()}!`;
+	FB3_NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${collectName()}!`;
 	complexFizzBuzz(FIZZBUZZ_INPUT);
 }
 
 
 //>	Setting up events.
-SUBMIT_BUTTON.addEventListener("click", () => {
+FB3_SUBMIT_BUTTON.addEventListener("click", () => {
 	writeOutputs();
 });

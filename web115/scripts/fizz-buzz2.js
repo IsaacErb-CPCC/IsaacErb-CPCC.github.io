@@ -1,11 +1,11 @@
 "use strict";
 
 //>	Defining global variables.
-const NAME_LOC = document.getElementById("fb2-greeting");
-const SUBMIT_BUTTON = document.getElementById("fb2-submission");
+import { OUTPUT_1_LOC } from "./common-assets";
+const FB2_NAME_LOC = document.getElementById("fb2-greeting");
+const FB2_SUBMIT_BUTTON = document.getElementById("fb2-submission");
 const SMALL_FACTOR = 6;
 const LARGE_FACTOR = 8;
-const OUTPUT_1_LOC = document.getElementById("code-output-1");
 
 
 //> Defining functions.
@@ -81,11 +81,11 @@ function modularFizzBuzz() {
 }
 
 function writeOutputs() {
-	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${collectName()}!`;
+	FB2_NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${collectName()}!`;
 	modularFizzBuzz();
 }
 
 // > Setting up events.
-SUBMIT_BUTTON.addEventListener("click", () => {
+FB2_SUBMIT_BUTTON.addEventListener("click", () => {
 	writeOutputs();
 });

@@ -1,9 +1,9 @@
 "use strict";
 
 //> Defining global variables.
-const NAME_LOC = document.getElementById("fb1-greeting");
-const SUBMIT_BUTTON = document.getElementById("fb1-submission");
-const OUTPUT_1_LOC = document.getElementById("code-output-1");
+import { OUTPUT_1_LOC } from "./common-assets";
+const FB1_NAME_LOC = document.getElementById("fb1-greeting");
+const FB1_SUBMIT_BUTTON = document.getElementById("fb1-submission");
 
 //>	Defining functions.
 function collectName() {
@@ -73,11 +73,11 @@ function normalFizzBuzz() {
 }
 
 function writeOutputs() {
-	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${collectName()}!`;
+	FB1_NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${collectName()}!`;
 	normalFizzBuzz();
 }
 
 //> Setting up events.
-SUBMIT_BUTTON.addEventListener("click", () => {
+FB1_SUBMIT_BUTTON.addEventListener("click", () => {
 	writeOutputs();
 });
