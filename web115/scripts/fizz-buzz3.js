@@ -3,7 +3,7 @@
 //>	Defining global variables.
 var NAME_LOC = document.getElementById("fb3-greeting");
 var SUBMIT_BUTTON = document.getElementById("fb3-submission");
-var OUTPUT_1_LOC = document.getElementById("fb3-output");
+var OUTPUT_1_LOC = document.getElementById("code-output-1");
 
 var EXCALM_INV = "&#161;";
 var SMALL_FACTOR = 3;
