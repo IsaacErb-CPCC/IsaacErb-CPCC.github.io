@@ -1,11 +1,11 @@
 "use strict";
 
 //>	Defining global constants.
-var NAME_LOC = document.getElementById("fb0-greeting");
-var OUTPUT_1_LOC = document.getElementById("code-output-1");
-var OUTPUT_2_LOC = document.getElementById("code-output-2");
-var SUBMIT_BUTTON = document.getElementById("fb0-submission");
-var EXCALM_INV = "&#161;";
+const NAME_LOC = document.getElementById("fb0-greeting");
+const OUTPUT_1_LOC = document.getElementById("code-output-1");
+const OUTPUT_2_LOC = document.getElementById("code-output-2");
+const SUBMIT_BUTTON = document.getElementById("fb0-submission");
+const EXCALM_INV = "&#161;";
 
 
 //>	Defining functions.

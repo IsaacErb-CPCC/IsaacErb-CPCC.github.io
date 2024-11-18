@@ -1,9 +1,9 @@
 "use strict";
 
 //> Defining global variables.
-var NAME_LOC = document.getElementById("fb1-greeting");
-var SUBMIT_BUTTON = document.getElementById("fb1-submission");
-var OUTPUT_1_LOC = document.getElementById("code-output-1");
+const NAME_LOC = document.getElementById("fb1-greeting");
+const SUBMIT_BUTTON = document.getElementById("fb1-submission");
+const OUTPUT_1_LOC = document.getElementById("code-output-1");
 
 //>	Defining functions.
 function collectName() {

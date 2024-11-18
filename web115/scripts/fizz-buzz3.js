@@ -1,19 +1,19 @@
 "use strict";
 
 //>	Defining global variables.
-var NAME_LOC = document.getElementById("fb3-greeting");
-var SUBMIT_BUTTON = document.getElementById("fb3-submission");
-var OUTPUT_1_LOC = document.getElementById("code-output-1");
+const NAME_LOC = document.getElementById("fb3-greeting");
+const SUBMIT_BUTTON = document.getElementById("fb3-submission");
+const OUTPUT_1_LOC = document.getElementById("code-output-1");
 
-var EXCALM_INV = "&#161;";
-var SMALL_FACTOR = 3;
-var LARGE_FACTOR = 5;
-var OTHER_FACTOR = 7;
-var NORM_TEXT = "None for now";
-var SMALL_TEXT = "Pet";
-var LARGE_TEXT = "Robot";
-var OTHER_TEXT = "Cute";
-var FIZZBUZZ_INPUT = [
+const EXCALM_INV = "&#161;";
+const SMALL_FACTOR = 3;
+const LARGE_FACTOR = 5;
+const OTHER_FACTOR = 7;
+const NORM_TEXT = "None for now";
+const SMALL_TEXT = "Pet";
+const LARGE_TEXT = "Robot";
+const OTHER_TEXT = "Cute";
+const FIZZBUZZ_INPUT = [
 	{factor: SMALL_FACTOR, text: SMALL_TEXT},
 	{factor: OTHER_FACTOR, text: OTHER_TEXT},
 	{factor: LARGE_FACTOR, text: LARGE_TEXT}

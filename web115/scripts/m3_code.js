@@ -3,7 +3,7 @@
 var inputTag = "<div class=\"code-bg\"><code class=\"input\">";
 var outputTag = "<div class=\"code-bg\"><code class=\"output\">";
 var endTag = "</code></div>";
-const OUTPUT_ZONE = document.getElementById("code-out-area");
+const OUTPUT_ZONE = document.getElementById("code-output-1");
 
 function handleAnglemarks(codestring) {
 	codestring = codestring.replaceAll("<", "&lt;");
