@@ -61,7 +61,7 @@
 		}
 
 		body {
-			background-color: #346;
+			background-color: #235;
 			border: calc(var(--pixel-size) * 6) ridge #DEF;
 
 			box-sizing: border-box;
@@ -85,39 +85,30 @@
 			margin: 0pt 0pt 0pt calc(var(--pixel-size) * 2);
 		}
 
-		h2, h3, h4, h5, h6 {
+		h2{
 			font-family: Carbon-13;
 			font-size: 1rem;
-			font-weight: bold;
-		}
+			font-weight: normal;
+			font-style: italic;
 
-		header {
-			height: 20%;
+			text-align: center;
 		}
 
 		main {
-			height: 85%;
-			width: 20%;
 			display: flex;
-			flex-flow: column nowrap;
+			flex-flow: column;
+			height: 100%;
+			width: 70%;
+			float: left;
 		}
 
-		main ul {
-			display: flex;
-			flex-flow: column wrap;
-			list-style-type: disc;
-			padding-left: calc(var(--pixel-size) * 9);
-
-			max-height: 80%;
-			width: 100%;
+		main div {
+			position: absolute;
+			bottom: 0pt;
+			right: 0pt;
 		}
 
-		li {
-			width: 45%
-		}
-
-		footer {
-			height: 15%;
+		p {
 			text-align: right;
 		}
 
@@ -126,17 +117,13 @@
 			width: 20%;
 			display: flex;
 			flex-flow: column nowrap;
+			float: left;
 		}
 
 		img {
 			min-height: 150px;
-			height: 55%;
+			height: 60%;
 			align-self: center;
-		}
-
-		figcaption {
-			font-style: italic;
-			text-align: center;
 		}
 	</style>
 </head>
@@ -144,23 +131,16 @@
 <body>
 	<figure>
 		<img src="images/tetsu.png">
-		<figcaption>The charater for <q>iron</q> in Carbon-39, Isaac Erb's highest-resolution pixel-font.</figcaption>
 	</figure>
 
 	<main>
 		<h1><b>Isaac Erb</b><br>Font-Dev, Programmer, Writer</h1>
-		<div id="info">
-			<b>Isaac Erb</b>: Creator of six fonts, developer of entry-level Python-programs, and writer of 1.8 books.
-			<ul>
-				<li>Has a focus on neat-looking body-fonts with good unicode-support.</li>
-				<li>In addition to three others, made all three fonts visible on this card.</li>
-				<li>Studying college-level programming. Native language is Python.</li>
-				<li>Creative writing focuses entertainment, morality, and philosophy.</li>
-			</ul>
+		<h2>Creator of six fonts, developer of entry-level Python-programs, and writer of 1.8 books.</h2>
+		<div>
+			<p>tetsujoou@skorb.net</p>
+			<p>555-555-5555</p>
+			<p>007 Ironqueen's Way</p>
 		</div>
 	</main>
-	<footer>
-		ierb0000@email.cpcc.edu | 555-555-5555 | 773 Actual Lane
-	</footer>
 </body>
 </html>
