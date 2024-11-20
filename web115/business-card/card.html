@@ -47,6 +47,11 @@
 			font-weight: bold;  font-style: italic;
 		}
 
+		@font-face {
+			font-family: Carbon-39;  src: url(fonts/Carbon-39/Carbon-39_Regular.woff2);
+			font-weight: normal;  font-style: normal;
+		}
+
 		:root {
 			--pixel-size: 1.6pt;
 		}
@@ -118,19 +123,18 @@
 			display: flex;
 			flex-flow: column nowrap;
 			float: left;
-		}
+			writing-mode: vertical-rl;
 
-		img {
-			min-height: 150px;
-			height: 60%;
-			align-self: center;
+			font-family: Carbon39;
+			font-size: 3rem;
+			line-height: 2.5rem;
 		}
 	</style>
 </head>
 
 <body>
-	<figure>
-		<img src="images/tetsu.png">
+	<figure lang="ja">
+		&#37444;&#22899;&#29579;
 	</figure>
 
 	<main>
