@@ -21,7 +21,7 @@ var thirdFactor = 9;
 var firstWord = "Caring";
 var secondWord = "Odd";
 var thirdWord = "Cute";
-var lineLimit = 125
+var lineLimit = 125;
 var LINE_MAX = 1000;
 
 
