@@ -5,131 +5,139 @@
 	<meta name="viewport" content="match-device-width" initial-scale="1.0">
 
 	<style>
-		@charset "utf-8";
+@charset "utf-8";
 
-		@font-face {
-			font-family: Carbon-13;  src: url(fonts/Carbon-13/Carbon-13_Regular.woff2);
-			font-weight: normal;  font-style: normal;
-		}
+@font-face {
+	font-family: Carbon-13;  src: url(fonts/Carbon-13/Carbon-13_Regular.woff2);
+	font-weight: normal;  font-style: normal;
+}
 
-		@font-face {
-			font-family: Carbon-13;  src: url(fonts/Carbon-13/Carbon-13_Bold.woff2);
-			font-weight: bold;  font-style: normal;
-		}
+@font-face {
+	font-family: Carbon-13;  src: url(fonts/Carbon-13/Carbon-13_Bold.woff2);
+	font-weight: bold;  font-style: normal;
+}
 
-		@font-face {
-			font-family: Carbon-13;  src: url(fonts/Carbon-13/Carbon-13_Italic.woff2);
-			font-weight: normal;  font-style: italic;
-		}
+@font-face {
+	font-family: Carbon-13;  src: url(fonts/Carbon-13/Carbon-13_Italic.woff2);
+	font-weight: normal;  font-style: italic;
+}
 
-		@font-face {
-			font-family: Carbon-13;  src: url(fonts/Carbon-13/Carbon-13_Bold-Italic.woff2);
-			font-weight: bold;  font-style: italic;
-		}
+@font-face {
+	font-family: Carbon-13;  src: url(fonts/Carbon-13/Carbon-13_Bold-Italic.woff2);
+	font-weight: bold;  font-style: italic;
+}
 
-		@font-face {
-			font-family: Carbon-26;  src: url(fonts/Carbon-26/Carbon-26_Regular.woff2);
-			font-weight: normal; font-style: normal;
-		}
+@font-face {
+	font-family: Carbon-26;  src: url(fonts/Carbon-26/Carbon-26_Regular.woff2);
+	font-weight: normal; font-style: normal;
+}
 
-		@font-face {
-			font-family: Carbon-26;  src: url(fonts/Carbon-26/Carbon-26_Bold.woff2);
-			font-weight: bold;  font-style: normal;
-		}
+@font-face {
+	font-family: Carbon-26;  src: url(fonts/Carbon-26/Carbon-26_Bold.woff2);
+	font-weight: bold;  font-style: normal;
+}
 
-		@font-face {
-			font-family: Carbon-26;  src: url(fonts/Carbon-26/Carbon-26_Italic.woff2);
-			font-weight: normal;  font-style: italic;
-		}
+@font-face {
+	font-family: Carbon-26;  src: url(fonts/Carbon-26/Carbon-26_Italic.woff2);
+	font-weight: normal;  font-style: italic;
+}
 
-		@font-face {
-			font-family: Carbon-26;  src: url(fonts/Carbon-26/Carbon-26_BoldItalic.woff2);
-			font-weight: bold;  font-style: italic;
-		}
+@font-face {
+	font-family: Carbon-26;  src: url(fonts/Carbon-26/Carbon-26_BoldItalic.woff2);
+	font-weight: bold;  font-style: italic;
+}
 
-		@font-face {
-			font-family: Carbon-39;  src: url(fonts/Carbon-39/Carbon-39_Regular.woff2);
-			font-weight: normal;  font-style: normal;
-		}
+@font-face {
+	font-family: Carbon-39;  src: url(fonts/Carbon-39/Carbon-39_Regular.woff2);
+	font-weight: normal;  font-style: normal;
+}
 
-		:root {
-			--pixel-size: 1.6pt;
-		}
+:root {
+	--pixel-size: 1.5pt;
+}
 
-		html {
-			background-color: #000;
+html {
+	background-color: #000;
 
-			font-family: Carbon-13;
-			font-size: calc(var(--pixel-size) * 11);
-			line-height: calc(var(--pixel-size) *15);
-			color: #DEF;
-		}
+	font-family: Carbon-13;
+	font-size: calc(var(--pixel-size) * 11);
+	line-height: calc(var(--pixel-size) *15);
+	color: #DEF;
+}
 
-		body {
-			background-color: #235;
-			border: calc(var(--pixel-size) * 6) ridge #DEF;
+body {
+	background-color: #235;
+	border: calc(var(--pixel-size) * 6) ridge #DEF;
 
-			box-sizing: border-box;
+	box-sizing: border-box;
 
-			width: 65vw;
-			height: 65vh;
+	width: calc(var(--pixel-size) * 420);
+	height: calc(var(--pixel-size) * 210);
 
-			margin: 17.5vh 17.5vw;
-			padding: calc(var(--pixel-size) * 3);
-		}
+	padding: calc(var(--pixel-size) * 3);
 
-		h1 {
-			display: block;
-			width: 100%;
-			font-family: Carbon-26;
-			font-size: 2rem;
-			line-height: 2rem;
-			font-weight: normal;
+	position: absolute;
 
-			text-align: center;
-			margin: 0pt 0pt 0pt calc(var(--pixel-size) * 2);
-		}
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
 
-		h2{
-			font-family: Carbon-13;
-			font-size: 1rem;
-			font-weight: normal;
-			font-style: italic;
+h1 {
+	display: block;
+	width: 100%;
+	font-family: Carbon-26;
+	font-size: 2rem;
+	line-height: 2rem;
+	font-weight: normal;
 
-			text-align: center;
+	text-align: center;
+	margin: 0pt 0pt 0pt calc(var(--pixel-size) * 2);
+}
 
-			position: relative;
-			bottom: 15%;
-		}
+h2{
+	font-family: Carbon-13;
+	font-size: 1rem;
+	font-weight: normal;
+	font-style: italic;
 
-		main {
-			box-sizing: border-box;
-			display: flex;
-			flex-flow: column;
-			height: 100%;
-			width: 70%;
-			float: left;
+	text-align: center;
 
-			justify-content: space-between;
-		}
+	position: relative;
+	bottom: 5%;
+}
 
-		p {
-			text-align: right;
-		}
+main {
+	box-sizing: border-box;
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+	width: calc(100% - calc(var(--pixel-size) * 37));
+	padding: 0pt calc(var(--pixel-size) * 8);
 
-		figure {
-			box-sizing: border-box;
-			height: 85%;
-			width: 30%;
-			display: flex;
-			flex-flow: column nowrap;
-			float: left;
-			writing-mode: vertical-rl;
+	float: left;
 
-			font-family: Carbon-39;
-			font-size: 3rem;
-			line-height: 2.5rem;
-		}
+	justify-content: space-between;
+}
+
+p {
+	text-align: right;
+}
+
+figure {
+	box-sizing: border-box;
+	height: 85%;
+	width: calc(var(--pixel-size) * 37);
+	float: left;
+	writing-mode: vertical-rl;
+
+	font-family: Carbon-39;
+	font-size: 4.5rem;
+	padding: 0pt;
+	margin: 2.5% 0%;
+
+	text-align: center;
+}
 	</style>
 </head>
 
@@ -140,7 +148,7 @@
 
 	<main>
 		<h1><b>Isaac Erb</b><br>Font-Dev, Programmer, Writer</h1>
-		<h2>Creator of six fonts, developer of entry-level Python-programs, and writer of 1.8 books.</h2>
+		<h2>Creator of six fonts, developer of entry-level<br> Python-programs, and writer of 1.8 books.</h2>
 		<div>
 			<p>tetsujoou@skorb.net</p>
 			<p>555-555-5555</p>
