@@ -8,8 +8,6 @@
 const MAIN = document.querySelector("main");
 const HOME_DISPLAY = "home";
 const TITLE_ELEM = document.querySelector("title");
-const OUTPUT_1_LOC = document.getElementById("code-output-1");
-const OUTPUT_2_LOC = document.getElementById("code-output-2");
 
 
 class ContentDisplay {
