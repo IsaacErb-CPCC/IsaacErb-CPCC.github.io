@@ -1,8 +1,9 @@
 "use strict";
 
 //> Defining global variables.
-import { OUTPUT_1_LOC } from "./common-assets";
-
+// import { OUTPUT_1_LOC } from "./common-assets";
+const OUTPUT_1_LOC = document.getElementById("code-output-1");
+const OUTPUT_2_LOC = document.getElementById("code-output-2");
 const FB4_SUBMIT_BUTTON = document.getElementById("fb4-submission");
 
 const FB4_NAME_FIRST_INPUT = document.getElementById("fb4-first-name");
