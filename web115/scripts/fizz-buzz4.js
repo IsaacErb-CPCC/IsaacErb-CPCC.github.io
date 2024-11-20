@@ -21,9 +21,7 @@ var thirdFactor = 9;
 var firstWord = "Caring";
 var secondWord = "Odd";
 var thirdWord = "Cute";
-var lineLimit = 125;
-
-var EXCALM_INV = "&#161;";
+var lineLimit = 125
 var LINE_MAX = 1000;
 
 
@@ -134,7 +132,7 @@ function doIO() {
 	if (name === null) {
 		return;
 	}
-	FB4_NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${name}!`;
+	FB4_NAME_LOC.innerHTML = `${EXCLAM_INV}Welcome to Lil'RoboCo${name}!`;
 
 	let fizzbuzzInput = [
 		{factor: firstFactor, text: firstWord},

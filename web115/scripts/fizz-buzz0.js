@@ -3,7 +3,6 @@
 //>	Defining global constants.
 const NAME_LOC = document.getElementById("fb0-greeting");
 const SUBMIT_BUTTON = document.getElementById("fb0-submission");
-const EXCALM_INV = "&#161;";
 
 
 //>	Defining functions.
@@ -48,7 +47,7 @@ function numberedText() {
 	OUTPUT_1_LOC.innerHTML = "";	//Clearing text of output-element, so repeated presses don't just keep appending.
 
 	//> FizzBuzz Loop:
-	let message = `${EXCALM_INV}Robopets! ${EXCALM_INV}Robospouses!`;
+	let message = `${EXCLAM_INV}Robopets! ${EXCLAM_INV}Robospouses!`;
 	for (let lineNum = 0; lineNum < 125; lineNum++) {
 		let outLine = `${tabulateLinenum(lineNum)}${message}<br>`;
 
@@ -78,7 +77,7 @@ function dynamicText() {
 }
 
 function writeOutputs() {
-	NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${collectName()}!`;
+	NAME_LOC.innerHTML = `${EXCLAM_INV}Welcome to Lil'RoboCo${collectName()}!`;
 	numberedText();
 	dynamicText();
 }

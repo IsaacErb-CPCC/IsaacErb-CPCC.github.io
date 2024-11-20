@@ -4,7 +4,6 @@
 const FB3_NAME_LOC = document.getElementById("fb3-greeting");
 const FB3_SUBMIT_BUTTON = document.getElementById("fb3-submission");
 
-const EXCALM_INV = "&#161;";
 const SMALL_FACTOR = 3;
 const LARGE_FACTOR = 5;
 const OTHER_FACTOR = 7;
@@ -79,7 +78,7 @@ function complexFizzBuzz(factorTextPairs) {
 			message = NORM_TEXT+".";
 		} else {
 			message = message.slice(0,-1);	//Removing space at end.
-			message = `${EXCALM_INV}${message}!`;
+			message = `${EXCLAM_INV}${message}!`;
 		}
 
 		let outLine = `${tabulateLinenum(lineNum)}${message}<br>`;
@@ -89,7 +88,7 @@ function complexFizzBuzz(factorTextPairs) {
 }
 
 function writeOutputs() {
-	FB3_NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${collectName()}!`;
+	FB3_NAME_LOC.innerHTML = `${EXCLAM_INV}Welcome to Lil'RoboCo${collectName()}!`;
 	complexFizzBuzz(FIZZBUZZ_INPUT);
 }
 

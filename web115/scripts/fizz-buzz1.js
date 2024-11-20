@@ -72,7 +72,7 @@ function normalFizzBuzz() {
 }
 
 function writeOutputs() {
-	FB1_NAME_LOC.innerHTML = `${EXCALM_INV}Welcome to Lil'RoboCo${collectName()}!`;
+	FB1_NAME_LOC.innerHTML = `${EXCLAM_INV}Welcome to Lil'RoboCo${collectName()}!`;
 	normalFizzBuzz();
 }
 
