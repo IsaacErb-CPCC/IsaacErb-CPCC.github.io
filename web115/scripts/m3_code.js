@@ -1,8 +1,5 @@
 "use strict";
 
-// import { OUTPUT_1_LOC } from "./common-assets.js";
-const OUTPUT_1_LOC = document.getElementById("code-output-1");
-const OUTPUT_2_LOC = document.getElementById("code-output-2");
 var inputTag = "<div class=\"code-bg\"><code class=\"input\">";
 var outputTag = "<div class=\"code-bg\"><code class=\"output\">";
 var endTag = "</code></div>";

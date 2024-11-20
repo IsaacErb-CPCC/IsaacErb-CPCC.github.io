@@ -1,9 +1,6 @@
 "use strict";
 
 //>	Defining global constants.
-// import { OUTPUT_1_LOC, OUTPUT_2_LOC } from "./common-assets";
-const OUTPUT_1_LOC = document.getElementById("code-output-1");
-const OUTPUT_2_LOC = document.getElementById("code-output-2");
 const NAME_LOC = document.getElementById("fb0-greeting");
 const SUBMIT_BUTTON = document.getElementById("fb0-submission");
 const EXCALM_INV = "&#161;";
