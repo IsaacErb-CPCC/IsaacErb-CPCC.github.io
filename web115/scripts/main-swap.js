@@ -21,6 +21,13 @@ class ContentDisplay {
 		TITLE_ELEM.innerHTML = `Isaac Erb's Lil'RoboCo: ${this.title}`;
 		localStorage.setItem("last-visited", this.section.id);
 
+		if (this.section.id !== "fizzbuzz0") {
+			OUTPUT_1_LOC.setAttribute("style", "width: 100%");
+			OUTPUT_2_LOC.setAttribute("style", "width: 0%");
+		} else {
+			OUTPUT_1_LOC.setAttribute("style", "width: 50%");
+			OUTPUT_2_LOC.setAttribute("style", "width: 50%");
+		}
 	}
 }
 
