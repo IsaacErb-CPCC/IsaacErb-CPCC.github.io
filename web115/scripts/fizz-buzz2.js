@@ -3,8 +3,8 @@
 //>	Defining global variables.
 const FB2_NAME_LOC = document.getElementById("fb2-greeting");
 const FB2_SUBMIT_BUTTON = document.getElementById("fb2-submission");
-const SMALL_FACTOR = 6;
-const LARGE_FACTOR = 8;
+const FB2_SMALL_FACTOR = 6;
+const FB2_LARGE_FACTOR = 8;
 
 
 //> Defining functions.
@@ -59,8 +59,8 @@ function modularFizzBuzz() {
 
 	//>	FizzBuzz Loop:
 	for (let lineNum = 0; lineNum < 140; lineNum++) {
-		let isSmallMult = isMultiple(lineNum, SMALL_FACTOR);
-		let isLargeMult = isMultiple(lineNum, LARGE_FACTOR);
+		let isSmallMult = isMultiple(lineNum, FB2_SMALL_FACTOR);
+		let isLargeMult = isMultiple(lineNum, FB2_LARGE_FACTOR);
 		let message;
 
 		if (isSmallMult && isLargeMult) {

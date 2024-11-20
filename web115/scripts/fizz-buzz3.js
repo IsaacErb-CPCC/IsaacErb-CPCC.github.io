@@ -4,17 +4,17 @@
 const FB3_NAME_LOC = document.getElementById("fb3-greeting");
 const FB3_SUBMIT_BUTTON = document.getElementById("fb3-submission");
 
-const SMALL_FACTOR = 3;
-const LARGE_FACTOR = 5;
+const FB3_SMALL_FACTOR = 3;
+const FB3_LARGE_FACTOR = 5;
 const OTHER_FACTOR = 7;
 const NORM_TEXT = "None for now";
 const SMALL_TEXT = "Pet";
 const LARGE_TEXT = "Robot";
 const OTHER_TEXT = "Cute";
 const FIZZBUZZ_INPUT = [
-	{factor: SMALL_FACTOR, text: SMALL_TEXT},
+	{factor: FB2_SMALL_FACTOR, text: SMALL_TEXT},
 	{factor: OTHER_FACTOR, text: OTHER_TEXT},
-	{factor: LARGE_FACTOR, text: LARGE_TEXT}
+	{factor: FB2_LARGE_FACTOR, text: LARGE_TEXT}
 ];
 
 //>	Defining functions.
