@@ -97,4 +97,10 @@ TEXT_LINKS.forEach((link) => {
 	}
 });
 
+
+//- Setting up reset-button.
+const RESETTER = document.getElementById("resetter");
+RESETTER.addEventListener("click", () => sortReset(resetID));
+
+//- Doing initial display.
 swapShownContent(getLastVisited());
