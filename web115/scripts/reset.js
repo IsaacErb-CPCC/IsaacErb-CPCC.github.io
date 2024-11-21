@@ -2,7 +2,7 @@
 const NUMERICS = /[0-9]/;
 
 function extractNumber(id, filtrator) {
-	let number = ParseInt(id.match(filtrator)[0]);
+	let number = parseInt(id.match(filtrator)[0]);
 	return number;
 }
 
