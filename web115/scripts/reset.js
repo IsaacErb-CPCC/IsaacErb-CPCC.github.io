@@ -43,5 +43,4 @@ function sortReset(sectionID) {
 
 
 //- Setting up reset-button.
-const RESETTER = document.getElementById("resetter");
 RESETTER.addEventListener("click", () => sortReset(resetID));

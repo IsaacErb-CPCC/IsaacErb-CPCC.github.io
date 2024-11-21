@@ -3,3 +3,4 @@
 const OUTPUT_1_LOC = document.getElementById("code-output-1");
 const OUTPUT_2_LOC = document.getElementById("code-output-2");
 const EXCLAM_INV = "&#161;";
+const RESETTER = document.getElementById("resetter");

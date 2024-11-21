@@ -1,9 +1,10 @@
 "use strict";
-
 /*
-  ! NOTICE: This script copies the structure of the MDN
-  "fetch-text" example at https://github.com/mdn/dom-examples/blob/main/fetch/fetch-text/index.html.
+	! NOTICE: This script copies the structure of the MDN
+	"fetch-text" example at https://github.com/mdn/dom-examples/blob/main/fetch/fetch-text/index.html.
 */
+
+const IS_CODEPAGE = /(?:fizzbuzz|m3)/i;
 
 const MAIN = document.querySelector("main");
 const HOME_DISPLAY = "home";
@@ -22,6 +23,12 @@ class ContentDisplay {
 		TITLE_ELEM.innerHTML = `Isaac Erb's Lil'RoboCo: ${this.title}`;
 		localStorage.setItem("last-visited", this.section.id);
 		resetID = this.section.id;
+
+		if (IS_CODEPAGE.test(this.section.id)) {
+			RESETTER.setAttribute("style", "display: block");
+		} else {
+			RESETTER.setAttribute("style", "display: none");
+		}
 
 		if (this.section.id !== "fizzbuzz0") {
 			OUTPUT_1_LOC.setAttribute("style", "width: 100%");
