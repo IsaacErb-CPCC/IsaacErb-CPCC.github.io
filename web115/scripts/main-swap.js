@@ -8,6 +8,7 @@
 const MAIN = document.querySelector("main");
 const HOME_DISPLAY = "home";
 const TITLE_ELEM = document.querySelector("title");
+var resetID;
 
 
 class ContentDisplay {
@@ -20,6 +21,7 @@ class ContentDisplay {
 		this.section.setAttribute("style", "display: block");
 		TITLE_ELEM.innerHTML = `Isaac Erb's Lil'RoboCo: ${this.title}`;
 		localStorage.setItem("last-visited", this.section.id);
+		resetID = this.section.id;
 
 		if (this.section.id !== "fizzbuzz0") {
 			OUTPUT_1_LOC.setAttribute("style", "width: 100%");
@@ -78,11 +80,11 @@ function swapShownContent(displayID) {
 //-	Setting event-listeners for swap-buttons.
 const BUTTONS = document.querySelectorAll(".content-button");
 BUTTONS.forEach((button) => {
-		if (button.id !== "to-namari-onepage") {
-			button.addEventListener("click", () => {
-				swapShownContent(button.id.replace("to-", ""));
-			});
-		}
+	if (button.id !== "to-namari-onepage") {
+		button.addEventListener("click", () => {
+			swapShownContent(button.id.replace("to-", ""));
+		});
+	}
 });
 
 

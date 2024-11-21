@@ -15,14 +15,22 @@ const WORD_3_INPUT = document.getElementById("fb4-word-3");
 const LINELIMIT_INPUT = document.getElementById("fb4-line-limit");
 const FB4_NAME_LOC = document.getElementById("fb4-greeting");
 
-var firstFactor = 4;
-var secondFactor = 6;
-var thirdFactor = 9;
-var firstWord = "Caring";
-var secondWord = "Odd";
-var thirdWord = "Cute";
+const DEFAULT_FIRST_FACTOR = 4;
+const DEFAULT_SECOND_FACTOR = 6;
+const DEFAULT_THIRD_FACTOR = 9;
+const DEFAULT_FIRST_WORD = "Caring";
+const DEFAULT_SECOND_WORD = "Odd";
+const DEFAULT_THIRD_WORD = "Cute";
+const DEFAULT_LINE_LIMIT = 125;
+
+var firstFactor = DEFAULT_FIRST_FACTOR;
+var secondFactor = DEFAULT_SECOND_FACTOR;
+var thirdFactor = DEFAULT_THIRD_FACTOR;
+var firstWord = DEFAULT_FIRST_WORD;
+var secondWord = DEFAULT_SECOND_WORD;
+var thirdWord = DEFAULT_THIRD_WORD;
 var lineLimit = 125;
-var LINE_MAX = 1000;
+const LINE_MAX = 1000;
 
 
 //> Defining functions.
@@ -50,7 +58,7 @@ function tabulateLinenum(lineNum) {
 	return displayNum;
 }
 
-function setDefaults() {
+function setFB4_Defaults() {
 	FACTOR_1_INPUT.value = firstFactor;
 	FACTOR_2_INPUT.value = secondFactor;
 	FACTOR_3_INPUT.value = thirdFactor;
@@ -146,7 +154,7 @@ function doIO() {
 
 
 //> Setting up default values.
-setDefaults();
+setFB4_Defaults();
 
 //>	Setting up events.
 FB4_SUBMIT_BUTTON.addEventListener("click", () => {
