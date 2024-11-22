@@ -361,6 +361,11 @@ button:not(.content-button), [type="submit"], [type="button"] {
 	border-width: 2px;
 }
 
+#resetter {
+	display: block;
+	margin: auto;
+}
+
 fieldset {
   border: 1px solid #fff;
   border-bottom: none;

@@ -333,9 +333,61 @@
 			</form>
 		</section>
 
+		<section id="introform">
+			<h2>Introduction-Form</h2>
+			<p>@INTRO-PARAGRAPH</p>
 
+			<form>
+				<!--
+					-	Name.
+					-	Mascot.
+					-	Picture.
+					-	Courses.
+						-	Course-descriptions.
+					-	Basic self-info.
+					-	Fun facts.
+					-	Links.
+						-	Link-text.
+					-	Academic background.
+					-	Subject-background.
+					-	Misc additional info.
+				-->
+				<div class="horizontal-centred">
+					<label>
+						Personal Name
+						<input type="text" id="personal-name">
+					</label>
+					<label>
+						Middle Initial
+						<input type="text" id="middle-init" maxlength="1">
+					</label>
+					<label>
+						Mascot<span class="explanatory">?</span>
+						<input type="text" id="mascot">
+					</label>
+					<label>
+						Family-Name
+						<input type="text" id="family-name">
+					</label>
+				</div>
+
+				<label>
+					Profile-Image
+					<input type="file" id="profile-image">
+				</label>
+				<label>
+					Image-Caption
+					<input type="text" id="image-caption">
+				</label>
+
+				<label>
+					Personal Background
+				</label>
+			</form>
+		</section>
+
+		<button type="button" id="resetter">Reset</button>
 		<div class="code-out-area">
-			<div><button type="button" id="resetter">Reset</button></div>
 			<code id="code-output-1"></code>
 			<code id="code-output-2"></code>
 		</div>
