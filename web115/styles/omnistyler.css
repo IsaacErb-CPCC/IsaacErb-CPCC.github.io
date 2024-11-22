@@ -366,6 +366,10 @@ button:not(.content-button), [type="submit"], [type="button"] {
 	margin: auto;
 }
 
+#profile-image, #image-caption {
+	text-align: center;
+}
+
 fieldset {
   border: 1px solid #fff;
   border-bottom: none;
