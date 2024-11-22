@@ -346,6 +346,11 @@ textarea {
 	width: 50%;
 }
 
+:invalid {
+	border-width: 2px;
+	border-color: var(--text-alt);
+}
+
 [type="url"] {
 	height: 2em;
 	text-wrap: wrap;
