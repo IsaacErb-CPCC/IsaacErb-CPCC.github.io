@@ -4,7 +4,7 @@
 	"fetch-text" example at https://github.com/mdn/dom-examples/blob/main/fetch/fetch-text/index.html.
 */
 
-const IS_CODEPAGE = /(?:fizzbuzz|m3)/i;
+const IS_CODEPAGE = /(?:fizzbuzz)/i;
 
 const MAIN = document.querySelector("main");
 const HOME_DISPLAY = "home";
