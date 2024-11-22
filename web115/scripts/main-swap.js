@@ -52,7 +52,8 @@ const DISPLAYS = [
 	new ContentDisplay("fizzbuzz1", "FizzBuzz 1"),
 	new ContentDisplay("fizzbuzz2", "FizzBuzz 2"),
 	new ContentDisplay("fizzbuzz3", "FizzBuzz 3"),
-	new ContentDisplay("fizzbuzz4", "FizzBuzz 4")];
+	new ContentDisplay("fizzbuzz4", "FizzBuzz 4"),
+	new ContentDisplay("introform", "Intro-Form")];
 
 
 function getLastVisited() {
