@@ -339,24 +339,10 @@
 			<p>@INTRO-PARAGRAPH</p>
 
 			<form>
-				<!--
-					-	Name.
-					-	Mascot.
-					-	Picture.
-					-	Courses.
-						-	Course-descriptions.
-					-	Basic self-info.
-					-	Fun facts.
-					-	Links.
-						-	Link-text.
-					-	Academic background.
-					-	Subject-background.
-					-	Misc additional info.
-				-->
 				<div class="horizontal-centred">
 					<label>
 						Personal Name
-						<input type="text" id="personal-name">
+						<input type="text" id="personal-name" required>
 					</label>
 					<label>
 						Middle Initial
@@ -364,42 +350,42 @@
 					</label>
 					<label>
 						Mascot<span class="explanatory">?</span>
-						<input type="text" id="mascot">
+						<input type="text" id="mascot" required>
 					</label>
 					<label>
 						Family-Name
-						<input type="text" id="family-name">
+						<input type="text" id="family-name" required>
 					</label>
 				</div>
 
 				<label>
 					Profile-Image
-					<input type="file" id="profile-image">
+					<input type="file" id="profile-image" required>
 				</label>
 				<label>
 					Image-Caption
-					<input type="text" id="image-caption">
+					<input type="text" id="image-caption" required>
 				</label>
 
 				<label>
 					Personal Background
-					<textarea id="personal-info"></textarea>
+					<textarea id="personal-info"></textarea required>
 				</label>
 				<label>
 					Academic Background
-					<textarea id="academic-info"></textarea>
+					<textarea id="academic-info"></textarea required>
 				</label>
 				<label>
 					Backround in Web-Design
-					<textarea id="webdev-info"></textarea>
+					<textarea id="webdev-info"></textarea required>
 				</label>
 				<label>
 					Computer-Platform
-					<textarea id="computer-info"></textarea>
+					<textarea id="computer-info"></textarea required>
 				</label>
 				<label>
 					Fun Fact about Self
-					<textarea id="fun-info"></textarea>
+					<textarea id="fun-info"></textarea required>
 				</label>
 				<label>
 					Additional Comments
@@ -409,33 +395,35 @@
 				<div class="horizontal-centred">
 					<label>
 						GitHub-Account-Link
-						<input type="url" id="github" placeholder="github.com/SkogIronsLRC">
+						<input type="url" id="github" placeholder="github.com/SkogIronsLRC" required>
 					</label>
 					<label>
 						GitHub-Pages-Link
-						<input type="url" id="github-pages" placeholder="SkogIronsLRC.github.io">
+						<input type="url" id="github-pages" placeholder="SkogIronsLRC.github.io" required>
 					</label>
 					<label>
 						WEB115-Site-Link
-						<input type="url" id="web115-site" placeholder="SkogIronsLRC.github.io/web115">
+						<input type="url" id="web115-site" placeholder="SkogIronsLRC.github.io/web115" required>
 					</label>
 					<label>
 						freeCodeCamp-Account-Link
-						<input type="url" id="freecodecamp" placeholder="freecodecamp.org/SkogIronsLRC">
+						<input type="url" id="freecodecamp" placeholder="freecodecamp.org/SkogIronsLRC" required>
 					</label>
 					<label>
 						Codecademy-Account-Link
-						<input type="url" id="codecademy" placeholder="codecademy.com/profiles/SkogIronsLRC">
+						<input type="url" id="codecademy" placeholder="codecademy.com/profiles/SkogIronsLRC" required>
 					</label>
 					<label>
 						JSFiddle-Account-Link
-						<input type="url" id="jsfiddle" placeholder="jsfiddle.net/u/SkogIronsLRC/fiddles/">
+						<input type="url" id="jsfiddle" placeholder="jsfiddle.net/u/SkogIronsLRC/fiddles/" required>
 					</label>
 					<label>
 						LinkedIn-Account-Link
-						<input type="url" id="linkedin" placeholder="linkedin.com/in/SkogIronsLRC">
+						<input type="url" id="linkedin" placeholder="linkedin.com/in/SkogIronsLRC" required>
 					</label>
 				</div>
+
+				<button type="submit" id="introform-submit">Submit Introduction</button>
 			</form>
 		</section>
 
