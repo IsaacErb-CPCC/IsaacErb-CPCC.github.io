@@ -341,6 +341,15 @@ input, button:not(.content-button), textarea {
 	font-size: 1rem;
 }
 
+textarea {
+	min-width: 12cm;
+	width: 50%;
+}
+
+[type="url"] {
+	height: 2em;
+}
+
 @media screen and (max-width: 960px) {
 	input {
 		border-width: 2px;
