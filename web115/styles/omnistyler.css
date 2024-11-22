@@ -329,7 +329,7 @@ hr {
 /*======================
 	FORM-STUFF:
 ======================*/
-input, button:not(.content-button) {
+input, button:not(.content-button), textarea {
 	display: block;
 	color: var(--text-highlight);
 	background-color: #000;
@@ -407,6 +407,12 @@ fieldset:not(:last-of-type) :last-child {
 	border-left: none;
 }
 
+.horizontal-centred {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
 fieldset p {
 	margin-top: 0mm;
 }
@@ -480,8 +486,4 @@ nav .drop-opened {
 
 nav .drop-opened + .drop-content-box {
 	border-color: var(--text-alt);
-}
-
-#time-of-swap {
-	display: none;
 }
