@@ -348,6 +348,7 @@ textarea {
 
 [type="url"] {
 	height: 2em;
+	text-wrap: wrap;
 }
 
 @media screen and (max-width: 960px) {
