@@ -36,6 +36,7 @@ function formatToParagraphs(rawText) {
 }
 
 function doIntroOutput() {
+	OUTPUT_DIV.setAttribute("style", "display: block")
 	let writeValues = [];
 
 	for (const i in IO_PAIRS) {
