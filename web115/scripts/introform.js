@@ -59,7 +59,11 @@ function doIntroOutput() {
 			writeValue = formatToParagraphs(readValue);
 		}
 
-		outputElement.innerHTML = writeValue;
+		if (outputElement.tagName == "img") {
+			outputElement.setAttribute("src", writeValue);
+		} else {
+			outputElement.innerHTML = writeValue;
+		}
 	}
 }
 
