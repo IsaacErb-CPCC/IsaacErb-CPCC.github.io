@@ -3,6 +3,7 @@
 const IO_PAIRS = [
 	[document.getElementById("profile-image"), document.getElementById("photo-position")],
 	[document.getElementById("image-caption"), document.getElementById("caption-output")],
+	[document.getElementById("basic-info"), document.getElementById("basic-info-output")],
 	[document.getElementById("personal-info"), document.getElementById("personal-output")],
 	[document.getElementById("professional-info"), document.getElementById("professional-output")],
 	[document.getElementById("academic-info"), document.getElementById("academic-output")],
