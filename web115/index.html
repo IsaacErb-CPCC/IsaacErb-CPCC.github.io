@@ -31,6 +31,7 @@
 	<script src="scripts/fizz-buzz3.js" defer="true"></script>
 	<script src="scripts/fizz-buzz4.js" defer="true"></script>
 	<script src="scripts/m3_code.js" defer="true"></script>
+	<script src="scripts/introform.js" defer="true"></script>
 	<script src="scripts/main-swap.js" defer="true"></script>
 	<script src="scripts/reset.js" defer="true"></script>
 	<script src="scripts/dropdowns.js" defer="true"></script>
@@ -339,25 +340,6 @@
 			<p>@INTRO-PARAGRAPH</p>
 
 			<form>
-				<div class="horizontal-centred">
-					<label>
-						Personal Name
-						<input type="text" id="personal-name" required>
-					</label>
-					<label>
-						Middle Initial
-						<input type="text" id="middle-init" maxlength="1">
-					</label>
-					<label>
-						Mascot<span class="explanatory">?</span>
-						<input type="text" id="mascot" required>
-					</label>
-					<label>
-						Family-Name
-						<input type="text" id="family-name" required>
-					</label>
-				</div>
-
 				<label>
 					Profile-Image
 					<input type="file" id="profile-image" required>
@@ -372,6 +354,10 @@
 					<textarea id="personal-info" required></textarea>
 				</label>
 				<label>
+					Professional Background
+					<textarea id="professional-info" required></textarea>
+				</label>
+				<label>
 					Academic Background
 					<textarea id="academic-info" required></textarea>
 				</label>
@@ -381,7 +367,7 @@
 				</label>
 				<label>
 					Computer-Platform
-					<textarea id="computer-info" required></textarea>
+					<textarea id="platform-info" required></textarea>
 				</label>
 				<label>
 					Fun Fact about Self
@@ -391,37 +377,6 @@
 					Additional Comments
 					<textarea id="misc-info"></textarea>
 				</label>
-
-				<div class="horizontal-centred">
-					<label>
-						GitHub-Account-Link
-						<input type="url" id="github" placeholder="github.com/SkogIronsLRC" required>
-					</label>
-					<label>
-						GitHub-Pages-Link
-						<input type="url" id="github-pages" placeholder="SkogIronsLRC.github.io" required>
-					</label>
-					<label>
-						WEB115-Site-Link
-						<input type="url" id="web115-site" placeholder="SkogIronsLRC.github.io/web115" required>
-					</label>
-					<label>
-						freeCodeCamp-Account-Link
-						<input type="url" id="freecodecamp" placeholder="freecodecamp.org/SkogIronsLRC" required>
-					</label>
-					<label>
-						Codecademy-Account-Link
-						<input type="url" id="codecademy" placeholder="codecademy.com/profiles/SkogIronsLRC" required>
-					</label>
-					<label>
-						JSFiddle-Account-Link
-						<input type="url" id="jsfiddle" placeholder="jsfiddle.net/u/SkogIronsLRC/fiddles/" required>
-					</label>
-					<label>
-						LinkedIn-Account-Link
-						<input type="url" id="linkedin" placeholder="linkedin.com/in/SkogIronsLRC" required>
-					</label>
-				</div>
 
 				<button type="submit" id="introform-submit">Submit Introduction</button>
 			</form>
@@ -439,7 +394,7 @@
 				<ul>
 					<li>
 						<h5>More about Me:</h5>
-						<ul id="additional-info-output"></ul>
+						<ul id="personal-output"></ul>
 					</li>
 					<li>
 						<h5 class="inlist-heading">Professional Background:</h5> <span id="professional-ouput"></span>
