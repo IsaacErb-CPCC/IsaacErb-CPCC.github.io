@@ -60,7 +60,7 @@ function doIntroOutput() {
 		}
 
 		if (outputElement.tagName == "img") {
-			outputElement.setAttribute("src", writeValue);
+			outputElement.setAttribute("src", URL.createObjectURL(writeValue));
 		} else {
 			outputElement.innerHTML = writeValue;
 		}
