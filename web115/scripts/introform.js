@@ -33,7 +33,7 @@ function formatToList(rawText) {
 }
 
 function formatToParagraphs(rawText) {
-	return rawText.replace("\n", "<br>");
+	return rawText.replaceAll("\n", "<br>");
 }
 
 function doIntroOutput() {
@@ -48,7 +48,7 @@ function doIntroOutput() {
 		if (inputElement.tagName === "textarea") {
 			readValue = inputElement.innerText;
 		} else {	//tagName is "input";
-			readValue = inputElement.value.replaceAll("\t","");
+			readValue = inputElement.value.trim();
 		}
 
 		if (outputElement.tagName === "ul" || outputElement.tagName === "ol") {
