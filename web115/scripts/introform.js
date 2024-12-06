@@ -38,7 +38,6 @@ function formatToParagraphs(rawText) {
 
 function doIntroOutput() {
 	OUTPUT_DIV.setAttribute("style", "display: block")
-	let writeValues = [];
 
 	for (const i in IO_PAIRS) {
 		let readValue, writeValue;
@@ -49,7 +48,7 @@ function doIntroOutput() {
 		if (inputElement.tagName === "textarea") {
 			readValue = inputElement.innerText;
 		} else {	//tagName is "input";
-			readValue = inputElement.value;
+			readValue = inputElement.value.replaceAll("\t","");
 		}
 
 		if (outputElement.tagName === "ul" || outputElement.tagName === "ol") {
