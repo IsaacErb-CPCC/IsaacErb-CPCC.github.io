@@ -343,7 +343,8 @@ input, button:not(.content-button), textarea {
 
 textarea {
 	min-width: 12cm;
-	width: 50%;
+	width: 70%;
+	min-height: 6cm;
 }
 
 :invalid {
@@ -458,6 +459,11 @@ label {
 
 section {
 	display: none;
+}
+
+#introform input {
+	min-width: 12cm;
+	width: 70%;
 }
 
 /*======================
